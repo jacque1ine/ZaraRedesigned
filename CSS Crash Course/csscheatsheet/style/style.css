@@ -1,3 +1,30 @@
+*{
+    /* the asterisk means for everthing
+        margin:0px;
+    
+    */
+
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+a:hover{
+    color:red;
+}
+
+a:active{
+    color:green; 
+}
+
+a:visted{
+    color: black; 
+}
+
+
+
 body{
     background-color:#f4f4f4;
     color: #555555;
@@ -5,9 +32,9 @@ body{
     font-size: 16px;
     font-weight: normal;
 
-    /*same as above*/
+    /*same as above
     font: normal Arial, Helvetica, san-serif;
-
+*/
     line-height: 1.6em;
     margin:0;
 
@@ -20,5 +47,50 @@ body{
 
 .box-1{
     background-color:#333;
+    border: 5px red solid;
+   
+    padding: 20px;
+    margin: 20px 0
+
+
 }
 
+.box-1 h1{
+    /*for all h1 in box1*/
+    font-family: Tahoma; 
+    font-weight: 800;
+    font-style: italic; 
+    text-decoration:underline; 
+    text-transform:uppercase; 
+    letter-spacing: 0.2em; 
+    word-spacing: 1em;
+}
+
+ .box-2{
+     border: 3px dotted #ccc; 
+     padding:20px; 
+     margin: 20px;
+ }
+
+ .categories{
+    border:1px #ccc solid; 
+    padding:10px; 
+    border-radius: 15px; 
+    
+ }
+
+ .categories h2{
+   text-align: center;
+    
+ }
+
+ .categories ul{
+   padding:0; 
+   list-style: square;
+   list-style: none;
+  }
+
+  .categories li{
+      padding-bottom:8px;
+      border-bottom: dotted 1px #333;
+  }
