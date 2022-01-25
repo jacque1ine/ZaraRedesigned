@@ -1,10 +1,15 @@
+/*
+
 *{
-    /* the asterisk means for everthing
+    ^^the asterisk means for everthing
         margin:0px;
     
-    */
+    
 
 }
+*/
+
+/* "a" elements related to links*/
 
 a{
     text-decoration: none;
@@ -22,8 +27,6 @@ a:active{
 a:visted{
     color: black; 
 }
-
-
 
 body{
     background-color:#f4f4f4;
@@ -51,8 +54,6 @@ body{
    
     padding: 20px;
     margin: 20px 0
-
-
 }
 
 .box-1 h1{
@@ -78,19 +79,22 @@ body{
     border-radius: 15px; 
     
  }
-
  .categories h2{
    text-align: center;
-    
  }
 
+
+/*ul = unordered lists*/
  .categories ul{
    padding:0; 
    list-style: square;
    list-style: none;
   }
 
+  /*for each line/element in the list*/
   .categories li{
       padding-bottom:8px;
       border-bottom: dotted 1px #333;
+      list-style-image: url('../images/check.png');
+      
   }
