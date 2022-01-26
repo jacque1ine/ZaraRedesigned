@@ -136,4 +136,12 @@ added in .myform textarea so that this formating would ALSO apply to the text ar
     width:100%;
 }
 
+.block{
+    float:left; 
+    width: 33.3%;
+    border: 1px solid #ccc; 
+    padding:10px;
+    box-sizing:border-box;
+    /*border-box -> takes in padding and border and counts it towards width*/
+}
 
