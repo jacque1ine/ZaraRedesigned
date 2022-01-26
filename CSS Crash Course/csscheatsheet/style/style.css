@@ -69,8 +69,6 @@ body{
     background-color:#333;
     border: 5px red solid;
     border-width: 3px;
-    border-bottom-width: 10px; 
-    border-top-style:dotted;
     padding: 20px;
     margin: 20px 0;
 }
@@ -171,16 +169,28 @@ added in .myform textarea so that this formating would ALSO apply to the text ar
     height:500px; 
     border:1px solid;
     margin-top:30px;
-
+    position:relative;
 }
 
-/*this is incorrect because we are telling it to go down 40px from the top
+/*if we didn't have the postion:relative in the section above,
+the section below would not work because it would be 40px from the 
+top of the page and NOT 40px down from the top of p-box*/
+
 .p-box h1{
     position:absolute;
     top:40px;
 }
-*/
 
+.p-box h2{
+    position:absolute; 
+    bottom:40px; 
+    right: 100px;;
+}
+
+.fix-me{
+    position:fixed; 
+    top:400px;
+}
 
 
 
