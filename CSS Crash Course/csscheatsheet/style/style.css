@@ -166,5 +166,21 @@ added in .myform textarea so that this formating would ALSO apply to the text ar
 
 }
 
+.p-box{
+    width:800px;
+    height:500px; 
+    border:1px solid;
+    margin-top:30px;
+
+}
+
+/*this is incorrect because we are telling it to go down 40px from the top
+.p-box h1{
+    position:absolute;
+    top:40px;
+}
+*/
+
+
 
 
