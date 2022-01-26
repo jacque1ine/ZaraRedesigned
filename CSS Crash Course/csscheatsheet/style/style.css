@@ -200,5 +200,31 @@ top of the page and NOT 40px down from the top of p-box*/
     top:400px;
 }
 
+/*first child refers to the 
+first thing in the ul list*/
+.my-list li:first-child{
+    background: red;
+}
+.my-list li:last-child{
+    background: rgb(108, 160, 106);
+}
+
+/*to target a certain number in the list...
+in brackets put which number u want. In this case, 
+assume we want the 5th item*/
+.my-list li:nth-child(5){
+
+    background: blue;
+}
+
+/*even and odd with nth child*/
+
+.my-list li:nth-child(even){
+    background: turquoise;
+}
+
+.my-list li:nth-child(odd){
+    background: orange;
+}
 
 
