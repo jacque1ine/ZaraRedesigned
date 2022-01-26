@@ -15,6 +15,9 @@ body{
     overflow:hidden;
 }
 
+
+
+
 #main-header{
     background-color: coral;
     color: white; 
@@ -25,7 +28,6 @@ body{
 #nav-bar{
     background-color: #333;
     color:white;
-    
 }
 
 #nav-bar ul{
@@ -44,6 +46,14 @@ body{
     font-size: 18px;
     padding-right: 15px;
 }
+
+
+#nav-bar a:hover{
+    color:coral;
+}
+
+
+
 
 /*want the height of the image to grow as the text grow */
 #showcase{
