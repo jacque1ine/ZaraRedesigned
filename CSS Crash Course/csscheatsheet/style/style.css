@@ -48,6 +48,18 @@ body{
     margin:auto;
 }
 
+.button{
+    background-color: #333;
+    color:#fff;
+    padding: 10px 15px;
+    border:none;
+}
+
+.button:hover{
+    background-color: cornflowerblue;
+    color:#fff;
+}
+
 .box-1{
     background-color:#333;
     border: 5px red solid;
@@ -122,13 +134,6 @@ added in .myform textarea so that this formating would ALSO apply to the text ar
 .myform input[type="text"], .my-form textarea{
     padding:8px; 
     width:100%;
-}
-
-.myform input[type="submit"]{
-    background-color: #333;
-    color:#fff;
-    padding: 10px 15px;
-    border:none;
 }
 
 
