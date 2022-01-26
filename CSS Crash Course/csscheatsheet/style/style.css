@@ -167,9 +167,16 @@ added in .myform textarea so that this formating would ALSO apply to the text ar
 .p-box{
     width:800px;
     height:500px; 
-    border:1px solid;
+    border:1px solid #000;
     margin-top:30px;
     position:relative;
+    background-image:url('../images/bg.jpg'); 
+    background-position:100px 200px;
+    /*^^shifts right 100 and down 200*/
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*centers in x and y*/
 }
 
 /*if we didn't have the postion:relative in the section above,
@@ -178,7 +185,8 @@ top of the page and NOT 40px down from the top of p-box*/
 
 .p-box h1{
     position:absolute;
-    top:40px;
+    top:100px;
+    left:200px;
 }
 
 .p-box h2{
