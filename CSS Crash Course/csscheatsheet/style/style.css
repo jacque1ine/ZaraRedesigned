@@ -60,6 +60,11 @@ body{
     color:#fff;
 }
 
+.clr{
+    clear:both;
+    /*clears floats above it*/
+}
+
 .box-1{
     background-color:#333;
     border: 5px red solid;
@@ -144,4 +149,22 @@ added in .myform textarea so that this formating would ALSO apply to the text ar
     box-sizing:border-box;
     /*border-box -> takes in padding and border and counts it towards width*/
 }
+
+/*id's use # sign*/
+#main-block{
+    float:left; 
+    width:70%;
+}
+
+#sidebar{
+    float:right;
+    width:30%;
+    background-color:#333; 
+    color: #fff; 
+    padding:15px; 
+    box-sizing: border-box;
+
+}
+
+
 
