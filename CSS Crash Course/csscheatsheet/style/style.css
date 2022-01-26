@@ -89,6 +89,7 @@ body{
 /*ul = unordered lists*/
  .categories ul{
    padding:0; 
+   padding-left: 20px;
    list-style: square;
    list-style: none;
   }
@@ -98,5 +99,36 @@ body{
       padding-bottom:8px;
       border-bottom: dotted 1px #333;
       list-style-image: url('../images/check.png');
-      
   }
+
+.myform{
+    padding:20px; 
+
+}
+
+/*to seperate each line in the form section*/
+.myform .form-group{
+    padding-bottom: 15px;
+
+}
+
+/*block are on their own line so this would put the labels seperate from each box*/
+.myform label{
+    display:block;
+}
+
+/*added in the type = text so that the submit button would not be affected
+added in .myform textarea so that this formating would ALSO apply to the text area*/
+.myform input[type="text"], .my-form textarea{
+    padding:8px; 
+    width:100%;
+}
+
+.myform input[type="submit"]{
+    background-color: #333;
+    color:#fff;
+    padding: 10px 15px;
+    border:none;
+}
+
+
