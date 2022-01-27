@@ -31,6 +31,13 @@ ul{
     color: white; 
 }
 
+.dark{
+    padding: 15px; 
+    background: #35424a; 
+    color: white; 
+    margin-top:10px; 
+    margin-bottom: 10px;
+}
 
 
 
@@ -45,7 +52,7 @@ header{
 }
 
 header a{
-    color: white; 
+    color: white;  
     text-decoration: none; /*this gets rid of the underline*/
     text-transform: uppercase; 
     font-size: 15px;
@@ -141,12 +148,29 @@ header a:hover{
     width:90px;;
 }
 
+/*sidebar*/
+aside#sidebar{
+    float:right; 
+    width:30%; 
+    margin-top:10px; 
+
+}
+
+/*main column*/
+article#main-col{
+    float: left; 
+    width: 65%;
+}
+
+
 footer{
     padding:20px; 
     margin-top: 20px;
     color:#ffffff; 
     background-color: #e8491d;
     text-align: center;
-
 }
+
+
+
 
