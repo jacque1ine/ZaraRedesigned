@@ -21,6 +21,7 @@ body {
 /*if boxes are stacked on top of each other, main axis is up and down. cross axis is side to side. */
 
 .item {
+    flex: 1 ; 
     width: 100px; 
     height: 100px; 
     background-color: #254de4;
