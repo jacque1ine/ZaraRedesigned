@@ -12,10 +12,13 @@ body{
 
 /*Global*/
 .container{
-    display:flex;
     width:88%;
     margin: auto;
     overflow:hidden;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -45,14 +48,22 @@ ul{
 
 /*header*/
 
+
 header{
     background:#35424a; 
     color: white; 
     padding-top:30px; 
     min-height:70px; 
     border-bottom:#e8491d 3px solid;
-    justify-content: space-between;
+    
 }
+
+/* header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+} */
 
 header a{
     color: white;  
@@ -83,6 +94,7 @@ header nav{
     margin-top: 10px;
     /* order: 2;
     /* flex: 1;  */ 
+    
 }
 
 header .highlight, header .current a{
@@ -102,9 +114,17 @@ header a:hover{
     background:url('../images/showcase1.jpg') no-repeat 0 -400px;
     text-align: center;
     color: white;
-    flex-direction: column;
+
 
 }
+
+/* #showcase .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+} */
 
 #showcase h1{
     margin-top:100px;
@@ -128,18 +148,14 @@ header a:hover{
     
 }
 
-#newsletter h1{
-    /* float:left; */
-    order: 1;
-    flex: 1; 
-}
+/* #newsletter .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+} */
 
-#newsletter form{
-    /* float:right;  */
-    margin-top: 15px;
-    order: 2;
-    flex: 1; 
-}
+
 
 #newsletter input[type="email"]{
     padding:4px; 
@@ -153,7 +169,7 @@ header a:hover{
 }
 
 #boxes .box{
-    float:left; 
+
     width:30%; 
     padding:10px; 
     text-align: center;
@@ -164,13 +180,12 @@ header a:hover{
 }
 
 /*sidebar*/
-aside#sidebar{
-    float:right; 
+.sidebar{
     width:30%; 
     margin-top:10px; 
 }
 
-aside#sidebar .quote input, aside#sidebar .quote textarea{
+.sidebar .quote input, .sidebar .quote textarea{
     width:90%; 
     padding:5px;
     font-family: Arial, Helvetica, sans-serif;
@@ -179,7 +194,6 @@ aside#sidebar .quote input, aside#sidebar .quote textarea{
 
 /*main column*/
 article#main-col{
-    float: left; 
     width: 65%;
 }
 
@@ -209,40 +223,23 @@ ul#services li{
 /*for tablet*/
 @media(max-width:768px){
 
-    /*to get rid of float*/
-    header #branding, 
-    header nav, 
-    header nav li, 
-    #newsletter h1, 
-    #newsletter form, 
-    #boxes .box, 
-    article#main-col, 
-    aside#sidebar
-    {
-        float:none; 
-        text-align:center; 
-        width:100%;
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    header{
-        padding-bottom: 28px;
+    /* .sidebar{
+        width:inherit;
     }
 
-    #showcase h1{
-        margin-top: 40px; 
+    .sidebar .dark{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-
-    #newsletter button, .quote button{
-        display:block; 
-        width:100%; 
-    }
-
-    #newsletter form input[type="email"], .quote input, .quote textarea{
-        width:100%; 
-        margin-bottom:5px; 
-
-    }
- 
+   */
 }
 
 
