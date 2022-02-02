@@ -2,81 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 
-    <meta name="viewport" content="width-device-width"> 
-    <meta name="description" content="Affordable and professional web design"> 
-    <meta name="keywords" content="web design, affordable web design, professional web design"> 
-    <meta name="author" content="Jacqueline Fung"> 
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+
     
-    <div id="branding"> 
-        <title>JF Web Design | Welcome</title>
-    </div>
-    
-    <link rel="stylesheet" href="./css/style.css"> 
-    
+    <title>Acme Web Solutions</title>
 
 </head>
 <body>
-        <header> 
-            <!--create container class so that everything stays aligned and in the middle -->
-            <div class="container">
-                <div id="branding">
-                        <h1><span class="highlight">JF</span> Web Design</h1>
-                </div>
-                <nav>
-                    <ul> 
-                        <li class="current"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                    </ul>
-                </nav>
-            </div> 
-        </header>
+    <!--Navigation bar-->
+    <nav class="navbar"> 
+        <div class="container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/2560px-Zara_Logo.svg.png">
 
-        <section id ="showcase">
-            <div class=container>
-                <h1>Affordable Professional Web Design</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis iure tenetur odio nisi exercitationem corporis porro laborum minima excepturi atque, numquam sed delectus nam enim eius quis sequi vel! Tempora.</p>
+            </div>
+            <ul class=nav>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!--Header Showcase-->
+    <header id="showcase" class="grid">
+        <div class="bg-image"> <video autoplay>
+           
+          </video></div>
+            <div class="content-wrap">
+                <h1>Spring Collection 2022</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aspernatur ullam tempore possimus in a vitae doloremque non corporis omnis.
+                </p> 
+            <a href="#section-b" class="btn">Shop Now</a>
+
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bbzgrbi2MjI" title="YouTube video player" frameborder="0" allow="autoplay; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+        </div>
+
+       
+    </header>
+
+    <!--Main Area -->
+    <main id="main"> 
+        <!--Section A-->
+        <section id="section-a" class="grid">
+            <div class="content-wrap">
+            <h2 class="content-title">Web & Application Development</h2>
+                <div class="content-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint et quas excepturi laboriosam rem porro esse qui quae corrupti doloremque nostrum perspiciatis at error ullam repellat exercitationem ab aliquid quasi numquam dolorum nihil laborum magnam, reiciendis optio? Nam, esse! Corrupti?</p>
+                </div>
             </div>
         </section>
 
-        <section id="newsletter"> 
-            <div class=container> 
-                <h1>Subscirbe to our newsletter</h1>
-                <form>
-                    <input type="email" placeholder="Enter email..."> 
-                    <button type="submit" class="button_1">Subscribe</button>
-                </form>
+
+        <!--Section B-->
+        <section id="section-b" class="grid">
+            <ul> 
+                <li>
+                    <div class="card">
+                        <img src ="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Web Development</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <img src ="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Tech Marketing</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <img src ="https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Mobile Applications</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+        </section>
+
+        <!--Section C-->
+        <section id="section-c" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">We handle all of your digital needs</h2>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ea, tempora optio mollitia vel fugit temporibus voluptas ipsum blanditiis error?</p>
             </div>
         </section>
 
-        <section id="boxes"> 
-
-            <div class="container"> 
-                <div class ="box"> 
-                    <img src="./images/logo_html.png">
-                    <h3>HTML5 Markup</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sit dignissimos sed, facere animi at reprehenderit perspiciatis recusandae, eligendi voluptates, suscipit libero ipsa nesciunt quas qui vero nihil quaerat similique.</p>
-                </div>
-
-                <div class ="box"> 
-                    <img src="./images/css3_logo.png">
-                    <h3>CSS3 Styling</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sit dignissimos sed, facere animi at reprehenderit perspiciatis recusandae, eligendi voluptates, suscipit libero ipsa nesciunt quas qui vero nihil quaerat similique.</p>
-                </div>
-
-                <div class ="box"> 
-                    <img src="./images/brush.png">
-                    <h3>Graphic Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sit dignissimos sed, facere animi at reprehenderit perspiciatis recusandae, eligendi voluptates, suscipit libero ipsa nesciunt quas qui vero nihil quaerat similique.</p>
-                </div>
+        <!--section d -->
+        <section id="section-d" class="grid">
+            <div class="box">
+                <h2 class="content-title">
+                    Contact us
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet totam ullam esse omnis cum molestiae unde rem laboriosam voluptas ea.</p>
+                <p>contac@acmewebsolutions.test</p>
+            </div>
+            <div class="box">
+                <h2 class="content-title">About Our Company</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto impedit ipsam rem eos veniam cumque molestiae iste, officia doloribus natus culpa beatae vel recusandae soluta repudiandae aperiam totam dignissimos pariatur!
+                </p>
 
 
             </div>
         </section>
+    </main>
 
-        <footer> 
-            <p>JF Web Design, Copyright &copy; 2022</p>
-        </footer>
+    <!--footer-->
+    <div id="main-footer" class="grid">
+        <div>Acme Web Solutions</div>
+        <div>Project By <a href="http://jacquelinefung.ca" target="_blank">Traversy Media</a></div>
+    </div>
+
+    
 </body>
 </html>

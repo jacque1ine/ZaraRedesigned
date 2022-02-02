@@ -1,230 +1,268 @@
-body{
-    /*
-    font-family: Arial, Helvetica, sans-serif; 
-    font-size: 15px; 
+/*Core Styles*/ 
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* body{
+    margin:0; 
+    background: #333;
+    color: #fff; 
+    font-size: 1.1em;
+    line-height: 1.5; 
+    text-align: center; 
+
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: whitesmoke;
+} */
+
+body {
+    color: #eaeaea;
+    font-family: 'Lora', serif;
+    font-size: 16px;
     line-height: 1.5;
-    */
-    font: 15px/1.5 Arial, Helvetica, sans-serif; 
-    padding: 0; 
+    
+
+ 
+    background: black;
+  }
+  
+
+img {
+    display: block;
+    width: 100%; 
+    height: auto; 
+}
+
+
+
+h1, h2, h3{
+    margin: 0;
+    padding: 1em 0; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+p{
     margin:0; 
-    background-color: #f4f4f4;
+    padding: 1em 0; 
 }
 
-/*Global*/
-.container{
-    width:88%; 
-    margin: auto; 
-    overflow:hidden; 
-}
-
-ul{
-    padding:0; 
-    margin:0;
-}
-
-.button_1{
-    height:38px; 
-    background: #e8491d;
-    border:0; 
-    padding-left: 20px; 
-    padding-right: 20px; 
+.btn{
+    display: inline-block;
+    background: #333;
     color: white; 
+    text-decoration: none;
+    padding: 1em 2em; 
+    border: 1px solid #666; 
+    margin: .5em 0; 
 }
 
-.dark{
-    padding: 15px; 
-    background: #35424a; 
-    color: white; 
-    margin-top:10px; 
-    margin-bottom: 10px;
+.btn:hover{
+    background: #eaeaea; 
+    color: #333; 
 }
 
-/*header*/
+/*Navigation Bar*/ 
 
-header{
-    background:#35424a; 
-    color: white; 
-    padding-top:30px; 
-    min-height:70px; 
-    border-bottom:#e8491d 3px solid;
+ul {
+    list-style-type: none;
+  }
+  
+.navbar {
+    background: white;
+    /* opacity: 0.4; */
+    color: black;
+    height: 60px;
+    padding: 10px 50px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+   
+  }
+  
+  .logo img {
+      height: 40px;
+  
+  
+  }
+  
+  .navbar a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  
+    .navbar a:hover{
+        color: goldenrod;
+  
+    }
+    
+    /*this makes the CONTAINER the parent so that the boxes are the children
+if the navbar was parent, the container class is the only children*/
+.navbar .container{
+    display:flex;
+    justify-content: space-between; /*space between the "flexbox logo and then nav bar links*/
+    align-items: center;
+    height: 100%;
+
 }
 
-header a{
-    color: white;  
-    text-decoration: none; /*this gets rid of the underline*/
-    text-transform: uppercase; 
-    font-size: 15px;
+/*add flexblox IN the navbar ul so that we can make the items go horizontal INSTEAD of vertical*/
+
+.navbar ul{
+    display: flex;
 
 }
 
-
-header li{
-    float: left; 
-    display:inline;
-    padding: 0 20px 0 20px; 
+/*children of the navbar ul*/
+.navbar ul li{
+    margin-left: 20px; /*makes it so that there is 20px margin on left of each item*/
 }
 
-header #branding{
-    float: left;
-
-}
-
-header #branding h1{
-    margin:0; 
-}
-
-header nav{
-    float:right;
-    margin-top: 10px;
-}
-
-header .highlight, header .current a{
-    color:#e8491d; 
-    font-weight: bold;
-}
-
-header a:hover{
-    color:#cccccc; 
-    font-weight:bold; 
-}
-
-/*showcase*/
+    
+/*Header Showcase*/
 
 #showcase{
-    min-height: 400px;
-    background:url('../images/showcase1.jpg') no-repeat 0 -400px;
-    text-align: center; 
-    color: white; 
+    min-height: 450px;
+    text-align: center;
 }
+
+#showcase .content-wrap, 
+#section-a .content-wrap  {
+    padding: 0 1.5em;
+}
+
+
+#showcase .bg-image{
+    position: absolute; 
+    background: rgb(0, 0, 0) url('https://www.designscene.net/wp-content/uploads/2020/04/ZARA-SS20-Steven-Meisel-00.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; 
+    height: 600px;
+    z-index: -1; 
+    opacity: 0.4;
+    /*the higher the Z index is, the closer to you it is. this ensure that image is BEHIND the text*/
+}
+
+
 
 #showcase h1{
-    margin-top:100px;
-    font-size:55px; 
-    margin-bottom:10px; 
+    padding-top:100px;
+    padding-bottom: 0px; 
+   
+    
 }
 
-#showcase p{
-    font-size:20px;
+
+/*Section A*/ 
+#section-a{
+    background: #eaeaea; 
+    color: #333; 
+    padding-bottom: 2em; 
 }
 
-/*Newsletter*/
+/*section B*/
+#section-b{
+    padding: 2em 1em 1em; 
+    
+}
 
-#newsletter{
-    padding:15px; 
+#section-b ul{
+    list-style: none; /*gets rids of bullets*/
+    margin:0; 
+    padding:0;
+
+}
+
+#section-b li{
+    margin-bottom: 1em; background: white;
+    color: #333;
+}
+
+.card-content{
+    padding: 1.5em; 
+}
+
+/*section C*/ 
+
+#section-c{
+    background: white;
+    color: #333; 
+    padding: 2em;
+}
+
+/*Section c / Boxes*/
+
+#section-d .box{
+    padding: 2em; 
     color: white; 
-    background: #35424a;
-}
-
-#newsletter h1{
-    float:left;
-}
-
-#newsletter form{
-    float:right; 
-    margin-top: 15px;
-}
-
-#newsletter input[type="email"]{
-    padding:4px; 
-    height:25px;
-    width:250px; 
-}
-
-/*boxes*/
-#boxes{
-    margin-top:20px;
-}
-
-#boxes .box{
-    float:left; 
-    width:30%; 
-    padding:10px; 
-    text-align: center;
-}
-
-#boxes .box img{
-    width:90px;;
-}
-
-/*sidebar*/
-aside#sidebar{
-    float:right; 
-    width:30%; 
-    margin-top:10px; 
-}
-
-aside#sidebar .quote input, aside#sidebar .quote textarea{
-    width:90%; 
-    padding:5px;
-    font-family: Arial, Helvetica, sans-serif;
 
 }
 
-/*main column*/
-article#main-col{
-    float: left; 
-    width: 65%;
+#section-d .box:first-child{ /*first box*/
+    background:#2690d4
 }
 
-footer{
-    padding:20px; 
-    margin-top: 20px;
-    color:#ffffff; 
-    background-color: #e8491d;
-    text-align: center;
+/*footer*/
+
+#main-footer{
+    padding: 2em; 
+    background: black; 
+    color: white;
+    text-align: center; 
 }
 
-/* Services */ 
+/*change url color and remove underline*/
 
-ul#services li{
-    list-style: none; 
-    padding:20px; 
-    border: #cccccc solid 1px; 
-    margin-bottom:5px;
-    background: #e6e6e6; 
+#main-footer a{
+    color: #2690d4; 
+    text-decoration: none; 
 }
 
-/*media query make certain conditions for using certain styling depending on the width*/
+/*Media Query*/ 
 
-/*Media queries*/
+/*styles put in here are only going to be in affect IF the width is greater than 700px*/
 
-/*for tablet*/
-@media(max-width:768px){
-
-    /*to get rid of float*/
-    header #branding, 
-    header nav, 
-    header nav li, 
-    #newsletter h1, 
-    #newsletter form, 
-    #boxes .box, 
-    article#main-col, 
-    aside#sidebar
-    {
-        float:none; 
-        text-align:center; 
-        width:100%;
+@media(min-width: 700px){
+    .grid {
+        display: grid; 
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em )) 1fr; 
     }
 
-    header{
-        padding-bottom: 28px;
+    #section-a .content-text {
+        columns: 2; 
+        column-gap: 2em;
     }
 
-    #showcase h1{
-        margin-top: 40px; 
+    #section-a .content-text p {
+       padding-top:0;
     }
 
-    #newsletter button, .quote button{
-        display:block; 
-        width:100%; 
+    .content-wrap, 
+    #section-b ul{
+        grid-column: 2/4; 
     }
 
-    #newsletter form input[type="email"], .quote input, .quote textarea{
-        width:100%; 
-        margin-bottom:5px; 
+    .box, #main-footer div{
+        grid-column: span 2; 
     }
+
+    #section-b ul{
+        display: flex;
+        justify-content: space-around; 
+    }
+
+    #section-b li{
+        width: 31%; 
+    }
+    
+
 }
-
-
-
-
