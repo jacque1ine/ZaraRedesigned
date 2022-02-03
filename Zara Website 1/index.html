@@ -21,9 +21,9 @@
         <div class="container">
 
             <!-- <ul class=search> -->
-            <!-- <div class="toggle active"></div> -->
+           
             <div class="logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/2560px-Zara_Logo.svg.png">
+                <img src="https://www.freepnglogos.com/uploads/zara-brand/clothing-brand-zara-hd-zara-logo-2020-3.jpg">
 
             </div>
             <ul class=nav>
@@ -41,7 +41,7 @@
                 <li>
                     <a href="#">Sale</a>
                 </li>
-                <li></li>
+                <li>
                     
                     <div class="search-container">
                           <input type="text" placeholder="Search.." name="search">
@@ -55,10 +55,7 @@
                 </li>
 
                 <li>
-                     
-                         <!-- <i class="fa fa-bars" aria-hidden="true">
-
-                         </i></div> -->
+                      <div class="toggle"></div>
                      
                 </li>
             </ul>
@@ -89,7 +86,7 @@
 
         </div>
 
-        <!-- <div class="menu">
+        <div class="menu" id="sideMenu">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">News</a></li>
@@ -97,7 +94,7 @@
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
-        </div> -->
+        </div>
 
        
     </header>
@@ -108,10 +105,10 @@
         <!--Section A-->
         <section id="section-a" class="grid">
             <div class="content-wrap">
-            <h2 class="content-title">Web & Application Development</h2>
-                <div class="content-text">
+            <h2 class="content-title">TRENDING NOW</h2>
+                <!-- <div class="content-text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint et quas excepturi laboriosam rem porro esse qui quae corrupti doloremque nostrum perspiciatis at error ullam repellat exercitationem ab aliquid quasi numquam dolorum nihil laborum magnam, reiciendis optio? Nam, esse! Corrupti?</p>
-                </div>
+                </div> -->
             </div>
             
         </section>
@@ -120,28 +117,45 @@
 
         <!--Section B-->
         <section id="section-b" class="grid">
+            <H2>TRENDING NOW</H2>
             <ul> 
                 <li>
                     <div class="card">
-                        <img src ="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"alt="">
+                        <img src ="https://static.zara.net/photos///2022/V/0/1/p/3427/716/700/2/w/750/3427716700_1_1_1.jpg?ts=1643358304826"alt="">
                         <div class="card-content">
-                            <h3 class="card-title">Web Development</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p>
+                            <h1 class="card-title">Cropped Puffer Vest</h1>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p> -->
                         </div>
                     </div>
                 </li>
-
+                
                 <li>
-                    <div class="card">
-                        <img src ="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"alt="">
-                        <div class="card-content">
-                            <h3 class="card-title">Tech Marketing</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p>
-                        </div>
+                    <img src ="https://static.zara.net/photos///2022/V/0/1/p/3427/716/700/2/w/750/3427716700_1_1_1.jpg?ts=1643358304826"alt="">
+                    <div class="card-content">
+                        <h1 class="card-title">Cropped Puffer Vest</h1>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p> -->
                     </div>
+                    
+                </li>
+                <li>
+                    <img src ="https://static.zara.net/photos///2022/V/0/1/p/3427/716/700/2/w/750/3427716700_1_1_1.jpg?ts=1643358304826"alt="">
+                    <div class="card-content">
+                        <h1 class="card-title">Cropped Puffer Vest</h1>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p> -->
+                    </div>
+                    
                 </li>
 
                 <li>
+                    <img src ="https://static.zara.net/photos///2022/V/0/1/p/3427/716/700/2/w/750/3427716700_1_1_1.jpg?ts=1643358304826"alt="">
+                    <div class="card-content">
+                        <h1 class="card-title">Cropped Puffer Vest</h1>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p> -->
+                    </div>
+                    
+                </li>
+
+                <!-- <li>
                     <div class="card">
                         <img src ="https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"alt="">
                         <div class="card-content">
@@ -149,7 +163,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p>
                         </div>
                     </div>
-                </li>
+                </li> -->
             </ul>
 
 
@@ -204,13 +218,26 @@
     </div>
 
     <script>
+        let menuIsOpen = false;
         const menuToggle = document.querySelector('.toggle');
- 
+        let menu = document.getElementById("sideMenu");
+        window.onload = function() {
+            menu.style.display = "none";
+
+};
+
  menuToggle.addEventListener('click', () => {
    menuToggle.classList.toggle('active');
+   if(menuIsOpen == false){
+    menu.style.display = "block";
+    menuIsOpen = true;
+   } else {
+    menu.style.display = "none"; 
+    menuIsOpen = false;
+   }
 //    showcase.classList.toggle('active');
  })
        
    </script>
 </body>
-</html>
+</html> 

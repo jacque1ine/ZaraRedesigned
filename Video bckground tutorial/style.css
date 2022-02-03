@@ -22,12 +22,39 @@ header
   justify-content: space-between;
   align-items: center;
 }
+
+
 header .logo
 {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.nav ul{
+
+  list-style-type: none;
+  display: flex;
+
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: em;
+  font-weight: bold;
+}
+
+.nav a:hover{
+    color: goldenrod;
+
+}
+
+.nav li{
+  margin: 0 0 20px 20px;
+  flex-direction: column-reverse;
+}
+
 .toggle
 {
   position: relative;
@@ -45,7 +72,7 @@ header .logo
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: center;
-  cursor: pointer;
+  cursor: pointer;  
 }
 .showcase
 {

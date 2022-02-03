@@ -25,9 +25,6 @@ body {
     font-family: 'Lora', serif;
     font-size: 16px;
     line-height: 1.5;
-    
-
- 
     background: black;
   }
   
@@ -75,7 +72,7 @@ ul {
   }
 
 .navbar {
-    background: white;
+    background: black;
     /* opacity: 0.4; */
     color: black;
     height: 60px;
@@ -92,7 +89,7 @@ ul {
   }
   
   .navbar a {
-      color: black;
+      color: white;
       text-decoration: none;
       font-size: 0.8em;
       font-weight: bold;
@@ -107,7 +104,7 @@ ul {
 if the navbar was parent, the container class is the only children*/
 .navbar .container{
     display:flex;
-    justify-content: space-between; /*space between the "flexbox logo and then nav bar links*/
+    justify-content: space-evenly; /*space between the "flexbox logo and then nav bar links*/
     align-items: center;
     height: 100%;
 
@@ -153,7 +150,7 @@ if the navbar was parent, the container class is the only children*/
   .navbar .search-container button:hover {
     background: #ccc;
   }
-/**
+
 .toggle
 { 
   position: relative;
@@ -177,6 +174,7 @@ if the navbar was parent, the container class is the only children*/
 
 .menu
 {
+  background-color: white;
   position: absolute;
   top: 0;
   right: 0;
@@ -205,7 +203,7 @@ if the navbar was parent, the container class is the only children*/
 {
   color: goldenrod; 
 }
-**/
+
     
 /*Header Showcase*/
 
@@ -227,8 +225,8 @@ if the navbar was parent, the container class is the only children*/
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%; 
-    height: 600px;
-    z-index: -1; 
+    height: 450px;
+    z-index: -100; 
     opacity: 0.4;
     /*the higher the Z index is, the closer to you it is. this ensure that image is BEHIND the text*/
 }
@@ -263,12 +261,14 @@ if the navbar was parent, the container class is the only children*/
 #section-a{
     background: #eaeaea; 
     color: #333; 
-    padding-bottom: 2em; 
+    /* padding-bottom: 2em;  */
 }
 
 /*section B*/
 #section-b{
+    z-index: 1000;
     padding: 2em 1em 1em; 
+    background: whitesmoke;
     
 }
 
@@ -280,12 +280,18 @@ if the navbar was parent, the container class is the only children*/
 }
 
 #section-b li{
-    margin-bottom: 1em; background: white;
+    margin-bottom: 1em; 
     color: #333;
+    /* background: white
+    ;  */
+    padding: 1em;
 }
 
 .card-content{
-    padding: 1.5em; 
+    padding: 0.2em;
+    font-size: 0.5em;
+    font-weight: 400;
+    
 }
 
 /*section C*/ 
