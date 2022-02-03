@@ -153,8 +153,59 @@ if the navbar was parent, the container class is the only children*/
   .navbar .search-container button:hover {
     background: #ccc;
   }
+/**
+.toggle
+{ 
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+   background-position: center;
+  cursor: pointer; 
+}
 
-  
+.toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  color: goldenrod; 
+}
+**/
     
 /*Header Showcase*/
 
@@ -181,6 +232,7 @@ if the navbar was parent, the container class is the only children*/
     opacity: 0.4;
     /*the higher the Z index is, the closer to you it is. this ensure that image is BEHIND the text*/
 }
+
 
 
 /* video*/
@@ -368,5 +420,30 @@ if the navbar was parent, the container class is the only children*/
         width: 31%; 
     }
     
+
+
+/*menu*/
+/* 
+.sidebar
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar .logo
+{
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+} */
+
+
     
 }
