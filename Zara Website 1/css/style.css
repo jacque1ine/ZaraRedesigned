@@ -122,34 +122,6 @@ if the navbar was parent, the container class is the only children*/
     margin-left: 20px; /*makes it so that there is 20px margin on left of each item*/
 }
 
-/* .navbar ul :last-child{
-    margin-right: 0;
-} */
-
-
-
-.navbar input[type=text] {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.7em;
-    padding: 0.45em;
-    border: none;
-  
-  }
-  
-  .navbar .search-container button {
-    padding: 0.2em 0.3em;
-    /* margin-top: 8px;
-    margin-right: 16px; */
-    background: whitesmoke;
-    font-size: 1em;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .navbar .search-container button:hover {
-    background: #ccc;
-  }
 
 .toggle
 { 
@@ -175,7 +147,6 @@ if the navbar was parent, the container class is the only children*/
 .menu
 {
   background-color: white;
-  position: absolute;
   top: 0;
   right: 0;
   width: 300px;
@@ -184,6 +155,7 @@ if the navbar was parent, the container class is the only children*/
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  position:fixed;
 }
 .menu ul
 {
@@ -303,15 +275,28 @@ if the navbar was parent, the container class is the only children*/
 }
 
 /*Section c / Boxes*/
-
 #section-d .box{
-    padding: 2em; 
-    color: white; 
+  padding-right: 2.5em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  padding-left: 0.4em;
+  
+  color: white; 
+  background-color: whitesmoke;
 
 }
 
-#section-d .box:first-child{ /*first box*/
-    background:#2690d4
+#section-d .box:first-child{
+  padding-left: 2.5em;
+  padding-right: 0.4em;
+  /* background-color: rgb(139, 57, 57); */
+ 
+ }
+
+#section-d .box img{
+  /* width: 50EMx; height: 58EM; object-fit: fill; */
+
+
 }
 
 /*footer*/
@@ -383,9 +368,6 @@ if the navbar was parent, the container class is the only children*/
 
 
 
-/*Carousel*/ 
-
-
 
 
 
@@ -425,31 +407,5 @@ if the navbar was parent, the container class is the only children*/
     #section-b li{
         width: 31%; 
     }
-    
-
-
-/*menu*/
-/* 
-.sidebar
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.sidebar .logo
-{
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-} */
-
-
-    
+  
 }
