@@ -119,9 +119,11 @@ if the navbar was parent, the container class is the only children*/
 
 /*children of the navbar ul*/
 .navbar ul li{
-    margin-left: 20px; /*makes it so that there is 20px margin on left of each item*/
+    margin-left: 10px; /*makes it so that there is 20px margin on left of each item*/
+    margin-right: 10px
 }
 
+/*Sidebar*/
 
 .toggle
 { 
@@ -202,6 +204,7 @@ if the navbar was parent, the container class is the only children*/
     opacity: 0.4;
     /*the higher the Z index is, the closer to you it is. this ensure that image is BEHIND the text*/
 }
+
 
 
 
@@ -298,6 +301,21 @@ if the navbar was parent, the container class is the only children*/
 
 
 }
+/* 
+.box #girl .bg-image{
+  position: absolute; 
+  background-image: url(images/girl.jpg);
+  /* background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* z-index: -100; 
+  opacity: 0.4; */
+  /*the higher the Z index is, the closer to you it is. this ensure that image is BEHIND the text*/
+}
+
+ */
+
+
 
 /*footer*/
 
