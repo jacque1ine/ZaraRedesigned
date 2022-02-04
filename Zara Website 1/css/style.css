@@ -23,43 +23,47 @@
 } */
 
 body {
-    color: black;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background: white;
-  }
-  
+  color: #eaeaea;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: black;
+}
+
 
 img {
-    display: block;
-    width: 100%; 
-    height: auto; 
+  display: block;
+  width: 100%; 
+  height: auto; 
 }
 
 
 
 h1, h2, h3{
-    margin: 0;
-    padding: 0.5em 0; 
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
+  margin: 0;
+  padding: 1em 0; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
+p{
+  margin:0; 
+  padding: 1em 0; 
+}
 /* p{
     margin:0; 
     padding: 1em 0; 
 }
  */
 
-p
+/* p
 {
   font-size: 1em;
   margin:0;
   font-weight: 400;
  
-}
+} */
 
 
 .btn{
@@ -87,7 +91,7 @@ ul {
     background: black;
     /* opacity: 0.4; */
     color: black;
-    height: 60px;
+    height: 70px;
     padding: 10px 50px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -95,7 +99,8 @@ ul {
   }
   
   .logo img {
-      height: 3em;
+      height: 4.5em;
+      padding: 0.4em;
   
   
   }
@@ -116,7 +121,7 @@ ul {
 if the navbar was parent, the container class is the only children*/
 .navbar .container{
     display:flex;
-    justify-content: space-evenly; /*space between the "flexbox logo and then nav bar links*/
+    justify-content: space-between; /*space between the "flexbox logo and then nav bar links*/
     align-items: center;
     height: 100%;
 
@@ -250,21 +255,21 @@ if the navbar was parent, the container class is the only children*/
 }
 
 /*section B*/
-#section-b{
+#section-b, #section-j{
     z-index: 1000;
     padding: 2em 1em 1em; 
     background: white;
     
 }
 
-#section-b ul{
+#section-b ul, #section-j li, ul{
     list-style: none; /*gets rids of bullets*/
     margin:0; 
     padding:0;
 
 }
 
-#section-b li{
+#section-j li, #section-b li{
     margin-bottom: 1em; 
     color: #333;
     /* background: white
@@ -444,8 +449,15 @@ if the navbar was parent, the container class is the only children*/
         justify-content: space-around; 
     }
 
-    #section-b li{
+    #section-j li, #section-b li{
         width: 31%; 
+    }
+
+    #section-j ul{
+      grid-column: 1/5;
+      display: flex;
+      justify-content: space-around; 
+
     }
   
 }
