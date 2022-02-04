@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /*Core Styles*/ 
 
 
@@ -21,11 +23,11 @@
 } */
 
 body {
-    color: #eaeaea;
-    font-family: 'Lora', serif;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background: black;
+    background: white;
   }
   
 
@@ -39,16 +41,26 @@ img {
 
 h1, h2, h3{
     margin: 0;
-    padding: 1em 0; 
+    padding: 0.5em 0; 
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
 }
 
-p{
+/* p{
     margin:0; 
     padding: 1em 0; 
 }
+ */
+
+p
+{
+  font-size: 1em;
+  margin:0;
+  font-weight: 400;
+ 
+}
+
 
 .btn{
     display: inline-block;
@@ -241,7 +253,7 @@ if the navbar was parent, the container class is the only children*/
 #section-b{
     z-index: 1000;
     padding: 2em 1em 1em; 
-    background: whitesmoke;
+    background: white;
     
 }
 
@@ -270,7 +282,7 @@ if the navbar was parent, the container class is the only children*/
 /*section C*/ 
 
 #section-c{
-    background: white;
+    background: whitesmoke;
     color: #333; 
     padding: 2em;
 }
