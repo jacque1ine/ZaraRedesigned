@@ -16,14 +16,15 @@
 
 </head>
 <body>
+<section class=content>
        <!--Navigation bar-->
        <nav class="navbar"> 
         <div class="container">
 
             <!-- <ul class=search> -->
            
-            <div class="logo">
-                <img src="https://www.freepnglogos.com/uploads/zara-brand/clothing-brand-zara-hd-zara-logo-2020-3.jpg">
+            <div class="logo"><a href="index.html">
+                <img src="https://www.freepnglogos.com/uploads/zara-brand/clothing-brand-zara-hd-zara-logo-2020-3.jpg"></a>
 
             </div>
             <ul class=nav>
@@ -36,32 +37,7 @@
             <div class="toggle"></div>
         </div>
       
-    </nav>
-
-        <div class="menu" id="sideMenu">
-            <ul>
-                <li>
-                    
-                    <div class="search-container">
-                          <input type="text" placeholder="Search.." name="search">
-                          <button type="submit"><i class="fa fa-search"></i></button>
-
-                          
-                        </form>
-                      </div>
-
-
-                </li>
-
-                <li><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Destination</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-        </div>
-
-       
+    </nav>       
     </header>
 
     <!--Main Area -->
@@ -69,11 +45,11 @@
     <main id="main"> 
         <!--Section C-->
         <section id="section-c" class="grid">
-            <div class="content-wrap">
+            <div class="content-wide">
                 <h2 class="content-title">WOMEN'S TOPS</h2>
-                <!-- <p>Our women’s tops cater to all occasions, tastes, styles and silhouettes to ensure there is something for every wardrobe.
+                <p>Our women’s tops cater to all occasions, tastes, styles and silhouettes to ensure there is something for every wardrobe.
 
-                </p> -->
+                </p>
             </div>
         </section>
 
@@ -89,7 +65,6 @@
             
         </section>
 
-        <!--Carousel-->
 
         <!--Section B-->
      
@@ -221,13 +196,10 @@
                         
                     </ul>
         
-        
-        
-        
                 </section>  
                
             </main>
-]
+
 
         <!--section d -->
         <section id="section-d" class="grid">
@@ -246,7 +218,31 @@
 
             </div>
         </section>
+
     </main>
+
+    <div class="menu" id="sideMenu">
+        <ul>
+            <li>
+                
+                <div class="search-container">
+                      <input type="text" placeholder="Search.." name="search">
+                      <button type="submit"><i class="fa fa-search"></i></button>
+
+                      
+                    </form>
+                  </div>
+
+
+            </li>
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+    </div>
 
     <!--footer-->
     <div id="main-footer" class="grid">
@@ -271,24 +267,28 @@
     <script>
         let menuIsOpen = false;
         const menuToggle = document.querySelector('.toggle');
+        const content = document.querySelector('.content');
         let menu = document.getElementById("sideMenu");
+        let contentShift = document.querySelector('.content');
         window.onload = function() {
             menu.style.display = "none";
 
 };
 
- menuToggle.addEventListener('click', () => {
-   menuToggle.classList.toggle('active');
-   if(menuIsOpen == false){
+menuToggle.addEventListener('click', () => {
+menuToggle.classList.toggle('active');
+content.classList.toggle('active');
+
+if(menuIsOpen == false){
     menu.style.display = "block";
     menuIsOpen = true;
-   } else {
+} else {
     menu.style.display = "none"; 
     menuIsOpen = false;
-   }
-//    showcase.classList.toggle('active');
- })
-       
-   </script>
+}
+
+})
+    
+</script>
 </body>
 </html> 

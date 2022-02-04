@@ -16,6 +16,9 @@
 
 </head>
 <body>
+    <section class="content">
+
+
     <!--Navigation bar-->
     <nav class="navbar"> 
         <div class="container">
@@ -28,7 +31,7 @@
             </div>
             <ul class=nav>
                 <li><a href="#">Men</a></li>
-                <li><a href="women.html">Women</a></li>
+                <li><a href="women.html"target="_blank">Women</a></li>
                 <li><a href="#">Kids</a></li>
                 <li><a href="#">Sale</a></li>
             
@@ -49,24 +52,6 @@
             <a href="#section-b" class="btn">Shop Now</a>
             <!-- <video src="Images/zara-full_Trim4.mp4" muted loop autoplay ></video> -->
 
-        </div>
-
-        <!--Side Menu-->
-        <div class="menu" id="sideMenu">
-            <ul>
-                <li>
-                    <div class="search-container">
-                          <input type="text" placeholder="Search.." name="search">
-                          <button type="submit"><i class="fa fa-search"></i></button> 
-                      </div>
-                </li>
-
-                <li><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Destination</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
         </div>
 
        
@@ -109,7 +94,7 @@
 
         <!--Section B-->
         <section id="section-b" class="grid">
-            <H2>TRENDING NOW</H2>
+          
             <ul> 
                 <li>
                     <div class="card">
@@ -144,18 +129,9 @@
                         <h1 class="card-title">Cropped Puffer Vest</h1>
                         <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p> -->
                     </div>
-                    
+            
                 </li>
 
-                <!-- <li>
-                    <div class="card">
-                        <img src ="https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"alt="">
-                        <div class="card-content">
-                            <h3 class="card-title">Mobile Applications</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus? Porro quaerat consequatur accusamus quia inventore vero quo possimus beatae?</p>
-                        </div>
-                    </div>
-                </li> -->
             </ul>
 
 
@@ -183,11 +159,31 @@
                 <h2 class="content-title">About Our Company</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto impedit ipsam rem eos veniam cumque molestiae iste, officia doloribus natus culpa beatae vel recusandae soluta repudiandae aperiam totam dignissimos pariatur!
                 </p>
-
-
             </div>
-        </section>
-    </main>
+      
+    
+</section>
+
+</main>
+
+  <!--Side Menu-->
+  <div class="menu" id="sideMenu">
+    <ul>
+        <li>
+            <div class="search-container">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button> 
+              </div>
+        </li>
+
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+</div>
+    
 
     <!--footer-->
     <div id="main-footer" class="grid">
@@ -201,35 +197,35 @@
             <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
             <li><a href="https://www.instagram.com/zara/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
           </ul>
-        
-
-
         </div>
-        
-        </ul>
     </div>
+  
 
     <script>
-        let menuIsOpen = false;
-        const menuToggle = document.querySelector('.toggle');
-        let menu = document.getElementById("sideMenu");
-        window.onload = function() {
-            menu.style.display = "none";
+            let menuIsOpen = false;
+            const menuToggle = document.querySelector('.toggle');
+            const content = document.querySelector('.content');
+            let menu = document.getElementById("sideMenu");
+            let contentShift = document.querySelector('.content');
+            window.onload = function() {
+                menu.style.display = "none";
 
-};
+    };
 
- menuToggle.addEventListener('click', () => {
-   menuToggle.classList.toggle('active');
-   if(menuIsOpen == false){
-    menu.style.display = "block";
-    menuIsOpen = true;
-   } else {
-    menu.style.display = "none"; 
-    menuIsOpen = false;
-   }
-//    showcase.classList.toggle('active');
- })
-       
-   </script>
+    menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    content.classList.toggle('active');
+
+    if(menuIsOpen == false){
+        menu.style.display = "block";
+        menuIsOpen = true;
+    } else {
+        menu.style.display = "none"; 
+        menuIsOpen = false;
+    }
+
+    })
+        
+    </script>
 </body>
 </html> 

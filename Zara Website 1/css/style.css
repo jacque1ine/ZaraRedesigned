@@ -95,6 +95,7 @@ ul {
     padding: 10px 50px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    
    
   }
   
@@ -109,7 +110,7 @@ ul {
       color: white;
       text-decoration: none;
       font-size: 0.8em;
-      font-weight: bold;
+      /* font-weight: bold; */
     }
   
     .navbar a:hover{
@@ -162,6 +163,8 @@ if the navbar was parent, the container class is the only children*/
   background-position: center;
   cursor: pointer;
 }
+
+
 
 .menu
 {
@@ -279,9 +282,14 @@ if the navbar was parent, the container class is the only children*/
 
 .card-content{
     padding: 0.2em;
-    font-size: 0.5em;
-    font-weight: 400;
+    font-size: 0.65em;
+
+ 
     
+}
+
+.card-title{
+  font-weight: bold;
 }
 
 /*section C*/ 
@@ -289,7 +297,15 @@ if the navbar was parent, the container class is the only children*/
 #section-c{
     background: whitesmoke;
     color: #333; 
-    padding: 2em;
+    padding: 1.5em;
+}
+
+#section-c h2{
+  padding: 0%;
+}
+
+#section-c p{
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*Section c / Boxes*/
@@ -345,6 +361,11 @@ if the navbar was parent, the container class is the only children*/
 
 }
 
+.content-wide{
+  padding: 1em;
+  text-align: center;
+}
+
 
 /*footer*/
 #main-footer{
@@ -352,6 +373,7 @@ if the navbar was parent, the container class is the only children*/
     background: black; 
     color: whitesmoke;
     text-align: center; 
+
 }
 
 
@@ -412,7 +434,15 @@ if the navbar was parent, the container class is the only children*/
 }
 
 
-
+.content
+{
+ position: absolute;
+  right: 0;
+}
+.content.active
+{
+  right: 300px;
+}
 
 
 
@@ -421,43 +451,44 @@ if the navbar was parent, the container class is the only children*/
 /*styles put in here are only going to be in affect IF the width is greater than 700px*/
 
 @media(min-width: 700px){
-    .grid {
-        display: grid; 
-        grid-template-columns: 1fr repeat(2, minmax(auto, 25em )) 1fr; 
-    }
+  .grid {
+      display: grid; 
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em )) 1fr; 
+  }
 
-    #section-a .content-text {
-        columns: 2; 
-        column-gap: 2em;
-    }
+  #section-a .content-text {
+      columns: 2; 
+      column-gap: 2em;
+  }
 
-    #section-a .content-text p {
-       padding-top:0;
-    }
+  #section-a .content-text p {
+     padding-top:0;
+  }
 
-    .content-wrap, 
-    #section-b ul{
-        grid-column: 2/4; 
-    }
+  .content-wrap, 
+  #section-b ul{
+      grid-column: 2/4; 
+  }
 
-    .box, #main-footer div{
-        grid-column: span 2; 
-    }
+  .box, #main-footer div{
+      grid-column: span 2; 
+  }
 
-    #section-b ul{
-        display: flex;
-        justify-content: space-around; 
-    }
-
-    #section-j li, #section-b li{
-        width: 31%; 
-    }
-
-    #section-j ul{
-      grid-column: 1/5;
+  #section-b ul, #section-j ul{
       display: flex;
       justify-content: space-around; 
+  }
 
-    }
-  
+  #section-j li, #section-b li{
+      width: 31%; 
+  }
+
+  #section-j ul, .content-wide{
+    grid-column: 1/5; 
+}
+
+.content-wide{
+
+}
+
 }
