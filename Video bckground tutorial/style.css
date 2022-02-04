@@ -10,6 +10,8 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+
 header
 {
   position: absolute;
@@ -21,6 +23,9 @@ header
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
+  text-decoration: none;
+ 
 }
 
 
@@ -31,10 +36,17 @@ header .logo
   cursor: pointer;
 }
 
+.logo img {
+  height: 3em;
+
+
+}
+
 .nav ul{
 
   list-style-type: none;
   display: flex;
+  
 
 }
 
@@ -42,16 +54,18 @@ header .logo
   color: #fff;
   text-decoration: none;
   font-size: em;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
+
+
 
 .nav a:hover{
     color: goldenrod;
-
 }
 
+
 .nav li{
-  margin: 0 0 20px 20px;
+  margin: 10px 0 20px 20px;
   flex-direction: column-reverse;
 }
 
