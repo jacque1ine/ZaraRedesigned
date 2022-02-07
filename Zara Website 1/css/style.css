@@ -95,6 +95,7 @@ ul {
     padding: 10px 50px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    z-index: 1000 ;
     
    
   }
@@ -177,7 +178,7 @@ if the navbar was parent, the container class is the only children*/
   display: flex;
   justify-content: bottom;
   align-content: center;
-  z-index: 1000;
+
 }
 .menu ul
 {
@@ -310,9 +311,9 @@ if the navbar was parent, the container class is the only children*/
 
 /*Section c / Boxes*/
 #section-d .box{
-  padding-right: 2em;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   padding-left: 0.4em;
   
   color: white; 
@@ -326,17 +327,17 @@ if the navbar was parent, the container class is the only children*/
 }
 
 #section-d .box:first-child{
-  padding-left: 2em;
+  padding-left: 1em;
   padding-right: 0.4em;
   /* background-color: rgb(139, 57, 57); */
  
  }
 
-#section-d .box img{
-  /* width: 50EMx; height: 58EM; object-fit: fill; */
+/* #section-d .box img{
+   width: 50EMx; height: 58EM; object-fit: fill; 
 
 
-}
+} */
 
 .centered {
   position: absolute;
@@ -486,9 +487,9 @@ if the navbar was parent, the container class is the only children*/
   #section-j ul, .content-wide{
     grid-column: 1/5; 
 }
-
+/* 
 .content-wide{
 
-}
+} */
 
 }

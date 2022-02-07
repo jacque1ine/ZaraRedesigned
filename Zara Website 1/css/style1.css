@@ -176,6 +176,12 @@ header .logo
 {
   letter-spacing: 6px;
 }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
 .social
 {
   position: absolute;
@@ -201,6 +207,25 @@ header .logo
 {
   transform: scale(0.5) translateY(-15px);
 }
+
+.boxes .container{
+  display: flex; /*makes everything in the container go in a row*/
+  justify-content: space-between;
+  /* align-items: center; */
+
+}
+
+.box{
+  flex: 1;
+  background: #0a51cc;
+  color: #fff;
+  border-radius: 10px;
+  margin: 20px 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  padding: 15px 20px; /*15 top and bottom, 20 left and right*/
+}
+
+
 
 .menu
 {
@@ -247,4 +272,8 @@ header .logo
   {
     font-size: 2em;
   }
+
+  
 }
+
+
