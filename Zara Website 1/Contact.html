@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--onmouseover-->
+    
+    <title>Zara Website</title>
+
+</head>
+<body>
+    <section class="content">
+ <!--Navigation bar-->
+ <nav class="navbar"> 
+    <div class="container">
+
+        <!-- <ul class=search> -->
+       
+        <div class="logo"><a href="index.html">
+            <img src="https://www.freepnglogos.com/uploads/zara-brand/clothing-brand-zara-hd-zara-logo-2020-3.jpg"></a>
+
+        </div>
+        <ul class=nav>
+            <li><a href="index.html">Men</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+        
+        </ul>
+        <!-- <div class="toggle"></div> -->
+    </div>
+  
+</nav>       
+
+
+    <!--Header Showcase-->
+    <header id="banner" class="grid">
+        <div class="image"> 
+
+
+        </div>
+            <div class="content-wrap">
+                <h1>Contact Us</h1>
+                <p> Want to talk to us? We got several options for you! Our team is happy to help with anything. 
+                </p> 
+        </div> 
+    </header>
+
+    <!--Main Area -->
+
+    <main id="main"> 
+
+        <!--Section C-->
+        <section id="section-c" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">We handle all of your digital needs</h2>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ea, tempora optio mollitia vel fugit temporibus voluptas ipsum blanditiis error?</p>
+            </div>
+        </section>
+
+        <section id="section-z" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">We handle all of your digital needs</h2>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ea, tempora optio mollitia vel fugit temporibus voluptas ipsum blanditiis error?</p>
+            </div>
+        </section>
+
+        <!--section d -->
+        <section id="section-z" class="grid">
+            <div class="box">
+                <h2 class="content-title">
+                    Contact us
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet totam ullam esse omnis cum molestiae unde rem laboriosam voluptas ea.</p>
+                <p>contac@acmewebsolutions.test</p>
+            </div>
+            <div class="box">
+                <h2 class="content-title">About Our Company</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto impedit ipsam rem eos veniam cumque molestiae iste, officia doloribus natus culpa beatae vel recusandae soluta repudiandae aperiam totam dignissimos pariatur!
+                </p>
+            </div>
+
+            <div class="box">
+                <h2 class="content-title">About Our Company</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto impedit ipsam rem eos veniam cumque molestiae iste, officia doloribus natus culpa beatae vel recusandae soluta repudiandae aperiam totam dignissimos pariatur!
+                </p>
+            </div>
+      
+    
+</section>
+
+</main>
+
+  <!--Side Menu-->
+  <div class="menu" id="sideMenu">
+    <ul>
+        <li>
+            <div class="search-container">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button> 
+              </div>
+        </li>
+
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+</div>
+    
+
+    <!--footer-->
+    <div id="main-footer" class="grid">
+    
+        <div class=>Join Zara's mailing list<br><input type="text" placeholder="Email Address" name="search"></div>
+      
+        <div class="social">
+            <p>&copy 2022 Zara Canada </p>
+            <ul>
+            <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/zara/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+          </ul>
+        </div>
+    </div>
+  
+
+    <script>
+            let menuIsOpen = false;
+            const menuToggle = document.querySelector('.toggle');
+            const content = document.querySelector('.content');
+            let menu = document.getElementById("sideMenu");
+            let contentShift = document.querySelector('.content');
+            window.onload = function() {
+                menu.style.display = "none";
+
+    };
+
+    menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    content.classList.toggle('active');
+
+    if(menuIsOpen == false){
+        menu.style.display = "block";
+        menuIsOpen = true;
+    } else {
+        menu.style.display = "none"; 
+        menuIsOpen = false;
+    }
+
+    })
+    // menuToggle.addEventListener('mouseout', () => {
+    //     menu.style.display = "none";
+    //     menuIsOpen = false;
+
+    // })
+  
+        
+    </script>
+</body>
+</html> 

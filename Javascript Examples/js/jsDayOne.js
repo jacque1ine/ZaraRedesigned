@@ -10,7 +10,7 @@
 //object 
 let name = "William"; 
 //string (with a bunch of functions that come with similar to Java)
-let isFinsihed = false; 
+let isFinished = false; 
 let avg = 87.9; 
 
 let test = 3/2; //yields 1.5
@@ -103,5 +103,62 @@ for (let ii=0; ii<names.length; ii++){
 for (let name of names){
     console.log(name);
 }
+
+const colours =[]; 
+colours.push('green'); 
+colours.push('red');
+colours.push('yellow');
+
+
+const marks = [80, 87, 92, 88];
+//map
+
+let student ={}; //makes an object (declares and defines)
+student.name= 'Jack Spratt';
+student.id ='1129393'; 
+student.marks = marks; 
+
+
+//for of is for array (to iterate through the values of the array)
+
+//for it is for map.objects and it allows you to iterate all through the properites 
+student.average = function(){
+
+
+    let totalMarks =0; 
+    for (let mark of this.marks){ 
+        let totalMarks =0;
+        totalMark += mark; 
+    }
+
+    return totalMarks / this.marks.length; 
+
+}
+
+console.log(student.average());
+
+//iterate through a map
+
+//gives us all the properties 
+for (let prop in student){
+    console.log(student[prop]); 
+
+}
+
+//json and json methods 
+
+//json = javascript object notation 
+//way that we can take an object or array and turn into string and the other way around 
+
+const jsonString = JSON.stringify(names); 
+console.log(names); 
+console.log(jsonString);
+
+const jsonString2 = '["hello, "steve", "paper"]'; 
+console.log(JSON.parse(jsonString2));
+
+console.log(JSON.stringify(student));3
+
+
 
 
