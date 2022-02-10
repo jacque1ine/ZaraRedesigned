@@ -510,6 +510,8 @@ p.social{
    
     background-color: black;
     color: #eaeaea;
+    border-left:none;
+    border-top: none;
     border-right: #eaeaea;
     text-align: left;
     width: 18em;
