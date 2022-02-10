@@ -470,8 +470,6 @@ p.social{
 #main-footer a{
     color: #2690d4; 
     text-decoration: none; 
-    
-
 }
 
 #main-footer input[type=text] {
@@ -485,11 +483,16 @@ p.social{
     border-right: #eaeaea;
     text-align: left;
     width: 18em;
-  
   }
+
+p.copyright{
+  padding: 0px;
+}
+
 
   .social ul
 {
+  padding: 0.5em;
   /* position: absolute; */
   z-index: 10;
   /* bottom: 20px; */
