@@ -95,6 +95,10 @@ p{
  
 }
 
+.active{
+  color:#7D6608;
+}
+
 .topnav a {
  
   float: right;
@@ -146,33 +150,6 @@ p{
    opacity: 0.4;
  }
 
-
-
-
-
-
-/*Navigation Bar*/ 
-
-ul {
-    list-style-type: none;
-  }
-
-.navbar {
-    background: black;
-    /* opacity: 0.4; */
-    color: black;
-    height: 70px;
-    padding: 10px 50px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    z-index: 1000 ;
-    display: block;
-    
-   
-  }
-
-  
-  
   .logo img{
       height: 4em;
       padding: 0.4em;
@@ -189,80 +166,14 @@ ul {
     height: 5em;
   }
 
-
-  .nav .icon {
-    display: none;
-  }
-
-  .navbar a {
-      color: white;
-      text-decoration: none;
-      font-size: 0.85em;
-      /* font-weight: bold; */
-    }
-  
-    .navbar a:hover{
-        color: goldenrod;
-  
-    }
-    
-    /*this makes the CONTAINER the parent so that the boxes are the children
-if the navbar was parent, the container class is the only children*/
-.navbar .container{
-    display:flex;
-    justify-content: space-between; /*space between the "flexbox logo and then nav bar links*/
-    align-items: center;
-    height: 100%;
-}
-
-/*add flexblox IN the navbar ul so that we can make the items go horizontal INSTEAD of vertical*/
-
-.navbar ul{
-    display: flex;
-
-}
-
-/*children of the navbar ul*/
-.navbar ul li{
-    margin-left: 10px; /*makes it so that there is 20px margin on left of each item*/
-    margin-right: 10px
-}
-
 .responsive {
   width: 100%;
   height: auto;
 }
-/*Sidebar*/
 
-/* .toggle
-{ 
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-   background-position: center;
-  cursor: pointer; 
-}
+/*SEARCH BAR*/
 
-.toggle.active
-{
-  background: url(https://i.ibb.co/rt3HybH/close.png);
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: center;
-  cursor: pointer;
-} */
-/* .openBtn {
- border: none;
-  cursor: pointer;
-}
-
-.openBtn:hover {
-  opacity: 0.4;
-} */
-
+/*Background when search bar is open*/
 .overlay {
   height: 100%;
   width: 100%;
@@ -275,6 +186,7 @@ if the navbar was parent, the container class is the only children*/
   background-color: rgba(0,0,0, 0.9);
 }
 
+/*Content when search bar is open*/
 .overlay-content {
   position: relative;
   top: 46%;
@@ -284,6 +196,7 @@ if the navbar was parent, the container class is the only children*/
   margin: auto;
 }
 
+/*'x' to close search*/
 .overlay .closebtn {
   position: absolute;
   top: 20px;
@@ -293,12 +206,15 @@ if the navbar was parent, the container class is the only children*/
   color: white;
 }
 
+/*Makes 'x' to close search grey when mouse is hover it*/
 .overlay .closebtn:hover {
   color: #ccc;
 }
 
+/*search field style*/
 .overlay input[type=text] {
-  padding: 15px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 14px;
   font-size: 17px;
   border: none;
   float: left;
@@ -306,10 +222,12 @@ if the navbar was parent, the container class is the only children*/
   background: white;
 }
 
+
 .overlay input[type=text]:hover {
   background: #f1f1f1;
 }
 
+/*Submit button style*/
 .overlay button {
   float: left;
   width: 20%;
@@ -324,39 +242,6 @@ if the navbar was parent, the container class is the only children*/
   background: #bbb;
 }
 
-
-
-/* .menu
-{
-  position:fixed;
-  background-color: white;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  justify-content: bottom;
-  align-content: center;
-
-}
-.menu ul
-{
-  position: relative;
-}
-.menu ul li
-{
-  list-style: none;
-}
-.menu ul li a
-{
-  text-decoration: none;
-  font-size: 24px;
-  color: #111;
-}
-.menu ul li a:hover
-{
-  color: goldenrod; 
-} */
 
     
 /*Header Showcase*/
@@ -742,6 +627,8 @@ p.copyright{
   #section-b {
       grid-column: 2/4; 
   }
+
+  
 
   #form-container form{
     grid-column: 2/4;
