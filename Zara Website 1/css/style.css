@@ -7,7 +7,8 @@
   box-sizing: border-box;
   margin: 
   0;
-padding: 0;
+  padding: 1;
+  padding: 0;
 }
 
 
@@ -369,13 +370,43 @@ p{
 /*Section d / Boxes*/
 #section-d .box{
   color: white; 
-  background-color: whitesmoke;
+  background-color: white;
 
   position: relative;
   text-align: center;
   color: white;
   z-index: -2;
 }
+
+
+#contact-split .box{
+  font-family: 'Montserrat', sans-serif;
+  color: white; 
+  background-color: #333;
+
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: -2;
+  border: none;
+
+}
+#contact-split p{
+  font-size: 0.8em;
+  color: whitesmoke;
+}
+
+#contact-split img{
+  height: 4em;
+  width: auto;
+  background-color: #333;
+  /* border: #333; */
+  margin: 0px;
+}
+
+/* #contact-split .box:first-child{
+  background-color: #666;
+} */
 
 
 #section-z{
@@ -402,7 +433,6 @@ p{
 }
 
 .box a:hover{
-  
   color: goldenrod;
 
 }
@@ -411,7 +441,6 @@ p{
   padding: 1em;
   text-align: center;
 }
-
 
 /*footer*/
 #main-footer{
@@ -425,8 +454,6 @@ p{
 p.social{
   padding: 0px;
 }
-
-
 
 /* form formating */
 #form-container {
@@ -608,7 +635,8 @@ p.social{
    
    }
   
-   #section-d .box{
+   #section-d .box, 
+   #contact-split .box{
     padding-right: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -635,13 +663,13 @@ p.social{
   }
 
      
-      .box, #main-footer div{
+  .box, #main-footer div{
         grid-column: span 2; 
-    }
+  }
   
-    p.copyright{
+  p.copyright{
       padding: 0px;
-    }
+  }
     
 
 
