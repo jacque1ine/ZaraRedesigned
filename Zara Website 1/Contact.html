@@ -49,16 +49,10 @@
         </div>
     </div>
  
- 
-
-
 
     <!--Header Showcase-->
     <header id="banner" class="grid">
-        <div class="image"> 
-
-
-        </div>
+        <div class="image"></div>
             <div class="content-wrap">
                 <h1>Contact Us</h1>
                 <p> Want to talk to us? We got several options for you! Our team is happy to help with anything. 
@@ -132,27 +126,8 @@
                 </ul>
          
         </section>
-
-        
 </main>
 
-  <!--Side Menu-->
-  <div class="menu" id="sideMenu">
-    <ul>
-        <li>
-            <div class="search-container">
-                  <input type="text" placeholder="Search.." name="search">
-                  <button type="submit"><i class="fa fa-search"></i></button> 
-              </div>
-        </li>
-
-        <li><a href="#">Home</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Destination</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-</div>
     
 
     <!--footer-->
@@ -173,37 +148,28 @@
     </div>
   
 
-    <script>
-            let menuIsOpen = false;
-            const menuToggle = document.querySelector('.toggle');
-            const content = document.querySelector('.content');
-            let menu = document.getElementById("sideMenu");
-            let contentShift = document.querySelector('.content');
-            window.onload = function() {
-                menu.style.display = "none";
+ 
+          <script>
+        /*SEARCH OVERLAY*/
+		function openSearch() {
+			document.getElementById("myOverlay").style.display = "block";
+		}
 
-    };
+		function closeSearch() {
+			document.getElementById("myOverlay").style.display = "none";
+		}
 
-    menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    content.classList.toggle('active');
-
-    if(menuIsOpen == false){
-        menu.style.display = "block";
-        menuIsOpen = true;
-    } else {
-        menu.style.display = "none"; 
-        menuIsOpen = false;
-    }
-
-    })
-    // menuToggle.addEventListener('mouseout', () => {
-    //     menu.style.display = "none";
-    //     menuIsOpen = false;
-
-    // })
-  
-        
+        /*For Responsive NavBar*/
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	
+      
     </script>
 </body>
 </html> 
