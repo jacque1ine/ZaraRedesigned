@@ -138,6 +138,12 @@ p{
     opacity: 0.4;
 }
 
+/*Nav Bar styling when device width is smaller than 700px*/
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+  
 /*SEARCH BAR*/
 
 /*Background when search bar is open*/
@@ -247,17 +253,18 @@ Text in showcase styling*/
 /*BANNER*/
 /*Banner - contact page*/
 
-
+/*Banner style*/
 #banner{
   min-height: 300px;
   text-align: center;
 }
 
+/*banner text group style*/
 #banner .content-wrap{
   padding: 0 1.5em;
 }
 
-
+/*banner image style*/
 #banner .image{
   position: absolute; 
   background: url('https://blog.procurify.com/app/uploads/2016/10/zara-blog-04-1024x576.jpg');
@@ -268,7 +275,6 @@ Text in showcase styling*/
   height: 300px;
   z-index: -100; 
   opacity: 0.25;
-  /*the higher the Z index is, the closer to you it is. this ensure that image is BEHIND the text*/
   }
   
 
