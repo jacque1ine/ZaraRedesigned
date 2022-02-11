@@ -30,6 +30,8 @@ body {
   background: black;
 }
 
+section#section-j {}
+
 
 img {
   display: block;
@@ -83,14 +85,14 @@ p{
 
 /*topnav*/
 .topnav {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 3em;
+  padding-right: 3em;
   
   background: black;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   overflow: hidden;
-  height: 70px;;
+  height: 4.1em;;
 
  
 }
@@ -105,10 +107,10 @@ p{
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
-  padding-top: 20px;
+  padding: 1em 1em;
+  padding-top: 1.5em;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1em;
 }
 
 .topnav a:nth-child(1) {
@@ -351,9 +353,8 @@ opacity: 0.25;
 /*section B*/
 #section-b, #section-j{
     z-index: 1000;
-    padding: 2em 1em 1em; 
+    padding: 2em 1em 1em;
     background: white;
-    
 }
 
 #section-b ul, #section-j li, ul{
@@ -482,7 +483,7 @@ p.social{
 
 
 
-/* Add a background color and some padding around the form */
+/* form formating */
 #form-container {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -557,27 +558,26 @@ p.social{
     width: 18em;
   }
 
-p.copyright{
-  padding: 0px;
-}
+  p.copyright{
+    padding-top: 3em;
+  }
 
 
-  .social ul
-{
+/*social media icons*/
+
+  .social ul{
   padding: 0.5em;
-  /* position: absolute; */
   z-index: 10;
-  /* bottom: 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.social li
-{
+
+.social li{
   list-style: none;
 }
-.social li a
-{
+
+.social li a{
   display: inline-block;
   margin-left: 30px;
   margin-right: 20px;
@@ -585,8 +585,8 @@ p.copyright{
   transform: scale(0.5);
   transition: 0.5s;
 }
-.social li a:hover
-{
+
+.social li a:hover{
   transform: scale(0.5) translateY(-15px);
 }
 
@@ -609,11 +609,14 @@ p.copyright{
 
 @media(min-width: 700px){
   .grid {
-      display: grid; 
-      grid-template-columns: 1fr repeat(2, minmax(auto, 25em )) 1fr; 
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em )) 1fr;
   }
 
-  
+  #contact-boxes ul{
+    grid-column:  1/5; 
+ }
+
   #section-a .content-text {
       columns: 2; 
       column-gap: 2em;
@@ -622,26 +625,22 @@ p.copyright{
   #section-a .content-text p {
      padding-top:0;
   }
+  
 
   .content-wrap, 
-  #section-b {
+  #section-b ul{
       grid-column: 2/4; 
   }
 
-  
-
-  #form-container form{
-    grid-column: 2/4;
-    
-  }
-
-  #contact-boxes ul{
-     grid-column:  1/5; 
-  }
-
+ 
   .box, #main-footer div{
       grid-column: span 2; 
   }
+
+  p.copyright{
+    padding: 0px;
+  }
+  
 
   #section-b ul, #section-j ul, #contact-boxes ul{
       display: flex;
@@ -656,12 +655,15 @@ p.copyright{
     grid-column: 1/5; 
 }
 
+#form-container form{
+  grid-column: 2/4;
+  
+}
 
 
 #section-d .box:first-child{
   padding-left: 1em;
   padding-right: 0.4em;
-  /* background-color: rgb(139, 57, 57); */
  
  }
 
