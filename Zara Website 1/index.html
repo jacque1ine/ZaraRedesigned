@@ -28,16 +28,16 @@
             </div>
           </div>
     <!--Navigation bar-->
-    <nav class="navbar"> 
-        <div class="container">
+    <!-- <nav class="navbar"> 
+        <div class="container"> -->
 
             <!-- <ul class=search> -->
            
-            <div class="logo">
-                <img src="https://www.freepnglogos.com/uploads/zara-brand/clothing-brand-zara-hd-zara-logo-2020-3.jpg">
+            <!-- <div class="logo">
+                <img src="https://www.freepnglogos.com/uploads/zara-brand/clothing-brand-zara-hd-zara-logo-2020-3.jpg"> -->
 
-            </div>
-            <div class="nav">
+            <!-- </div> -->
+            <!-- <div class="nav">
 
    
             <ul>
@@ -50,12 +50,23 @@
             </ul>
 
             
-        </div>
+        </div> -->
             <!-- <div class="toggle"></div> -->
 
            
-      
-    </nav>
+<!--       
+    </nav> -->
+
+    <div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
 
  
       
@@ -150,13 +161,22 @@ function closeSearch() {
 }
 
 function myFunction() {
-  var x = document.getElementById("myNavbar");
-  if (x.className === "nav") {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
     x.className += " responsive";
   } else {
-    x.className = "nav";
+    x.className = "topnav";
   }
 }
+
+// function myFunction() {
+//   var x = document.getElementById("myNavbar");
+//   if (x.className === "nav") {
+//     x.className += " responsive";
+//   } else {
+//     x.className = "nav";
+//   }
+// }
 
     //         let menuIsOpen = false;
     //         const menuToggle = document.querySelector('.toggle');
