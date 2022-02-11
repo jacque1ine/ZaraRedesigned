@@ -212,17 +212,20 @@ p{
 
 /*HEADER*/
 
+/*home/index page showcase */
 #showcase{
     min-height: 450px;
     text-align: center;
 }
 
+/*.content-wrap has all the text in showcase. 
+Text in showcase styling*/
 #showcase .content-wrap, 
 #section-a .content-wrap  {
     padding: 0 1.5em;
 }
 
-
+/*background image in showcase styling*/
 #showcase .bg-image{
     position: absolute; 
     background: rgb(0, 0, 0) url('https://www.designscene.net/wp-content/uploads/2020/04/ZARA-SS20-Steven-Meisel-00.jpg');
@@ -233,16 +236,18 @@ p{
     height: 450px;
     z-index: -100; 
     opacity: 0.4;
-    /*the higher the Z index is, the closer to you it is. this ensure that image is BEHIND the text*/
 }
 
-
+/*adds padding to top of showcase title*/
 #showcase h1{
     padding-top:100px;
     padding-bottom: 0px;  
 }
 
-/*Banner*/
+/*BANNER*/
+/*Banner - contact page*/
+
+
 #banner{
   min-height: 300px;
   text-align: center;
