@@ -1,62 +1,51 @@
+
+/*Poppins font*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
+/*Monserrat font*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root{
 
-}
+/*Style to ALL */
 *
 {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
-header
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  text-decoration: none;
- 
+/*Header Styling*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-decoration: none;
 }
 
-
-header .logo
-{
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
+/*Format to logo*/
 .logo img {
   height: 3em;
-
-
 }
 
+/**/
 .nav ul{
-
-  list-style-type: none;
-  display: flex;
-  
-
+    list-style-type: none;
+    display: flex;
 }
 
 .nav a {
   color: #fff;
   text-decoration: none;
   font-size: em;
-  /* font-weight: bold; */
 }
 
 
@@ -207,8 +196,6 @@ header .logo
 {
   transform: scale(0.5) translateY(-15px);
 }
-
-
 
 .menu
 {
