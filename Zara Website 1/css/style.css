@@ -311,11 +311,17 @@ p{
     padding: 1em;
 }
 
-.card-content{
-    padding: 0.2em;
-    font-size: 0.9em;   
+.card{
+  filter:/* Reddish shadow with 1rem blur */
+  drop-shadow(.3rem .3rem 0.5rem rgb(206, 206, 206))
+  
 }
 
+.card-content{
+    padding: 0.2em;
+    font-size: 0.9em; 
+    
+}
 .card-title{
   font-weight: none;
 }
@@ -339,7 +345,7 @@ p{
   color: #333;
 }
 
-.card-content{
+#contact-boxes .card-content{
   padding: 1.5em; 
 }
 

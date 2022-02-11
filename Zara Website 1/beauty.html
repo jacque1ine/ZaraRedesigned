@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    
+    <title>Zara Website</title>
+
+</head>
+
+<body>
+    <section class=content>
+
+        <!--Navigation Bar-->
+	<nav class="topnav" id="myTopnav">
+		<a href="index.html" >
+				<div class="logo">
+					<img src="https://www.freepnglogos.com/uploads/zara-brand/clothing-brand-zara-hd-zara-logo-2020-3.jpg">
+				</div>
+		</a>
+		<a href="index.html">Home</a>
+		<a>
+			<button class="openBtn" onclick="openSearch()"><img src ="data:image/png;base64,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"></button>
+		</a>
+		
+		<a href="Contact.html">Contact</a>
+        <a href="landingpage.html">Beauty</a>
+		<a href="women.html">Womens</a>
+		<a><button class="openBtn" onclick="openSearch()">Search</button></li></a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>	
+	</nav>
+
+	<!--Search Overlay-->
+	<section class="content">
+		<div id="myOverlay" class="overlay">
+			<span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+
+			<div class="overlay-content">
+				<form>
+					<input type="text" placeholder="Search.." name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+			  	</form>
+			</div>
+		</div>
+     
+     
+    <!--Main Area -->
+    <main id="main-content">
+    
+        <!--Section C-->
+        <section id="section-c" class="grid">
+            <div class="content-wide">
+                <h2 class="content-title">THE BEAUTY COLLECTION</h2>
+                <p>From rich, on-trend berry tones to classic bright red hues, as well as barely-there dusky pinks and nudes; the statement pout works for every occasion; just select a high shine or subtle matte finish.
+
+
+                </p>
+            </div>
+        </section>
+
+        <!--Section B-->
+        <section id="section-j" class="grid">
+            <!--Row 1-->
+            <ul> 
+                <li>
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2022/V/2/1/p/4130/201/805/2/w/240/4130201805_6_1_1.jpg?ts=1638466221647"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">Eye Color Stick<br> $13.90</h1>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2022/V/2/1/p/4130/202/146/2/w/240/4130202146_6_1_1.jpg?ts=1638466248392"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">Eye Color Stick<br> $13.90</h1>
+            
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2022/V/2/1/p/4130/203/745/2/w/240/4130203745_6_1_1.jpg?ts=1638466247940"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">Eye Color Stick<br> $13.90</h1>
+            
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <img src =https://static.zara.net/photos///2022/V/2/1/p/4130/207/748/2/w/240/4130207748_6_1_1.jpg?ts=1638466242643"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">Eye Color Stick<br> $13.90</h1>
+            
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+            <!--Row 2-->
+            <ul> 
+                <li>
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2021/I/2/1/p/4280/103/607/2/w/240/4280103607_6_1_1.jpg?ts=1636989121468"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">MANIFESTO COLOR STICK <br> 22.90</h1>
+            
+            
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2021/I/2/1/p/4280/100/142/2/w/240/4280100142_6_1_1.jpg?ts=1637258340298"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">MANIFESTO COLOR STICK <br> 22.90</h1>
+            
+            
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2021/I/2/1/p/4280/100/420/2/w/240/4280100420_6_1_1.jpg?ts=1637572836305"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">MANIFESTO COLOR STICK <br> 22.90</h1>
+            
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2021/I/2/1/p/4280/106/751/2/w/240/4280106751_6_1_1.jpg?ts=1637258343752"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">MANIFESTO COLOR STICK <br> 22.90</h1>
+            
+            
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!--Row 3-->
+
+            <ul> 
+                <li>
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2022/V/2/1/p/4130/701/014/2/w/240/4130701014_6_1_1.jpg?ts=1642516298486"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">EYE COLOR IN 2 DUO EYESHADOWt <br> $19.90</h1>
+            
+            
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2022/V/2/1/p/4130/706/019/2/w/240/4130706019_6_1_1.jpg?ts=1642516330914"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">EYE COLOR IN 2 DUO EYESHADOWt <br> $19.90</h1>
+            
+            
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2022/V/2/1/p/4130/707/020/2/w/240/4130707020_6_1_1.jpg?ts=1642516331616"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">EYE COLOR IN 2 DUO EYESHADOWt <br> $19.90</h1>
+            
+            
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <img src ="https://static.zara.net/photos///2022/V/2/1/p/4130/702/015/2/w/240/4130702015_6_1_1.jpg?ts=1642516303110"alt="">
+                        <div class="card-content">
+                            <h1 class="card-title">EYE COLOR IN 2 DUO EYESHADOWt <br> $19.90</h1>
+            
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+
+        </section> 
+    </main>
+
+   
+    <!--footer-->
+    <div id="main-footer" class="grid">
+        <div class="sub">
+            Join Zara's mailing list<br><input type="text" placeholder="Email Address" name="search">
+        </div>
+      
+        <div class="social">
+            <p class="copyright">&copy 2022 Zara Canada </p>
+            <ul>
+                <li>
+                    <a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a>
+                </li>
+          </ul>
+        </div>
+    </div>
+
+    <!--Javscript-->
+    <script>
+        /*SEARCH OVERLAY*/
+		function openSearch() {
+			document.getElementById("myOverlay").style.display = "block";
+		}
+
+		function closeSearch() {
+			document.getElementById("myOverlay").style.display = "none";
+		}
+
+        /*For Responsive NavBar*/
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+</body>
+</html> 
