@@ -1,34 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/*Core Styles*/ 
-
-
+/*Applies to ALL*/ 
 * {
-  box-sizing: border-box;
-  margin: 
-  0;
-  padding: 1;
-  padding: 0;
-}
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
 
+/*GLOBAL*/
 
+/*content of website*/
 body {
-color: #eaeaea; 
-font-family: 'Lora', serif;
-font-size: 16px;
-  line-height: 1.5;
- background: black;
+    color: #eaeaea; 
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: black;
 }
 
-
+/*default image styling for all in webpage*/
 img {
   display: block;
   width: 100%; 
   height: auto; 
 }
 
-
-
+/*font styling*/
 h1, h2, h3{
   margin: 0;
   padding: 1em 0; 
@@ -37,12 +34,13 @@ h1, h2, h3{
   text-transform: uppercase;
 }
 
+/*paragraph styling*/
 p{
   margin:0; 
   padding: 1em 0; 
 }
 
-
+/* Styling for button - used on "shop now" button on index.html*/
 .btn{
     display: inline-block;
     background: #333;
@@ -53,96 +51,91 @@ p{
     margin: .5em 0; 
 }
 
+/*formating for if user hovers pver button - button darkens*/
 .btn:hover{
     background: #eaeaea; 
     color: #333; 
 }
 
-/*topnav*/
+/*NAVIGATION BAR*/
+
+/*nav bar stlying*/
 .topnav {
-  padding-left: 3em;
-  padding-right: 3em;
-  background: black;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  overflow: hidden;
-  height: 4.1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    background: black;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    height: 4.1em;
 }
 
-.active{
-  color:#7D6608;
-}
-
+/*links in navigation bar*/
 .topnav a {
- 
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 1em 1em;
-  padding-top: 1.5em;
-  text-decoration: none;
-  font-size: 1em;
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1em 1em;
+    padding-top: 1.5em;
+    text-decoration: none;
+    font-size: 1em;
 }
 
+/*Logo as home button styling*/
 .topnav a:nth-child(1) {
-  float: left;
-  padding:0px;
-  margin: 0;
+    float: left;
+    padding:0px;
+    margin: 0;
 }
 
+/*Hide Home text tab and Search text tab - show icon form when device is
+ greater than 700px*/
 .topnav a:nth-child(2), 
 .topnav a:nth-child(7)
 {
-  display: none;
+    display: none;
 }
 
+/*change text color when hovering*/
 .topnav a:hover {
-  color: goldenrod;
+    color: goldenrod;
 }
 
-/* .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-} */
-
+/*hide hamburger menu when device is greater than 700px*/
 .topnav .icon {
-  display: none;
+     display: none;
 }
 
-.openBtn {
-  border: none;
-   cursor: pointer;
-   font-family: 'Montserrat', sans-serif;
-   text-transform: uppercase;
-   background-color: black;
-   color: white;
-   font-size: 17px;
- }
- 
- .openBtn:hover {
-   opacity: 0.4;
- }
-
-  .logo img{
-      height: 4em;
-      padding: 0.4em;
-
-  }
-  
-  .openBtn img{
-    height: 0.85em;
-    border: none;
-    
-  }
-
-  .icon img{
+/*Hamburger menu style*/
+.icon img{
     height: 5em;
   }
 
-.responsive {
-  width: 100%;
-  height: auto;
+
+ /*Zara logo styling*/
+ .logo img{
+    height: 4em;
+    padding: 0.4em;
+
+}
+
+/*Opens search overlay*/
+.openBtn {
+    border: none;
+    cursor: pointer;
+    background-color: black;
+ }
+ 
+ /*Search icon on nav bar styling*/
+ .openBtn img{
+    height: 0.85em;
+    border: none;
+}
+
+ /*Darkens search icon on hover*/
+.openBtn:hover {
+    opacity: 0.4;
 }
 
 /*SEARCH BAR*/
@@ -196,7 +189,7 @@ p{
   background: white;
 }
 
-
+/*makes search field lighter on hover*/
 .overlay input[type=text]:hover {
   background: #f1f1f1;
 }
@@ -212,13 +205,12 @@ p{
   cursor: pointer;
 }
 
+/*makes submit button darker on hover*/
 .overlay button:hover {
   background: #bbb;
 }
 
-
-    
-/*Header Showcase*/
+/*HEADER*/
 
 #showcase{
     min-height: 450px;
@@ -377,37 +369,6 @@ p{
   color: white;
   z-index: -2;
 }
-
-
-#contact-split .box{
-  font-family: 'Montserrat', sans-serif;
-  color: white; 
-  background-color: #333;
-
-  position: relative;
-  text-align: center;
-  color: white;
-  z-index: -2;
-  border: none;
-
-}
-#contact-split p{
-  font-size: 0.8em;
-  color: whitesmoke;
-}
-
-#contact-split img{
-  height: 4em;
-  width: auto;
-  background-color: #333;
-  /* border: #333; */
-  margin: 0px;
-}
-
-/* #contact-split .box:first-child{
-  background-color: #666;
-} */
-
 
 #section-z{
   display: flex; 
