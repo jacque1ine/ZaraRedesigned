@@ -9,38 +9,34 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!--onmouseover-->
     
-    <title>Zara Website</title>
+    <title>Zara: Contact Us</title>
 
 </head>
 <body>
-    <section class="content">
-  <!--Navigation Bar-->
-  <nav class="topnav" id="myTopnav">
-    <a href="index.html" >
-            <div class="logo">
-                <img src="https://www.freepnglogos.com/uploads/zara-brand/clothing-brand-zara-hd-zara-logo-2020-3.jpg">
-            </div>
-    </a>
-    <a href="index.html">Home</a>
-    <a>
-        <button class="openBtn" onclick="openSearch()"><img src ="images/search.png"></button>
-    </a>
-    
-    <a href="Contact.html">Contact</a>
-    <a href="landingpage.html">Beauty</a>
-    <a href="women.html">Womens</a>
-    <a><button class="openBtn" onclick="openSearch()">Search</button></li></a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>	
-</nav>
 
-<!--Search Overlay-->
-<section class="content">
+    <!--Navigation Bar-->
+    <nav class="topnav" id="myTopnav">
+		<a href="index.html" >
+				<div class="logo">
+					<img src="https://www.freepnglogos.com/uploads/zara-brand/clothing-brand-zara-hd-zara-logo-2020-3.jpg">
+				</div>
+		</a>
+		<a href="index.html">Home</a>
+		<a>
+			<button class="openBtn" onclick="openSearch()"><img src ="images/search.png"></button>
+		</a>
+		<a href="Contact.html">Contact</a>
+        <a href="landingpage.html">Beauty</a>
+		<a href="women.html">Womens</a>
+		<a><button class="openBtn" onclick="openSearch()">Search</button></li></a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>	
+	</nav>
+
+    <!--Search Overlay-->
     <div id="myOverlay" class="overlay">
-        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
-
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×
+        </span>
         <div class="overlay-content">
             <form>
                 <input type="text" placeholder="Search.." name="search">
@@ -49,75 +45,67 @@
         </div>
     </div>
  
-
-    <!--Header Showcase-->
-    <header id="banner" class="grid">
-        <div class="image"></div>
-            <div class="content-wrap">
-                <h1>Contact Us</h1>
-                <p> Want to talk to us? We got several options for you! Our team is happy to help with anything. 
-                </p> 
-        </div> 
-    </header>
-
     <!--Main Area -->
-
     <main id="main"> 
 
+        <!--Header Showcase-->
+        <header id="banner" class="grid">
+            <div class="image"></div>
+                <div class="content-wrap">
+                    <h1>Contact Us</h1>
+                    <p> Want to talk to us? We got several options for you! Our team is happy to help with anything. 
+                    </p> 
+            </div> 
+        </header>
+
+        <!--Form-->
         <div id="form-container" class="grid">
            <form>
             <h1>Message</h1>
               <label for="fname">Name</label>
               <input type="text" id="name" name="name" placeholder="First Name">
-<!--           
-              <label for="lname">Last Name</label> -->
               <input type="text" id="lname" name="lastname" placeholder="Last Name">
-          
+
               <label for="topic">Choose a topic</label>
               <select id="topic" name="topic">
-                <option value="Apparel">Apparel</option>
-                <option value="Beauty">Beauty</option>
-                <option value="Stores">Stores</option>
-                <option value="Gift-Cards">Gift Cards</option>
-                <option value="Other">Other</option>
+                    <option value="Apparel">Apparel</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Stores">Stores</option>
+                    <option value="Gift-Cards">Gift Cards</option>
+                    <option value="Other">Other</option>
               </select>
           
               <label for="subject">Subject</label>
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          
+
               <input type="submit" value="Submit">
           
             </form>
-          </div>
-
-        </section>
-
+        </div>
     </main>
 
-    
-
-    <!--footer-->
+    <!--Footer-->
     <div id="main-footer" class="grid">
     
         <div class=>Join Zara's mailing list<br><input type="text" placeholder="Email Address" name="search"></div>
-
-        
       
         <div class="social">
             <p class="copyright">&copy 2022 Zara Canada </p>
             <ul>
             <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
             <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
-            <li><a href="https://www.instagram.com/zara/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+            <li><a href="https://www.instagram.com/zara/">
+                <img src="https://i.ibb.co/ySwtH4B/instagram.png">
+            </a></li>
           </ul>
         </div>
     </div>
   
 
- 
-          <script>
-        /*SEARCH OVERLAY*/
-		function openSearch() {
+    <!--Javascript-->
+    <script>
+        /*Search Overlay*/
+	    function openSearch() {
 			document.getElementById("myOverlay").style.display = "block";
 		}
 
@@ -134,8 +122,6 @@
 				x.className = "topnav";
 			}
 		}
-	
-      
     </script>
 </body>
 </html> 
