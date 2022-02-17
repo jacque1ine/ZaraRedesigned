@@ -49,7 +49,9 @@
             const delButton = document.createElement('button');
             delButton.textContent = 'DELETE';
 
-            delButton.addEventListener('click', () =>delButton.parentElement.remove());
+            delButton.addEventListener('click', function () {
+               delButton.parentElement.remove();
+            });
             li.appendChild(delButton);
 
 
@@ -68,17 +70,7 @@
       */
 
       input.focus();
-
-      const arr = [1,2,3,6]; 
-      arr.forEach((el, i, alias)=>{
-          console.log('Element: ' + e);
-          console.log('Index: ' + i); 
-          console.log('Whole Array ' + alias); 
-      });
-
-      </script>
-
-
+   </script>
 </body>
 
 </html>

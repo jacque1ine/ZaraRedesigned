@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Chat</title>
+   <script>
+      function submit() {
+         let msg = document.querySelector('#chat').value;
+
+         let container = document.querySelector("#chatBox");
+         let section = document.createElement('section');
+         section.classList.add('section');
+         let p = document.createElement('p');
+         p.innerHTML = msg.length > 8 ? msg.substring(0, 8) + '...' : msg;
+         p.title = msg;
+         section.appendChild(p);
+         container.appendChild(section);
+
+         document.querySelector('#chat').value = '';
+
+      }
+   </script>
+
+   <style>
+      .section {
+         border: 1px solid blue;
+      }
+   </style>
+</head>
+
+<body>
+   <div>
+
+      <label for="chat">Chat</label>
+      <input type="text" name="chat" id="chat">
+      <button onclick="submit();">Enter</button>
+
+   </div>
+   <div id="chatBox"></div>
+</body>
+
+</html>

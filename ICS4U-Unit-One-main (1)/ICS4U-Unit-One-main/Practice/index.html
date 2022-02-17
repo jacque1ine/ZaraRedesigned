@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Page Title</title>
+   <style>
+      input[type="text"]:hover {
+         border-radius: 5px;
+      }
+   </style>
+
+   <script>
+      function test() {
+         let el = document.getElementById('test');
+         el.style.display = "none";
+      }
+   </script>
+</head>
+
+<body>
+   <!-- Headings-->
+   <h1 onmouseover="test();">This is a Header</h1>
+   <h2>This is a Header</h2>
+   <h3>This is a Header</h3>
+   <h4 id="test">This is a Header4</h4>
+   <h5>This is a Header</h5>
+   <h6>This is a Header</h6>
+
+   <!-- Paragraphs-->
+   <p>This is a paragraph.</p>
+   <p>This is another paragraph.</p>
+
+   <ol>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+   </ol>
+
+   <ul>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+   </ul>
+
+   <!--Tables-->
+   <table>
+      <thead>
+         <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>Jack Smith</td>
+            <td>(416) 555-1212</td>
+            <td>jack@smith.com</td>
+         </tr>
+         <tr>
+            <td>Jack Smith</td>
+            <td>(416) 555-1212</td>
+            <td>jack@smith.com</td>
+         </tr>
+         <tr>
+            <td>Jack Smith</td>
+            <td>(416) 555-1212</td>
+            <td>jack@smith.com</td>
+         </tr>
+      </tbody>
+   </table>
+   <footer>This is a footer</footer>
+   <form>
+      <div>
+         <label for="name">Name</label>
+         <input type="text" name="name" id="name">
+      </div>
+      <div>
+         <label for="phone">Phone</label>
+         <input type="text" name="phone" id="phone">
+      </div>
+      <div>
+         <label for="password">Password</label>
+         <input type="password" name="password" id="password">
+      </div>
+      <div>
+         <label for="radioY">Yes/No</label>
+         <input type="radio" name="radio" id="radioY">
+         <input type="radio" name="radio" id="radioN">
+      </div>
+
+      <div>
+         <label for="checkbox">Select All that Apply</label>
+         <input type="checkbox" name="A">
+         <input type="checkbox" name="B">
+         <input type="checkbox" name="C">
+
+      </div>
+
+      <div>
+         <select name="favouriteColour">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+         </select>
+         <button>Click Me</button>
+      </div>
+
+      <textarea cols="30" rows="10"></textarea>
+   </form>
+
+
+   <div>
+      <a href="https://www.birds.com"><img src="images/bird.jpg" width="20%"></a></div>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio amet, quidem dicta ipsum quam quae sint maiores
+      quos modi consequuntur esse <a href="#test">repellat</a> eaque dolorum odit assumenda <a
+         href="https://www.google.com">dignissimos</a> unde nobis?
+      Deleniti.</p>
+   </div>
+</body>
+
+</html>

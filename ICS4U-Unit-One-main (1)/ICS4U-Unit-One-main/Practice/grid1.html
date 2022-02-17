@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS Grid 1</title>
+   <style>
+      .wrapper {
+         display: grid;
+         /*grid-template-columns: 70% 30%;*/
+         grid-template-columns: 1fr 2fr;
+         column-gap: 1em;
+         row-gap: 1em;
+      }
+
+      .wrapper>div {
+         background: #ccc;
+         padding: 10px;
+      }
+
+      .wrapper>div:nth-child(odd) {
+         background: #ddd;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum earum inventore rem, adipisci reprehenderit
+         magnam saepe dolores, exercitationem ipsam nobis praesentium deleniti molestiae nostrum quas vitae aut
+         perferendis repellendus. Ipsam distinctio placeat nostrum, neque perspiciatis tempora quidem quos, vero
+         necessitatibus explicabo omnis facere? Et velit autem tempora doloribus sunt tenetur soluta. Cumque eos
+         molestias quo expedita beatae quidem nihil ad recusandae placeat similique fugiat aspernatur neque culpa,
+         doloremque, inventore, fugit et? Repellat illum, cupiditate eaque nesciunt aspernatur a quas nostrum.</div>
+      <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, atque? Pariatur odio, amet
+         est
+         repellendus porro quam quas cum non temporibus! Assumenda optio quia facilis cum itaque nisi atque nostrum!
+      </div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum earum inventore rem, adipisci reprehenderit
+         magnam saepe dolores, exercitationem ipsam nobis praesentium deleniti molestiae nostrum quas vitae aut
+         perferendis repellendus. Ipsam distinctio placeat nostrum, neque perspiciatis tempora quidem quos, vero
+         necessitatibus explicabo omnis facere? Et velit autem tempora doloribus sunt tenetur soluta. Cumque eos
+         molestias quo expedita beatae quidem nihil ad recusandae placeat similique fugiat aspernatur neque culpa,
+         doloremque, inventore, fugit et? Repellat illum, cupiditate eaque nesciunt aspernatur a quas nostrum.</div>
+      <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, atque? Pariatur odio, amet est
+         repellendus porro quam quas cum non temporibus! Assumenda optio quia facilis cum itaque nisi atque nostrum!
+      </div>
+
+   </div>
+</body>
+
+</html>
