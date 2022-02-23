@@ -6,9 +6,11 @@ var bgcolorForm = document.getElementById('bgcolor');
 var fontForm = document.getElementById('font');
 var imageForm = document.getElementById('image');
 
-if (!localStorage.getItem('bgcolor')) {
+
+
+if (!localStorage.getItem('bgcolor')) { //empty, then it will populate
    populateStorage();
-} else {
+} else { //otherwise - get from local storage 
    setStyles();
 }
 
