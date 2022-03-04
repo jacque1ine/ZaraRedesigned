@@ -59,8 +59,8 @@ let isCategorySort = false;
 let categorySortDir = 'none';
 
 
-const btn = document.querySelector('button');
-btn.addEventListener('click', createTable);
+// const btn = document.querySelector('button');
+// btn.addEventListener('click', createTable);
 
 function createTable() {
    const tbody = document.querySelector('tbody');
@@ -76,6 +76,9 @@ function createTable() {
       }
    });
 }
+
+createTable();
+
 const sort = (evt) => {
    let sortField = evt.currentTarget.id;
    console.log(1);
