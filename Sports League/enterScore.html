@@ -56,25 +56,210 @@
     
 
     <!--Form-->
-    <div class="container mt-4">
+    <!-- <div class="container mt-4">
       <h1 class="display-4 text-center">
         <i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Book</span>List</h1>
         <form id="book-form">
           <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text" id="title" class="form-control">
+            <label for="title">Date</label>
+            <input type="text" id="date" class="form-control">
           </div>
           <div class="form-group">
-            <label for="author">Author</label>
-            <input type="text" id="author" class="form-control">
+            <label for="author">Home Team</label>
+            <input type="text" id="homeTeam" class="form-control">
           </div>
           <div class="form-group">
-            <label for="isbn">ISBN#</label>
-            <input type="text" id="isbn" class="form-control">
+            <label for="isbn">awayTeam</label>
+            <input type="text" id="awayTeam" class="form-control">
           </div>
           <input type="submit" value="Add Book" class="btn btn-primary btn-block">
-        </form>
-        <table class="table table-striped mt-5">
+          
+         </form> -->
+
+         <div class="card m-3 p-3 ">
+       
+          <h5 class="card-title"> Input Game Scores</h5>
+          <form>
+       
+           <div class="row">
+             <!-- <div class="col">
+             <label for="week">Month</label>
+             <select class="form-select" id="week">
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5</option>
+               <option>6</option>
+               <option>7</option>
+               <option>8</option>
+               <option>9</option>
+               <option>10</option>
+               <option>11</option>
+               <option>12</option>
+               <option>13</option>
+               <option>14</option>
+               <option>15</option>
+               <option>16</option>
+               <option>17</option>
+       
+             </select>
+             </div>
+
+             <div class="col">
+              <label for="week"> Week</label>
+              <select class="form-select" id="week">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+        
+              </select>
+              </div> -->
+           </div>
+
+           <!--Date-->
+           <div class="row">
+            <div class="col">
+              <label for="date">Date (YYYY-MM-DD)</label>
+              <input type="text" class="form-control" id="date" placeholder="Date">
+            </div>
+
+            <!--Date with Dropdowns-->
+            
+            <!--Teams-->
+           <div class="row">
+             <!--Home Team-->
+             <div class="col">
+               <label for="homeTeam"> Home Team</label>
+               <select class="form-select" id="homeTeam" placeholder="Home Team">
+                 <option value="PHI">Philadelphia 76ers</option>
+                 <option value="BKN">Brooklyn Nets</option>
+                 <option value="NY">New York Knicks</option>
+                 <option value="BOS">Boston Celtics</option>
+                 <option value="TOR">Toronto Raptors</option>
+                 <option value="MIL">Milwaukee Bucks</option>
+                 <option value="IND">Indiana Pacers</option>
+                 <option value="CHI">Chicago Bulls</option>
+                 <option value="CLE">Cleveland Cavaliers</option>
+                 <option value="DET">Detroit Pistons</option>
+                 <option value="ATL">Atlanta Hawks</option>
+                 <option value="MIA">Miama Heat</option>
+                 <option value="WAS">Washington Wizards</option>
+                 <option value="CHA">Charlotte Hornets</option>
+                 <option value="ORL">Orlando Magic</option>
+                 <option value="UTA">Utah Jazz</option>
+                 <option value="DEN">Denver Nuggets</option>
+                 <option value="POR">Portland Trail Blazers</option>
+                 <option value="MIN">Minnesota Timberwolves</option>
+                 <option value="OKC">Oklahoma Thunder</option>
+                 <option value="PHO">Phoenix Suns</option>
+                 <option value="LAC">Los Angeles Clippers</option>
+                 <option value="LAL">Los Angeles Lakers</option>
+                 <option value="GS">Golden State Warriors</option>
+                 <option value="SAC">Sacramento Kings</option>
+                 <option value="DAL">Dallas Mavericks</option>
+                 <option value="MEM">Memphis Grizzlies</option>
+                 <option value="SA">San Antonio Spurs</option>
+                 <option value="NO">New Orleans Pelicans</option>
+                 <option value="HOU">Houston Rockets</option>
+               </select>
+             </div>
+             <div class="col">
+               <label for="homeTeam"> Away Team</label>
+               <select class="form-select" id="awayTeam" placeholder = "Away Team" >
+                <option value="PHI">Philadelphia 76ers</option>
+                 <option value="BKN">Brooklyn Nets</option>
+                 <option value="NY">New York Knicks</option>
+                 <option value="BOS">Boston Celtics</option>
+                 <option value="TOR">Toronto Raptors</option>
+                 <option value="MIL">Milwaukee Bucks</option>
+                 <option value="IND">Indiana Pacers</option>
+                 <option value="CHI">Chicago Bulls</option>
+                 <option value="CLE">Cleveland Cavaliers</option>
+                 <option value="DET">Detroit Pistons</option>
+                 <option value="ATL">Atlanta Hawks</option>
+                 <option value="MIA">Miama Heat</option>
+                 <option value="WAS">Washington Wizards</option>
+                 <option value="CHA">Charlotte Hornets</option>
+                 <option value="ORL">Orlando Magic</option>
+                 <option value="UTA">Utah Jazz</option>
+                 <option value="DEN">Denver Nuggets</option>
+                 <option value="POR">Portland Trail Blazers</option>
+                 <option value="MIN">Minnesota Timberwolves</option>
+                 <option value="OKC">Oklahoma Thunder</option>
+                 <option value="PHO">Phoenix Suns</option>
+                 <option value="LAC">Los Angeles Clippers</option>
+                 <option value="LAL">Los Angeles Lakers</option>
+                 <option value="GS">Golden State Warriors</option>
+                 <option value="SAC">Sacramento Kings</option>
+                 <option value="DAL">Dallas Mavericks</option>
+                 <option value="MEM">Memphis Grizzlies</option>
+                 <option value="SA">San Antonio Spurs</option>
+                 <option value="NO">New Orleans Pelicans</option>
+                 <option value="HOU">Houston Rockets</option>
+               </select>
+             </div>
+       
+             <div class="row">
+               <div class="col">
+                 <label for="hScore">Home Score</label>
+                 <input type="text" class="form-control" id="hScore" placeholder="Home Score">
+               </div>
+               <div class="col">
+                 <label for="aScore">Away Score</label>
+                 <input type="text" class="form-control" id="aScore" placeholder="Away Score">
+               </div>
+       
+               
+       
+             </div>
+             
+               <div class="btn btn-primary btn-lg  mx-auto m-3" type = "button" onclick="createGame()"> Submit</div>
+             </div>
+             
+           </div>
+       
+       
+       
+          </form>
+               
+          </div>
+
+        <!--<div class="container mt-4">
+          <h1 class="display-4 text-center">
+            <i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Book</span>List</h1>
+            <form id="book-form">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="isbn">ISBN#</label>
+                <input type="text" id="isbn" class="form-control">
+              </div>
+              <input type="submit" value="Add Book" class="btn btn-primary btn-block">
+            </form>
+     -->
+
+        <!-- <table class="table table-striped mt-5">
           <thead>
             <tr>
               <th>Title</th>
@@ -84,7 +269,7 @@
             </tr>
           </thead>
           <tbody id="book-list"></tbody>
-        </table>
+        </table> -->
     </div>
 
     

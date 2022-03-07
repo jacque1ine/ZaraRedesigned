@@ -1,7 +1,7 @@
-[
+const teamsAll = [
     {
       "Season": 2021,
-      "SeasaonType": 1,
+      "SeasonType": 1,
       "TeamID": 7,
       "Key": "PHI",
       "City": "Philadelphia",
