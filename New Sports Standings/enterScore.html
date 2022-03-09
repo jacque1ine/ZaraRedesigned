@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <title>NFl Standings</title>
+
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><a class="navbar-brand" href="#">
+        <img src="https://www.pngplay.com/wp-content/uploads/13/Nba-Logo-Transparent-File.png" alt="" width="auto" height="30">
+      </a></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="standings.html">Standings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="scores.html">Scores</a>
+          </li>
+          <li class="nav-item"><span class="visually-hidden">(current)</span>
+            <a class="nav-link" href="enterScore.html">Enter a Score</a>
+          </li>
+      
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+   <div class="card m-3 p-3 ">
+       
+   <h5 class="card-title"> Input Game Scores</h5>
+   <form>
+
+    <div class="row">
+      <div class="col">
+      <label for="week"> Week</label>
+      <select class="form-select" id="week">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+
+      </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="AwayTeam"> Home Team</label>
+        <select class="form-select" id="homeTeam">
+          <option value="ARI">ARI</option>
+          <option value="ATL">ATL</option>
+          <option value="BAL">BAL</option>
+          <option value="BUF">BUF</option>
+          <option value="CAR">CAR</option>
+          <option value="CHI">CHI</option>
+          <option value="CIN">CIN</option>
+          <option value="CLE">CLE</option>
+          <option value="DAL">DAL</option>
+          <option value="DEN">DEN</option>
+          <option value="DET">DET</option>
+          <option value="GB">GB</option>
+          <option value="HOU">HOU</option>
+          <option value="IND">IND</option>
+          <option value="JAC">JAC</option>
+          <option value="KC">KC</option>
+          <option value="LV">LV</option>
+          <option value="LAC">LAC</option>
+          <option value="LAR">LAR</option>
+          <option value="MIA">MIA</option>
+          <option value="MIN">MIN</option>
+          <option value="NE">NE</option>
+          <option value="NO">NO</option>
+          <option value="NYG">NYG</option>
+          <option value="NYJ">NYG</option>
+          <option value="PHI">PHI</option>
+          <option value="PIT">PIT</option>
+          <option value="SF">SF</option>
+          <option value="SEA">SEA</option>
+          <option value="TB">TB</option>
+          <option value="TEN">TEN</option>
+          <option value="WAS">WAS</option>
+
+        </select>
+      </div>
+      <div class="col">
+        <label for="homeTeam"> Away Team</label>
+        <select class="form-select" id="awayTeam" placeholder = "Home Team" >
+          <option value="ARI">ARI</option>
+          <option value="ATL">ATL</option>
+          <option value="BAL">BAL</option>
+          <option value="BUF">BUF</option>
+          <option value="CAR">CAR</option>
+          <option value="CHI">CHI</option>
+          <option value="CIN">CIN</option>
+          <option value="CLE">CLE</option>
+          <option value="DAL">DAL</option>
+          <option value="DEN">DEN</option>
+          <option value="DET">DET</option>
+          <option value="GB">GB</option>
+          <option value="HOU">HOU</option>
+          <option value="IND">IND</option>
+          <option value="JAC">JAC</option>
+          <option value="KC">KC</option>
+          <option value="LV">LV</option>
+          <option value="LAC">LAC</option>
+          <option value="LAR">LAR</option>
+          <option value="MIA">MIA</option>
+          <option value="MIN">MIN</option>
+          <option value="NE">NE</option>
+          <option value="NO">NO</option>
+          <option value="NYG">NYG</option>
+          <option value="NYJ">NYG</option>
+          <option value="PHI">PHI</option>
+          <option value="PIT">PIT</option>
+          <option value="SF">SF</option>
+          <option value="SEA">SEA</option>
+          <option value="TB">TB</option>
+          <option value="TEN">TEN</option>
+          <option value="WAS">WAS</option>
+
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="hScore">Home Score</label>
+          <input type="text" class="form-control" id="hScore" placeholder="Home Score">
+        </div>
+        <div class="col">
+          <label for="aScore">Away Score</label>
+          <input type="text" class="form-control" id="aScore" placeholder="Away Score">
+        </div>
+
+        
+
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col">
+          <label for="hQ1">  Home Points Scored Q1 </label>
+          <input type="text" class="form-control p-1" id="hQ1" placeholder="Home Score">
+        </div>
+        <div class="col">
+          <label for="hQ2">  Home Points Scored Q2 </label>
+          <input type="text" class="form-control p-1" id="hQ2" placeholder="Home Score">
+        </div>
+          <div class="col">
+            <label for="hQ3">  Home Points Scored Q3 </label>
+          <input type="text" class="form-control p-1" id="hQ3" placeholder="Home Score">
+          </div>
+          <div class="col">
+            <label for="hQ4">  Home Points Scored Q4 </label>
+          <input type="text" class="form-control p-1" id="hQ4" placeholder="Home Score">
+        </div>
+          
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="aQ1">  Away Points Scored Q1 </label>
+            <input type="text" class="form-control p-1" id="aQ1" placeholder="Away Score">
+          </div>
+          <div class="col">
+            <label for="aQ2">  Away Points Scored Q2 </label>
+            <input type="text" class="form-control p-1" id="aQ2" placeholder="Away Score">
+          </div>
+            <div class="col">
+              <label for="aQ3">  Away Points Scored Q3 </label>
+            <input type="text" class="form-control p-1" id="aQ3" placeholder="Away Score">
+            </div>
+            <div class="col">
+              <label for="aQ4">  Away Points Scored Q4 </label>
+            <input type="text" class="form-control p-1" id="aQ4" placeholder="Away Score">
+            </div>
+        </div>
+          
+        </div>
+        <div class="btn btn-primary btn-lg  mx-auto m-3" type = "button" onclick="createGame()"> Submit</div>
+      </div>
+      
+    </div>
+
+
+
+   </form>
+        
+   </div>
+    
+      <style>
+            body::before {
+    display: block;
+    content: '';
+    height: 150px;
+  }
+      </style>
+      
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+   <script src="input.js"></script>
+</body>
+
+</html>
