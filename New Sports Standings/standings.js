@@ -191,7 +191,7 @@ function createRow(team) {
     let newRow = document.createElement('tr');
     newRow.setAttribute('scope', 'row');
     let newCell = document.createElement('td');
-    newCell.appendChild(initImage(team.Logo));
+    // newCell.appendChild(initImage(team.Logo));
     newRow.appendChild(newCell);
     newCell.appendChild(document.createTextNode(team.Name));
     newRow.appendChild(newCell);
@@ -245,13 +245,13 @@ getStandings().then(data => { teams = data; allTeams = teams; createStandings();
 
 
      
-function initImage(source) {
-  var img = document.createElement('img'); 
-  img.src = source;
-  img.style.margin = '5px';
-  img.style.width = '30px';
-  img.style.height = '20px';
-  return img;
+// function initImage(source) {
+//   var img = document.createElement('img'); 
+//   img.src = source;
+//   img.style.margin = '5px';
+//   img.style.width = '30px';
+//   img.style.height = '20px';
+//   return img;
   
-} 
+// } 
 

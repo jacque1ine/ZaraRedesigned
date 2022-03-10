@@ -50,7 +50,7 @@
    <h5 class="card-title"> Input Game Scores</h5>
    <form>
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col">
       <label for="week"> Week</label>
       <select class="form-select" id="week">
@@ -74,84 +74,83 @@
 
       </select>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <label for="AwayTeam"> Home Team</label>
-        <select class="form-select" id="homeTeam">
-          <option value="ARI">ARI</option>
-          <option value="ATL">ATL</option>
-          <option value="BAL">BAL</option>
-          <option value="BUF">BUF</option>
-          <option value="CAR">CAR</option>
-          <option value="CHI">CHI</option>
-          <option value="CIN">CIN</option>
-          <option value="CLE">CLE</option>
-          <option value="DAL">DAL</option>
-          <option value="DEN">DEN</option>
-          <option value="DET">DET</option>
-          <option value="GB">GB</option>
-          <option value="HOU">HOU</option>
-          <option value="IND">IND</option>
-          <option value="JAC">JAC</option>
-          <option value="KC">KC</option>
-          <option value="LV">LV</option>
-          <option value="LAC">LAC</option>
-          <option value="LAR">LAR</option>
-          <option value="MIA">MIA</option>
-          <option value="MIN">MIN</option>
-          <option value="NE">NE</option>
-          <option value="NO">NO</option>
-          <option value="NYG">NYG</option>
-          <option value="NYJ">NYG</option>
-          <option value="PHI">PHI</option>
-          <option value="PIT">PIT</option>
-          <option value="SF">SF</option>
-          <option value="SEA">SEA</option>
-          <option value="TB">TB</option>
-          <option value="TEN">TEN</option>
-          <option value="WAS">WAS</option>
+    </div> -->
+       <!--Teams-->
+       <div class="row">
+        <!--Home Team-->
+        <div class="col">
+          <label for="homeTeam"> Home Team</label>
+          <select class="form-select" id="homeTeam" placeholder="Home Team">
+            <option value="PHI">Philadelphia 76ers</option>
+            <option value="BKN">Brooklyn Nets</option>
+            <option value="NY">New York Knicks</option>
+            <option value="BOS">Boston Celtics</option>
+            <option value="TOR">Toronto Raptors</option>
+            <option value="MIL">Milwaukee Bucks</option>
+            <option value="IND">Indiana Pacers</option>
+            <option value="CHI">Chicago Bulls</option>
+            <option value="CLE">Cleveland Cavaliers</option>
+            <option value="DET">Detroit Pistons</option>
+            <option value="ATL">Atlanta Hawks</option>
+            <option value="MIA">Miama Heat</option>
+            <option value="WAS">Washington Wizards</option>
+            <option value="CHA">Charlotte Hornets</option>
+            <option value="ORL">Orlando Magic</option>
+            <option value="UTA">Utah Jazz</option>
+            <option value="DEN">Denver Nuggets</option>
+            <option value="POR">Portland Trail Blazers</option>
+            <option value="MIN">Minnesota Timberwolves</option>
+            <option value="OKC">Oklahoma Thunder</option>
+            <option value="PHO">Phoenix Suns</option>
+            <option value="LAC">Los Angeles Clippers</option>
+            <option value="LAL">Los Angeles Lakers</option>
+            <option value="GS">Golden State Warriors</option>
+            <option value="SAC">Sacramento Kings</option>
+            <option value="DAL">Dallas Mavericks</option>
+            <option value="MEM">Memphis Grizzlies</option>
+            <option value="SA">San Antonio Spurs</option>
+            <option value="NO">New Orleans Pelicans</option>
+            <option value="HOU">Houston Rockets</option>
+          </select>
+        </div>
 
-        </select>
-      </div>
-      <div class="col">
-        <label for="homeTeam"> Away Team</label>
-        <select class="form-select" id="awayTeam" placeholder = "Home Team" >
-          <option value="ARI">ARI</option>
-          <option value="ATL">ATL</option>
-          <option value="BAL">BAL</option>
-          <option value="BUF">BUF</option>
-          <option value="CAR">CAR</option>
-          <option value="CHI">CHI</option>
-          <option value="CIN">CIN</option>
-          <option value="CLE">CLE</option>
-          <option value="DAL">DAL</option>
-          <option value="DEN">DEN</option>
-          <option value="DET">DET</option>
-          <option value="GB">GB</option>
-          <option value="HOU">HOU</option>
-          <option value="IND">IND</option>
-          <option value="JAC">JAC</option>
-          <option value="KC">KC</option>
-          <option value="LV">LV</option>
-          <option value="LAC">LAC</option>
-          <option value="LAR">LAR</option>
-          <option value="MIA">MIA</option>
-          <option value="MIN">MIN</option>
-          <option value="NE">NE</option>
-          <option value="NO">NO</option>
-          <option value="NYG">NYG</option>
-          <option value="NYJ">NYG</option>
-          <option value="PHI">PHI</option>
-          <option value="PIT">PIT</option>
-          <option value="SF">SF</option>
-          <option value="SEA">SEA</option>
-          <option value="TB">TB</option>
-          <option value="TEN">TEN</option>
-          <option value="WAS">WAS</option>
-
-        </select>
-      </div>
+        <!--Away Team-->
+        <div class="col">
+          <label for="awayTeam"> Away Team</label>
+          <select class="form-select" id="awayTeam" placeholder = "Away Team" >
+           <option value="PHI">Philadelphia 76ers</option>
+            <option value="BKN">Brooklyn Nets</option>
+            <option value="NY">New York Knicks</option>
+            <option value="BOS">Boston Celtics</option>
+            <option value="TOR">Toronto Raptors</option>
+            <option value="MIL">Milwaukee Bucks</option>
+            <option value="IND">Indiana Pacers</option>
+            <option value="CHI">Chicago Bulls</option>
+            <option value="CLE">Cleveland Cavaliers</option>
+            <option value="DET">Detroit Pistons</option>
+            <option value="ATL">Atlanta Hawks</option>
+            <option value="MIA">Miama Heat</option>
+            <option value="WAS">Washington Wizards</option>
+            <option value="CHA">Charlotte Hornets</option>
+            <option value="ORL">Orlando Magic</option>
+            <option value="UTA">Utah Jazz</option>
+            <option value="DEN">Denver Nuggets</option>
+            <option value="POR">Portland Trail Blazers</option>
+            <option value="MIN">Minnesota Timberwolves</option>
+            <option value="OKC">Oklahoma Thunder</option>
+            <option value="PHO">Phoenix Suns</option>
+            <option value="LAC">Los Angeles Clippers</option>
+            <option value="LAL">Los Angeles Lakers</option>
+            <option value="GS">Golden State Warriors</option>
+            <option value="SAC">Sacramento Kings</option>
+            <option value="DAL">Dallas Mavericks</option>
+            <option value="MEM">Memphis Grizzlies</option>
+            <option value="SA">San Antonio Spurs</option>
+            <option value="NO">New Orleans Pelicans</option>
+            <option value="HOU">Houston Rockets</option>
+          </select>
+        </div>
+  
 
       <div class="row">
         <div class="col">
@@ -163,49 +162,10 @@
           <input type="text" class="form-control" id="aScore" placeholder="Away Score">
         </div>
 
-        
-
+      
       </div>
       
-      <div class="row mb-3">
-        <div class="col">
-          <label for="hQ1">  Home Points Scored Q1 </label>
-          <input type="text" class="form-control p-1" id="hQ1" placeholder="Home Score">
-        </div>
-        <div class="col">
-          <label for="hQ2">  Home Points Scored Q2 </label>
-          <input type="text" class="form-control p-1" id="hQ2" placeholder="Home Score">
-        </div>
-          <div class="col">
-            <label for="hQ3">  Home Points Scored Q3 </label>
-          <input type="text" class="form-control p-1" id="hQ3" placeholder="Home Score">
-          </div>
-          <div class="col">
-            <label for="hQ4">  Home Points Scored Q4 </label>
-          <input type="text" class="form-control p-1" id="hQ4" placeholder="Home Score">
-        </div>
-          
-        </div>
-        <div class="row">
-          <div class="col">
-            <label for="aQ1">  Away Points Scored Q1 </label>
-            <input type="text" class="form-control p-1" id="aQ1" placeholder="Away Score">
-          </div>
-          <div class="col">
-            <label for="aQ2">  Away Points Scored Q2 </label>
-            <input type="text" class="form-control p-1" id="aQ2" placeholder="Away Score">
-          </div>
-            <div class="col">
-              <label for="aQ3">  Away Points Scored Q3 </label>
-            <input type="text" class="form-control p-1" id="aQ3" placeholder="Away Score">
-            </div>
-            <div class="col">
-              <label for="aQ4">  Away Points Scored Q4 </label>
-            <input type="text" class="form-control p-1" id="aQ4" placeholder="Away Score">
-            </div>
-        </div>
-          
-        </div>
+      
         <div class="btn btn-primary btn-lg  mx-auto m-3" type = "button" onclick="createGame()"> Submit</div>
       </div>
       

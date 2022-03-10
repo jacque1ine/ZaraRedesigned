@@ -1,4 +1,4 @@
-const teamsAll = [
+var teamsAll = [
     {
       "Season": 2021,
       "SeasonType": 1,
@@ -930,3 +930,4 @@ const teamsAll = [
       "DivisionRank": 4
     }
   ]
+
