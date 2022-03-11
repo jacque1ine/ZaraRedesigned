@@ -84,6 +84,22 @@ function getInput(){
 
     }
 
+    function changeGames(team){
+        
+         const parent = document.getElementById("sections")
+    while (parent.firstChild) {
+        parent.firstChild.remove()
+    }
+
+
+        allGames.forEach(game => {
+            if (game.HomeTeam === team || game.AwayTeam === team){
+                let row = createCard(game); document.querySelector('#sections').appendChild(row);
+    
+            }
+        })
+      }
+      
 
 
 
@@ -139,8 +155,16 @@ function createCard(game) {
     let cardBody = document.createElement('div');
     cardBody.className = 'card-body';
   
+
+    let monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    let month = monthNames[parseInt(game.Day.substring(5, 7)) - 1];
+    let day = game.Day.substring(8, 10);
+    let year = game.Day.substring(0, 4);
+   let date = `${month}. ${day}, ${year}`;
+ 
+
     let title = document.createElement('h6');
-    title.innerText = game.Day + ': ' + game.HomeTeam + ' (Home)    vs    ' + game.AwayTeam + " (Away)";
+    title.innerText = date + ': ' + game.HomeTeam + ' (Home)    vs    ' + game.AwayTeam + " (Away)";
     title.className = 'card-header';
 
     let container = document.createElement('div');
@@ -271,6 +295,7 @@ function createSchedule() {
     })
 
 }
+
 
 
 
