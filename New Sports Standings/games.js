@@ -27,37 +27,23 @@ let games = [];
 let allTeamsString = localStorage.getItem('storedTeams');
 let allTeams = JSON.parse(allTeamsString);
 let teams = [];
-let currentWeek = 1; 
-let sWeek = 1;
 
 
-// function convertName(nTeam){
-//     let Tname = ' ';
-// allTeams.forEach(team => {
+
+function convertName(key){
+    let fullName = ' ';
+allTeams.forEach(team => {
     
-//     if(team.Team === nTeam){
-//         Tname =  team.Name
+    if(team.Key === key){
+        fullName =  team.City + " " + team.Name;
         
-//     }
-// })
+    }
+})
 
-// return Tname;
-// }
+return fullName;
+}
 
-// function changeWeek(week){
-    
-//     games.forEach(game => {
-//         let section = document.getElementById('sections');
-//         let cards = document.getElementById('card');
-//         section.removeChild(cards);
-        
-//     });
-   
-    
-//     currentWeek = week;
-//     console.log(currentWeek);
-//     createSchedule();
-// }
+
 
 
 function getInput(){
@@ -81,11 +67,12 @@ function getInput(){
         }
     })
 
-    createPagination(newArr); 
+    paginationTwo(newArr); 
 
     }
 
     function changeGames(team){
+        var newArr = []; 
         
          const parent = document.getElementById("sections")
     while (parent.firstChild) {
@@ -96,26 +83,16 @@ function getInput(){
         allGames.forEach(game => {
             if (game.HomeTeam === team || game.AwayTeam === team){
                 let row = createCard(game); document.querySelector('#sections').appendChild(row);
+                newArr.push(game);
+    
     
             }
         })
+
+        paginationTwo(newArr); 
+
       }
       
-
-
-
-function pagination(numGames){
-
-}
-
-
-getInput();
-
-console.log(document.getElementById("sections"))
-
-// function findNearestDate(){
-
-// }
 
 
 function createCard(game) {
@@ -131,20 +108,23 @@ function createCard(game) {
     score.className = 'card-title text-center pt-lg-5 '
 
     let hTeam = document.createElement('div')
-    hTeam.className = "card float-left d-inline p-2 font-weight-bold"
+    hTeam.className = "card float-left d-inline p-2 font-weight-bold text-center"
+    hTeam.innerText =  "HOME" ;
     let tbody = document.createElement('div')
     tbody.className = 'card-body';
-    tbody.innerText = game.HomeTeam;
+    tbody.innerText = convertName(game.HomeTeam);
 
     hTeam.appendChild(tbody);
 
     let aTeam = document.createElement('div')
-    aTeam.className = "card float-right p-2 font-weight-bold"
+    aTeam.innerText =  "AWAY" ;
+
+    aTeam.className = "card float-right p-2 font-weight-bold text-center"
     
     tbody = document.createElement('div')
 
     tbody.className = 'card-body';
-    tbody.innerText = game.AwayTeam;
+    tbody.innerText = convertName(game.AwayTeam);
     aTeam.appendChild(tbody);
 
     //background
@@ -160,7 +140,7 @@ function createCard(game) {
  
 
     let title = document.createElement('h6');
-    title.innerText = date + ': ' + game.HomeTeam + ' (Home)    vs    ' + game.AwayTeam + " (Away)";
+    title.innerText = date + ': ' + convertName(game.HomeTeam) + ' (Home)    vs    ' + convertName(game.AwayTeam) + " (Away)";
     title.className = 'card-header';
 
     let container = document.createElement('div');
@@ -181,7 +161,11 @@ function createCard(game) {
     grid = document.createElement('div');
     grid.className ='col-sm';
     grid.appendChild(aTeam);
+
+
     gridrow.appendChild(grid);
+
+    
     
 
     cardBody.appendChild(title);
@@ -193,76 +177,101 @@ function createCard(game) {
 
 }
 
-// createCard(allGamesString)
-
-// function pagination(){
-
-//    let btn = document.createElement('button');
-//    btn.innerText = '<';
-//    btn.id = 'front';
-//    btn.onclick = function(){
-//     let section =  document.querySelector('#btnGroup');
-//     section.removeChild(document.getElementById('front'));
-//     section.removeChild(document.getElementById('end'));
-//     for(i = 0; i<10; i++){
-//         section.removeChild(document.getElementById('btn' +( sWeek+i)))
-//     }
-//        if(sWeek > 1)
-//        sWeek--
-
-//        pagination();
-//    }
-//    btn.className = 'btn btn-primary m-1'
-//    document.querySelector('#btnGroup').appendChild(btn);
-
- 
-
-//     for(i=sWeek; i<=(sWeek+9); i++){
-//         let btn = document.createElement('button');
-//         btn.innerText = 'Week ' + i;
-//         btn.id = 'btn' + i;
-//         btn.className = 'btn btn-primary m-1'
-      
-//         document.querySelector('#btnGroup').appendChild(btn);
-        
-//     }
-
-//     btn = document.createElement('button');
-//     btn.innerText = '>';
-//     btn.id = 'end';
-//     btn.onclick = function(){
-        
-
-//         let section =  document.querySelector('#btnGroup');
-//         section.removeChild(document.getElementById('front'));
-//         section.removeChild(document.getElementById('end'));
-//         for(i = 0; i<10; i++){
-//             section.removeChild(document.getElementById('btn' +( sWeek+i)))
-//         }
-
-//        if(sWeek <8)
-//         sWeek++
-
-        
-//         pagination();
-//     }
-//     btn.className = 'btn btn-primary m-1'
-//     document.querySelector('#btnGroup').appendChild(btn);
-
-
-//     document.getElementById('btn' + sWeek).onclick = function(){changeWeek(sWeek)};
-//     document.getElementById('btn' + (sWeek+1)).onclick = function(){changeWeek(sWeek+1)};
-//     document.getElementById('btn' + (sWeek+2 )).onclick = function(){changeWeek(sWeek+2)};
-//     document.getElementById('btn' + (sWeek+3 )).onclick = function(){changeWeek(sWeek+3)};
-//     document.getElementById('btn' + (sWeek+4 )).onclick = function(){changeWeek(sWeek+4)};
-//     document.getElementById('btn' + (sWeek+5 )).onclick = function(){changeWeek(sWeek+5)};
-//     document.getElementById('btn' + (sWeek+6 )).onclick = function(){changeWeek(sWeek+6)};
-//     document.getElementById('btn' + (sWeek+7 )).onclick = function(){changeWeek(sWeek+7)};
-//     document.getElementById('btn' + (sWeek+8 )).onclick = function(){changeWeek(sWeek+8)};
-//     document.getElementById('btn' + (sWeek+9 )).onclick = function(){changeWeek(sWeek+9)}
+function paginationTwo(gamesArr){
+    var state = {
+        'querySet': gamesArr,
+        'page': 1,
+        'rows': 10,
+        'window': 5,
+    }
     
-// }
+    buildTable()
+    
+    //grab our data and trim it down
+    function pagination(querySet, page, rows) {
+    
+        var trimStart = (page - 1) * rows
+        var trimEnd = trimStart + rows
+    
+        var trimmedData = querySet.slice(trimStart, trimEnd)
+    
+        var pages = Math.ceil(querySet.length / rows);
+    
+        return {
+            'querySet': trimmedData,
+            'pages': pages,
+        }
+    }
+    
+    function pageButtons(pages) {
+        var wrapper = document.getElementById('pagination-wrapper')
+    
+        wrapper.innerHTML = ``
+        console.log('Pages:', pages)
+    
+        var maxLeft = (state.page - Math.floor(state.window / 2))
+        var maxRight = (state.page + Math.floor(state.window / 2))
+    
+        if (maxLeft < 1) {
+            maxLeft = 1
+            maxRight = state.window
+        }
+    
+        if (maxRight > pages) {
+            maxLeft = pages - (state.window - 1)
+            
+            if (maxLeft < 1){
+                maxLeft = 1
+            }
+            maxRight = pages
+        }
+        
+    
+        for (var page = maxLeft; page <= maxRight; page++) {
+            wrapper.innerHTML += `<button value=${page} class="page btn btn-sm btn-primary">${page}</button>`
+        }
+    
+        if (state.page != 1) {
+            wrapper.innerHTML = `<button value=${1} class="page btn btn-sm btn-primary">&#171; First</button>` + wrapper.innerHTML
+        }
+    
+        if (state.page != pages) {
+            wrapper.innerHTML += `<button value=${pages} class="page btn btn-sm btn-primary">Last &#187;</button>`
+        }
+    
+        $('.page').on('click', function() {
+            $('#table-body').empty()
+    
+            state.page = Number($(this).val())
+    
+            buildTable()
+        })
+    
+    }
+    
+    
+    function buildTable() {
+        // var table = $('#table-body')
 
+        const parent = document.getElementById("sections")
+        while (parent.firstChild) {
+            parent.firstChild.remove()
+        }
+    
+    
+        var data = pagination(state.querySet, state.page, state.rows)
+        var myList = data.querySet
+     
+        for (let i = 0; i < myList.length; i++) {
+            let item = myList[i];
+            let row = createCard(item);
+            document.querySelector('#sections').appendChild(row)
+        }
+            
+        pageButtons(data.pages)
+    }
+    
+}
 
 function createPagination(gamesArr){
 
@@ -279,6 +288,7 @@ function createPagination(gamesArr){
 
     let current_page = 1;
     let rows = 10;
+    let window = 5;
 
 function DisplayList (games, wrapper, rows_per_page, page) {
 	wrapper.innerHTML = "";
@@ -352,8 +362,9 @@ function initGames(){
 }
 
 createSchedule();
-createPagination(allGames);
+paginationTwo(allGames);
 getStandings().then(data => { teams = data; allTeams = teams; initTeams() });
 // createPagination(allGames);
 
 // console.log(allGames)
+
