@@ -61,7 +61,7 @@ let sWeek = 1;
 
 
 function getInput(){
-
+    var newArr = []; 
     const parent = document.getElementById("sections")
     while (parent.firstChild) {
         parent.firstChild.remove()
@@ -74,13 +74,14 @@ function getInput(){
     console.log(endDate)
 
     allGames.forEach(game => {
-        if ( new Date(game.DateTime) >= new Date(intialDate) &&  new Date(game.DateTime) <= new Date(endDate)){
+        if ( new Date(game.DateTime) > new Date(intialDate) &&  new Date(game.DateTime) <= new Date(endDate)){
             console.log(game.DateTime)
             let row = createCard(game); document.querySelector('#sections').appendChild(row);
-
+            newArr.push(game);
         }
     })
 
+    createPagination(newArr); 
 
     }
 
@@ -103,14 +104,9 @@ function getInput(){
 
 
 
-// function getTime(){
+function pagination(numGames){
 
-    
-        
-        
-//     })
-// }
-
+}
 
 
 getInput();
@@ -267,25 +263,75 @@ function createCard(game) {
     
 // }
 
-// game.Day.substring(5,9)
 
-// function gfg_Run() {
-//     D_1 = Date_1.split("/");
-//     D_2 = Date_2.split("/");
-//     D_3 = Date_to_check.split("/");
-    
-//     var d1 = new Date(D_1[2], parseInt(D_1[1]) - 1, D_1[0]);
-//     var d2 = new Date(D_2[2], parseInt(D_2[1]) - 1, D_2[0]);
-//     var d3 = new Date(D_3[2], parseInt(D_3[1]) - 1, D_3[0]);
-    
-//     if (d3 > d1 && d3 < d2) {
-//         el_down.innerHTML = "Date is in between the "
-//                             + "Date 1 and Date 2";
-//     } else {
-//         el_down.innerHTML = "Date is not in between "
-//                             + "the Date 1 and Date 2";
-//     }
-// }
+function createPagination(gamesArr){
+
+    const parent = document.getElementById("sections")
+    while (parent.firstChild) {
+        parent.firstChild.remove()
+    }
+
+    console.log("pagination")
+
+
+    const list_element = document.getElementById('sections');
+    const pagination_element = document.getElementById('pagination');
+
+    let current_page = 1;
+    let rows = 10;
+
+function DisplayList (games, wrapper, rows_per_page, page) {
+	wrapper.innerHTML = "";
+	page--;
+
+	let start = rows_per_page * page;
+	let end = start + rows_per_page;
+	let paginatedItems = games.slice(start, end);
+
+	for (let i = 0; i < paginatedItems.length; i++) {
+		let item = paginatedItems[i];
+        let row = createCard(item);
+        document.querySelector('#sections').appendChild(row)
+	}
+}
+
+function SetupPagination (games, wrapper, rows_per_page) {
+	wrapper.innerHTML = "";
+
+	let page_count = Math.ceil(games.length / rows_per_page);
+	for (let i = 1; i < page_count + 1; i++) {
+		let btn = PaginationButton(i, games);
+		wrapper.appendChild(btn);
+	}
+}
+
+function PaginationButton (page, games) {
+	let button = document.createElement('button');
+	button.innerText = page;
+
+	if (current_page == page) button.classList.add('active');
+
+	button.addEventListener('click', function () {
+		current_page = page;
+		DisplayList(games, list_element, rows, current_page);
+
+		let current_btn = document.querySelector('.pagenumbers button.active');
+		current_btn.classList.remove('active');
+
+		button.classList.add('active');
+	});
+
+	return button;
+}
+
+DisplayList(gamesArr, list_element, rows, current_page);
+SetupPagination(gamesArr, pagination_element, rows);
+
+
+}
+
+
+
 
 function createSchedule() {
     allGames.forEach(game => {
@@ -297,9 +343,6 @@ function createSchedule() {
 }
 
 
-
-
-
 function initTeams(){
     allTeams = teams;
 }
@@ -309,7 +352,8 @@ function initGames(){
 }
 
 createSchedule();
-// pagination();
+createPagination(allGames);
 getStandings().then(data => { teams = data; allTeams = teams; initTeams() });
+// createPagination(allGames);
 
 // console.log(allGames)
