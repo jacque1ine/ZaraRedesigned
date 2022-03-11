@@ -77,6 +77,56 @@ class Game {
   }
 
   
+//Parse class: parses date to get the month 
+
+function parse(game){
+  let month = game.Day.substring(5,7); 
+  
+  switch (new Date().getDay()) {
+    case 1:
+      day = "Jan";
+      break;
+    case 2:
+      day = "Feb";
+      break;
+    case 3:
+       day = "March";
+      break;
+    case 4:
+      day = "April";
+      break;
+    case 5:
+      day = "May";
+      break;
+    case 6:
+      day = "June";
+      break;
+    case 7:
+      day = "July";
+      break;
+    case 8:
+      day = "August";
+      break;
+    case 9:
+      day = "Sept";
+      break;
+    case 10:
+      day = "Oct";
+      break;
+    case 11:
+      day = "Nov";
+      break;
+    case 12:
+        day = "Dec";
+        break;
+  }
+
+  localStorage.setItem(game, month); 
+
+}
+
+
+
   // Store Class: Handles Storage
   class Store {
     static getGames() {
