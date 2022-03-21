@@ -97,6 +97,8 @@ function getInput(){
 
 function createCard(game) {
     console.log("RUNNING");
+
+
     let newRow = document.createElement('tr');
     newRow.setAttribute('id', 'card');
 
@@ -108,7 +110,7 @@ function createCard(game) {
     score.className = 'card-title text-center pt-lg-5 '
 
     let hTeam = document.createElement('div')
-    hTeam.className = "card float-left d-inline p-2 font-weight-bold text-center"
+    hTeam.className = "card float-right p-2 font-weight-bold text-center"
     hTeam.innerText =  "HOME" ;
     let tbody = document.createElement('div')
     tbody.className = 'card-body';
@@ -131,17 +133,17 @@ function createCard(game) {
     let cardBody = document.createElement('div');
     cardBody.className = 'card-body';
   
-
+    //month # to month name
     let monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     let month = monthNames[parseInt(game.Day.substring(5, 7)) - 1];
     let day = game.Day.substring(8, 10);
     let year = game.Day.substring(0, 4);
    let date = `${month}. ${day}, ${year}`;
  
-
+    //header 
     let title = document.createElement('h6');
-    title.innerText = date + ': ' + convertName(game.HomeTeam) + ' (Home)    vs    ' + convertName(game.AwayTeam) + " (Away)";
-    title.className = 'card-header';
+    title.innerText = date + ': ' + convertName(game.HomeTeam) + '    vs    ' + convertName(game.AwayTeam)
+    title.className = 'card-header text-center';
 
     let container = document.createElement('div');
     container.className = 'container p-4';
@@ -273,72 +275,72 @@ function paginationTwo(gamesArr){
     
 }
 
-function createPagination(gamesArr){
+// function createPagination(gamesArr){
 
-    const parent = document.getElementById("sections")
-    while (parent.firstChild) {
-        parent.firstChild.remove()
-    }
+//     const parent = document.getElementById("sections")
+//     while (parent.firstChild) {
+//         parent.firstChild.remove()
+//     }
 
-    console.log("pagination")
-
-
-    const list_element = document.getElementById('sections');
-    const pagination_element = document.getElementById('pagination');
-
-    let current_page = 1;
-    let rows = 10;
-    let window = 5;
-
-function DisplayList (games, wrapper, rows_per_page, page) {
-	wrapper.innerHTML = "";
-	page--;
-
-	let start = rows_per_page * page;
-	let end = start + rows_per_page;
-	let paginatedItems = games.slice(start, end);
-
-	for (let i = 0; i < paginatedItems.length; i++) {
-		let item = paginatedItems[i];
-        let row = createCard(item);
-        document.querySelector('#sections').appendChild(row)
-	}
-}
-
-function SetupPagination (games, wrapper, rows_per_page) {
-	wrapper.innerHTML = "";
-
-	let page_count = Math.ceil(games.length / rows_per_page);
-	for (let i = 1; i < page_count + 1; i++) {
-		let btn = PaginationButton(i, games);
-		wrapper.appendChild(btn);
-	}
-}
-
-function PaginationButton (page, games) {
-	let button = document.createElement('button');
-	button.innerText = page;
-
-	if (current_page == page) button.classList.add('active');
-
-	button.addEventListener('click', function () {
-		current_page = page;
-		DisplayList(games, list_element, rows, current_page);
-
-		let current_btn = document.querySelector('.pagenumbers button.active');
-		current_btn.classList.remove('active');
-
-		button.classList.add('active');
-	});
-
-	return button;
-}
-
-DisplayList(gamesArr, list_element, rows, current_page);
-SetupPagination(gamesArr, pagination_element, rows);
+//     console.log("pagination")
 
 
-}
+//     const list_element = document.getElementById('sections');
+//     const pagination_element = document.getElementById('pagination');
+
+//     let current_page = 1;
+//     let rows = 10;
+//     let window = 5;
+
+// function DisplayList (games, wrapper, rows_per_page, page) {
+// 	wrapper.innerHTML = "";
+// 	page--;
+
+// 	let start = rows_per_page * page;
+// 	let end = start + rows_per_page;
+// 	let paginatedItems = games.slice(start, end);
+
+// 	for (let i = 0; i < paginatedItems.length; i++) {
+// 		let item = paginatedItems[i];
+//         let row = createCard(item);
+//         document.querySelector('#sections').appendChild(row)
+// 	}
+// }
+
+// function SetupPagination (games, wrapper, rows_per_page) {
+// 	wrapper.innerHTML = "";
+
+// 	let page_count = Math.ceil(games.length / rows_per_page);
+// 	for (let i = 1; i < page_count + 1; i++) {
+// 		let btn = PaginationButton(i, games);
+// 		wrapper.appendChild(btn);
+// 	}
+// }
+
+// function PaginationButton (page, games) {
+// 	let button = document.createElement('button');
+// 	button.innerText = page;
+
+// 	if (current_page == page) button.classList.add('active');
+
+// 	button.addEventListener('click', function () {
+// 		current_page = page;
+// 		DisplayList(games, list_element, rows, current_page);
+
+// 		let current_btn = document.querySelector('.pagenumbers button.active');
+// 		current_btn.classList.remove('active');
+
+// 		button.classList.add('active');
+// 	});
+
+// 	return button;
+// }
+
+// DisplayList(gamesArr, list_element, rows, current_page);
+// SetupPagination(gamesArr, pagination_element, rows);
+
+
+// }
 
 
 

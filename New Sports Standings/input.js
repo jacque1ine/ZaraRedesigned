@@ -1,38 +1,31 @@
-// async function getGameData() {
+async function getGameData() {
+  const res = await fetch('games.json');
+  const data = await res.json();
+  return data;
 
-//     const res = await fetch('games.json');
-  
-//     const data = await res.json();
-  
-//     return data;
-  
-//   }
-  
-//   async function getStandings() {
-  
-//     const res = await fetch('teams.json');
-  
-//     const data = await res.json();
-  
-//     return data;
-  
-//   }
-let test = [];
-  
-let allGames = [];
+} 
+
+async function getStandings() {
+
+  const res = await fetch('teams.json');
+
+  const data = await res.json();
+
+  return data;
+
+}
+
+
+let allGamesString = localStorage.getItem('storedAllGames');
+let allGames = JSON.parse(allGamesString);
+
+
+
 let games = [];
 
+let allTeamsString = localStorage.getItem('storedTeams');
+let allTeams = JSON.parse(allTeamsString);
 let teams = [];
-
-let allTeamsArr = [];
-
-let filteredTeams = [];
-
-
-
-teamsAll.then(data =>{ games = data; allGames = data; initGames()})
-
-dataAll.then(data => { teams = data; allTeamsArr = teams; initTeams() });
 
 
 /*
@@ -46,13 +39,13 @@ let allGames = allGamesString != null ? JSON.parse(allGamesString) : JSON.parse(
 
 */
 function storeData() {
-  localStorage.setItem('storedTeams', teamsAll);
+  localStorage.setItem('storedTeams', allTeams);
 
   console.log("storing");
-  localStorage.setItem('storedAllGames', gamesAll);
+  localStorage.setItem('storedAllGames', allGames);
 
   console.log(allGames)
-  console.log(allTeamsArr);
+  console.log(allTeams);
 
 }
 
@@ -63,12 +56,11 @@ function createGame(){
   const date = document.querySelector('#date').value;
   const hTeam = document.querySelector('#homeTeam').value;
   const aTeam = document.querySelector('#awayTeam').value;
-  const hScore = document.querySelector('#aScore').value;
-  const aScore = document.querySelector('#hScore').value;
+  const hScore = document.querySelector('#awayScore').value;
+  const aScore = document.querySelector('#homeScore').value;
   
-  if( !isNaN(date) && !isNaN(hScore) &&!isNaN(aScore)){
+  if(!isNaN(hScore) &&!isNaN(aScore)){
     let newGame = {
-      Week: Week,
       HomeTeam: hTeam,
       AwayTeam: aTeam,
       AwayScore: aScore,
@@ -79,12 +71,12 @@ function createGame(){
     storeData();
 
 
-      //fix ISSUE WITH DATE
-     Date =  document.querySelector('#date').value;
-     aTeam = document.querySelector('#awayTeam').value = ' ';
-     hTeam = document.querySelector('#homeTeam').value= ' ';
-     hScore = document.querySelector('#hScore').value= ' ';
-     aScore = document.querySelector('#aScore').value= ' ';
+    //   //fix ISSUE WITH DATE
+    //  date =  document.querySelector('#date').value;
+    //  aTeam = document.querySelector('#awayTeam').value = ' ';
+    //  hTeam = document.querySelector('#homeTeam').value= ' ';
+    //  hScore = document.querySelector('#homeScore').value= ' ';
+    //  aScore = document.querySelector('#awayScore').value= ' ';
   } else{
     alert('please enter the correct information');
     
@@ -92,16 +84,13 @@ function createGame(){
 
 }
 
-function initTeams(){
-  allTeams = teams;
-  test = allTeams;
-  console.log(test);
+// function initTeams(){
+//   allTeams = teams;
+//   test = allTeams;
+//   console.log(test);
 
-}
+// }
 
-function initGames(data){
- 
-}
 
 
 
