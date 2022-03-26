@@ -16,16 +16,24 @@ async function getStandings() {
 
 }
 
+function storeData() {
+    localStorage.setItem('storedTeams', JSON.stringify(allTeams));
+    
+    console.log("storing");
+    localStorage.setItem('storedAllGames', JSON.stringify(allGames));
+    }
 
-let allGamesString = localStorage.getItem('storedAllGames');
-let allGames = JSON.parse(allGamesString);
 
+//if data is not in local storage, get data from JSON or string
+const allTeamsString = localStorage.getItem('storedTeams');
+let allTeams = allTeamsString != null ? JSON.parse(allTeamsString) : JSON.parse(teamData);
+
+const allGamesString = localStorage.getItem('storedAllGames');
+let allGames = allGamesString != null ? JSON.parse(allGamesString) : JSON.parse(gameData);
 
 
 let games = [];
 
-let allTeamsString = localStorage.getItem('storedTeams');
-let allTeams = JSON.parse(allTeamsString);
 let teams = [];
 
 

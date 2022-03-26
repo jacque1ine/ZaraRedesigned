@@ -1,9 +1,12 @@
 async function getGameData() {
+
   const res = await fetch('games.json');
+
   const data = await res.json();
+
   return data;
 
-} 
+}
 
 async function getStandings() {
 
@@ -13,19 +16,27 @@ async function getStandings() {
 
   return data;
 
+
+
+
 }
 
+let test = [];
 
-let allGamesString = localStorage.getItem('storedAllGames');
-let allGames = JSON.parse(allGamesString);
-
-
-
+let allGames = [];
 let games = [];
 
-let allTeamsString = localStorage.getItem('storedTeams');
-let allTeams = JSON.parse(allTeamsString);
 let teams = [];
+
+let allTeamsArr = [];
+
+let filteredTeams = [];
+
+getGameData().then(data =>{ games = data; allGames = data; initGames()})
+
+getStandings().then(data => { teams = data; allTeamsArr = teams; initTeams() });
+
+
 
 
 /*
@@ -53,11 +64,11 @@ function storeData() {
 
 function createGame(){
 
-  const date = document.querySelector('#date').value;
-  const hTeam = document.querySelector('#homeTeam').value;
-  const aTeam = document.querySelector('#awayTeam').value;
-  const hScore = document.querySelector('#awayScore').value;
-  const aScore = document.querySelector('#homeScore').value;
+  let date = document.querySelector('#date').value;
+  let hTeam = document.querySelector('#homeTeam').value;
+  let aTeam = document.querySelector('#awayTeam').value;
+  let hScore = document.querySelector('#awayScore').value;
+  let aScore = document.querySelector('#homeScore').value;
   
   if(!isNaN(hScore) &&!isNaN(aScore)){
     let newGame = {
@@ -71,12 +82,12 @@ function createGame(){
     storeData();
 
 
-    //   //fix ISSUE WITH DATE
-    //  date =  document.querySelector('#date').value;
-    //  aTeam = document.querySelector('#awayTeam').value = ' ';
-    //  hTeam = document.querySelector('#homeTeam').value= ' ';
-    //  hScore = document.querySelector('#homeScore').value= ' ';
-    //  aScore = document.querySelector('#awayScore').value= ' ';
+
+     date =  document.querySelector('#date').value;
+     aTeam = document.querySelector('#awayTeam').value = ' ';
+     hTeam = document.querySelector('#homeTeam').value= ' ';
+     hScore = document.querySelector('#homeScore').value= ' ';
+     aScore = document.querySelector('#awayScore').value= ' ';
   } else{
     alert('please enter the correct information');
     
@@ -84,12 +95,17 @@ function createGame(){
 
 }
 
-// function initTeams(){
-//   allTeams = teams;
-//   test = allTeams;
-//   console.log(test);
+function initTeams(){
+  allTeams = teams;
+  test = allTeams;
+  console.log(test);
 
-// }
+}
+
+function initGames(data){
+
+ 
+}
 
 
 

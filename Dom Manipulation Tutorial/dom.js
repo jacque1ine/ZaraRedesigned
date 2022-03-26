@@ -135,29 +135,79 @@ var itemList = document.querySelector('#items');
 
 // createElement
 
-// Create a div
-var newDiv =  document.createElement('div');
+// // Create a div
+// var newDiv =  document.createElement('div');
 
-// Add class
-newDiv.className= 'hello';
+// // Add class
+// newDiv.className= 'hello';
 
-// Add id
-newDiv.id = 'hello1';
+// // Add id
+// newDiv.id = 'hello1';
 
-// Add attr
+// // Add attr
+// newDiv.setAttribute('title', 'Hello Div');
+
+// // Create text node
+// var newDivText = document.createTextNode('Hello World');
+
+// // Add text to div
+// newDiv.appendChild(newDivText);
+
+// var container = document.querySelector('header .container');
+// var h1 = document.querySelector('header h1');
+
+// console.log(newDiv);
+
+// newDiv.style.fontSize = '30px';
+
+// container.insertBefore(newDiv, h1);
+
+// //TRAVERSING THE DOM 
+
+// var itemList = document.querySelector('#items'); //ul with id of items
+// //parentNode 
+// console.log(itemList.parentNode); //returns div withe the id of main
+
+
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode);
+
+//createElement 
+
+//create a dic 
+var newDiv = document.createElement('div'); 
+console.log(newDiv);
+
+newDiv.className = 'hello'; 
+
+//Add class 
+console.log(newDiv); 
+
+//Add id 
+newDiv.id = 'hello1'; 
+
+//add attr - attribute is title, the value is 'Hello Div;
 newDiv.setAttribute('title', 'Hello Div');
 
-// Create text node
-var newDivText = document.createTextNode('Hello World');
+console.log(newDiv); 
 
-// Add text to div
-newDiv.appendChild(newDivText);
+//create text node to add content inside the div
+var newDivText = document.createTextNode('Hello World'); 
 
-var container = document.querySelector('header .container');
-var h1 = document.querySelector('header h1');
+//add text to div 
+newDiv.appendChild(newDivText); 
 
-console.log(newDiv);
+var container = document.querySelector('header .container'); 
 
 newDiv.style.fontSize = '30px';
 
+var h1 = document.querySelector('header h1')
+
+
+console.log(newDiv);
+
+//newDiv = what we are insery, h1 = what we are inserting before
 container.insertBefore(newDiv, h1);
+
+
+
