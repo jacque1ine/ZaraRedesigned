@@ -1,38 +1,45 @@
 
 async function getGameData() {
-    const res = await fetch('games.json');
-    const data = await res.json();
+    let res = await fetch('games.json');
+    let data = await res.json();
     return data;
 
 } 
 
 async function getStandings() {
 
-    const res = await fetch('teams.json');
+    let res = await fetch('teams.json');
 
-    const data = await res.json();
+    let data = await res.json();
 
     return data;
 
 }
 
-function storeData() {
-    localStorage.setItem('storedTeams', JSON.stringify(allTeams));
-    
-    console.log("storing");
-    localStorage.setItem('storedAllGames', JSON.stringify(allGames));
-    }
 
+
+//ternary operator: a condition followed by a question mark ( ? ), then an expression to execute if the condition is truthy followed by a colon ( : ), and finally the expression to execute if the condition is falsy.
 
 //if data is not in local storage, get data from JSON or string
-const allTeamsString = localStorage.getItem('storedTeams');
-let allTeams = allTeamsString != null ? JSON.parse(allTeamsString) : JSON.parse(teamData);
+// const allTeamsString = localStorage.getItem('storedTeams');
+
+// let allTeams = allTeamsString != null ? JSON.parse(allTeamsString) : JSON.parse(JSON.stringify(getStandings()));
+// // //if storedTeams is null, then parse the JSON 
 
 const allGamesString = localStorage.getItem('storedAllGames');
-let allGames = allGamesString != null ? JSON.parse(allGamesString) : JSON.parse(gameData);
+console.log(allGamesString);
+let allGames = allGamesString != null ? JSON.parse(allGamesString) : JSON.parse(getGameData());
+
+// let allGamesString = localStorage.getItem('storedAllGames');
+
+// let allGames = JSON.parse(allGamesString);
 
 
 let games = [];
+
+let allTeamsString = localStorage.getItem('storedTeams');
+let allTeams = JSON.parse(allTeamsString);
+
 
 let teams = [];
 
@@ -283,75 +290,6 @@ function paginationTwo(gamesArr){
     
 }
 
-// function createPagination(gamesArr){
-
-//     const parent = document.getElementById("sections")
-//     while (parent.firstChild) {
-//         parent.firstChild.remove()
-//     }
-
-//     console.log("pagination")
-
-
-//     const list_element = document.getElementById('sections');
-//     const pagination_element = document.getElementById('pagination');
-
-//     let current_page = 1;
-//     let rows = 10;
-//     let window = 5;
-
-// function DisplayList (games, wrapper, rows_per_page, page) {
-// 	wrapper.innerHTML = "";
-// 	page--;
-
-// 	let start = rows_per_page * page;
-// 	let end = start + rows_per_page;
-// 	let paginatedItems = games.slice(start, end);
-
-// 	for (let i = 0; i < paginatedItems.length; i++) {
-// 		let item = paginatedItems[i];
-//         let row = createCard(item);
-//         document.querySelector('#sections').appendChild(row)
-// 	}
-// }
-
-// function SetupPagination (games, wrapper, rows_per_page) {
-// 	wrapper.innerHTML = "";
-
-// 	let page_count = Math.ceil(games.length / rows_per_page);
-// 	for (let i = 1; i < page_count + 1; i++) {
-// 		let btn = PaginationButton(i, games);
-// 		wrapper.appendChild(btn);
-// 	}
-// }
-
-// function PaginationButton (page, games) {
-// 	let button = document.createElement('button');
-// 	button.innerText = page;
-
-// 	if (current_page == page) button.classList.add('active');
-
-// 	button.addEventListener('click', function () {
-// 		current_page = page;
-// 		DisplayList(games, list_element, rows, current_page);
-
-// 		let current_btn = document.querySelector('.pagenumbers button.active');
-// 		current_btn.classList.remove('active');
-
-// 		button.classList.add('active');
-// 	});
-
-// 	return button;
-// }
-
-// DisplayList(gamesArr, list_element, rows, current_page);
-// SetupPagination(gamesArr, pagination_element, rows);
-
-
-// }
-
-
-
 
 function createSchedule() {
     allGames.forEach(game => {
@@ -374,7 +312,4 @@ function initGames(){
 createSchedule();
 paginationTwo(allGames);
 getStandings().then(data => { teams = data; allTeams = teams; initTeams() });
-// createPagination(allGames);
-
-// console.log(allGames)
 

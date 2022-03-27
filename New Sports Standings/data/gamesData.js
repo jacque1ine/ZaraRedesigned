@@ -1,4 +1,4 @@
-const gamesAll =[
+const gamesBigArr =[
     {
       "GameID": 15462,
       "Season": 2021,

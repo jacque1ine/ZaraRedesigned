@@ -1,4 +1,4 @@
-const teamsAll = [
+const teamsBigArr = [
     {
       "Season": 2021,
       "SeasonType": 1,

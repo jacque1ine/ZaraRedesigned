@@ -17,11 +17,9 @@ async function getStandings() {
   return data;
 
 
-
-
 }
 
-let test = [];
+
 
 let allGames = [];
 let games = [];
@@ -30,7 +28,7 @@ let teams = [];
 
 let allTeamsArr = [];
 
-let filteredTeams = [];
+
 
 getGameData().then(data =>{ games = data; allGames = data; initGames()})
 
@@ -55,8 +53,9 @@ function storeData() {
   console.log("storing");
   localStorage.setItem('storedAllGames', allGames);
 
-  console.log(allGames)
-  console.log(allTeams);
+  // console.log(allGames)
+  // console.log(allTeams);
+
 
 }
 
@@ -64,7 +63,7 @@ function storeData() {
 
 function createGame(){
 
-  let date = document.querySelector('#date').value;
+  let date = document.querySelector('#date').value + "T00:00:00";
   let hTeam = document.querySelector('#homeTeam').value;
   let aTeam = document.querySelector('#awayTeam').value;
   let hScore = document.querySelector('#awayScore').value;
@@ -74,20 +73,22 @@ function createGame(){
     let newGame = {
       HomeTeam: hTeam,
       AwayTeam: aTeam,
-      AwayScore: aScore,
-      HomeScore: hScore,
+      AwayTeamScore: aScore,
+      HomeTeamScore: hScore,
     }
   
     allGames.push(newGame);
     storeData();
+    console.log(date + hTeam + aTeam + hScore + aScore)
 
 
-
-     date =  document.querySelector('#date').value;
+     date =  document.querySelector('#date').value = ' ';
      aTeam = document.querySelector('#awayTeam').value = ' ';
      hTeam = document.querySelector('#homeTeam').value= ' ';
      hScore = document.querySelector('#homeScore').value= ' ';
      aScore = document.querySelector('#awayScore').value= ' ';
+
+    
   } else{
     alert('please enter the correct information');
     
@@ -97,8 +98,8 @@ function createGame(){
 
 function initTeams(){
   allTeams = teams;
-  test = allTeams;
-  console.log(test);
+ 
+  // console.log(test);
 
 }
 
@@ -106,6 +107,14 @@ function initGames(data){
 
  
 }
+
+
+// console.log(localStorage.getItem('storedTeams'))
+// console.log(localStorage.getItem('storedAllGames'))
+
+// if (localStorage.getItem('storedTeams') == undefined || localStorage.getItem('storedTeams') == null){
+//   localStorage.setItem('storedTeams', getGameData)
+// }
 
 
 
