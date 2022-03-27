@@ -54,7 +54,7 @@ async function getStandings() {
 // // let allGames = gamesString != null ? JSON.parse(gamesString) : JSON.parse(allGamesString);
 
 
-if (localStorage.getItem('storedAllGames') == undefined || localStorage.getItem('storedAllGames') == null){
+if (localStorage.getItem('storedAllGames') == undefined || localStorage.getItem('storedAllGames') === null){
   localStorage.setItem('storedAllGames', JSON.stringify(gamesBigArr))
 }
 

@@ -9,8 +9,6 @@ async function getGameData() {
 }
 
 
-localStorage.clear()
-
 
 
 let allGames = [];
