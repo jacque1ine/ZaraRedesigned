@@ -7,51 +7,10 @@ async function getGameData() {
 } 
 
 async function getStandings() {
-
     let res = await fetch('teams.json');
-
     let data = await res.json();
-
     return data;
-
 }
-
-
-
-// // const allTeamsString = localStorage.getItem('storedTeams');
-
-// // let allTeams = allTeamsString != null ? JSON.parse(allTeamsString) : JSON.parse(JSON.stringify(getStandings()));
-// // // //if storedTeams is null, then parse the JSON 
-
-// const allGamesString = localStorage.getItem('storedAllGames');
-// console.log(allGamesString);
-// let allGames = allGamesString != null ? JSON.parse(allGamesString) : gamesBigArr;
-
-// // let allGamesString = localStorage.getItem('storedAllGames');
-
-// // let allGames = JSON.parse(allGamesString);
-
-
-// let games = [];
-
-// let allTeamsString = localStorage.getItem('storedTeams');
-// // let allTeams = JSON.parse(allTeamsString);
-
-// let allTeams = allTeamsString != null ? JSON.parse(allTeamsString) : teamsBigArr;
-
-
-// let teams = [];
-
-
-// // let allTeamsString = JSON.stringify(teamsBigArr); 
-
-// // const teamString = localStorage.getItem('storedTeams');
-// // let allTeams = teamString != null ? JSON.parse(teamString) : JSON.parse(allTeamsString);
-
-// // let allGamesString = JSON.stringify(gamesBigArr); 
-
-// // const gamesString = localStorage.getItem('storedGames');
-// // let allGames = gamesString != null ? JSON.parse(gamesString) : JSON.parse(allGamesString);
 
 
 if (localStorage.getItem('storedAllGames') == undefined || localStorage.getItem('storedAllGames') === null){
@@ -62,26 +21,15 @@ if (localStorage.getItem('storedTeams') === undefined || localStorage.getItem('s
   localStorage.setItem('storedTeams', JSON.stringify(teamsBigArr))
 }
 
-
 console.log(localStorage.getItem('storedAllGames'));
-
 
 let allGamesString = localStorage.getItem('storedAllGames');
 let allGames = JSON.parse(allGamesString);
-
-
-
 let games = [];
 
 let allTeamsString = localStorage.getItem('storedTeams');
 let allTeams = JSON.parse(allTeamsString);
 let teams = [];
-
-
-    
-
-
-
 
 
 function convertName(key){
@@ -96,8 +44,6 @@ allTeams.forEach(team => {
 
 return fullName;
 }
-
-
 
 
 function getInput(){
@@ -138,16 +84,12 @@ function getInput(){
             if (game.HomeTeam === team || game.AwayTeam === team){
                 let row = createCard(game); document.querySelector('#sections').appendChild(row);
                 newArr.push(game);
-    
-    
+
             }
         })
-
         paginationTwo(newArr); 
-
       }
-      
-
+    
 
 function createCard(game) {
     console.log("RUNNING");
@@ -218,11 +160,7 @@ function createCard(game) {
     grid.className ='col-sm';
     grid.appendChild(aTeam);
 
-
     gridrow.appendChild(grid);
-
-    
-    
 
     cardBody.appendChild(title);
     cardBody.appendChild(container);
@@ -339,7 +277,6 @@ function createSchedule() {
 
 }
 
-
 function initTeams(){
     allTeams = teams;
 }
@@ -355,8 +292,7 @@ function storeData() {
     localStorage.setItem('storedAllGames', JSON.stringify(allGames));
   }
 
-  storeData();
-
+storeData();
 createSchedule();
 paginationTwo(allGames);
 getStandings().then(data => { teams = data; allTeams = teams; initTeams() });
