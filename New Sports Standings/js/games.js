@@ -62,7 +62,7 @@ function getInput(){
     allGames.forEach(game => {
         if ( new Date(game.DateTime) > new Date(intialDate) &&  new Date(game.DateTime) <= new Date(endDate)){
             console.log(game.DateTime)
-            let row = createCard(game); document.querySelector('#sections').appendChild(row);
+            let row = createCardTwo(game); document.querySelector('#sections').appendChild(row);
             newArr.push(game);
         }
     })
@@ -82,7 +82,7 @@ function getInput(){
 
         allGames.forEach(game => {
             if (game.HomeTeam === team || game.AwayTeam === team){
-                let row = createCard(game); document.querySelector('#sections').appendChild(row);
+                let row = createCardTwo(game); document.querySelector('#sections').appendChild(row);
                 newArr.push(game);
 
             }
@@ -106,7 +106,7 @@ function createCard(game) {
     score.className = 'card-title text-center pt-lg-5 '
 
     let hTeam = document.createElement('div')
-    hTeam.className = "card float-right p-2 font-weight-bold text-center"
+    hTeam.className = "float-right p-2 font-weight-bold text-center lead"
     hTeam.innerText =  "HOME" ;
     let tbody = document.createElement('div')
     tbody.className = 'card-body';
@@ -116,8 +116,7 @@ function createCard(game) {
 
     let aTeam = document.createElement('div')
     aTeam.innerText =  "AWAY" ;
-
-    aTeam.className = "card float-right p-2 font-weight-bold text-center"
+    aTeam.className = "float-right p-2 font-weight-bold text-center lead"
     
     tbody = document.createElement('div')
 
@@ -135,6 +134,17 @@ function createCard(game) {
     let day = game.DateTime.substring(8, 10);
     let year = game.DateTime.substring(0, 4);
    let date = `${month}. ${day}, ${year}`;
+
+
+    let myTable = document.createElement('table'); 
+    let row1 = myTable.insertRow(0); 
+    let row1cell1 = row1.insertCell(0); 
+    row1cell1.innerText= "Home: " + convertName(game.HomeTeam)
+    let row1cell2 = row1.insertCell(1); 
+    let row1cell3 = row1.insertCell(2); 
+    row1cell3.innerText= game.HomeTeamScore;
+    
+
  
     //header 
     let title = document.createElement('h6');
@@ -152,15 +162,39 @@ function createCard(game) {
     grid.className ='col-sm';
     grid.appendChild(hTeam);
     gridrow.appendChild(grid);
+
     grid = document.createElement('div');
     grid.className ='col-sm';
     grid.appendChild(score);
     gridrow.appendChild(grid);
+
     grid = document.createElement('div');
     grid.className ='col-sm';
     grid.appendChild(aTeam);
 
     gridrow.appendChild(grid);
+
+    container.appendChild(myTable)
+
+    let gridrow2 = document.createElement('div')
+    gridrow2.className = 'row';
+    container.appendChild(gridrow2);
+
+    let grid2 = document.createElement('div');
+    grid2.className ='col-sm';
+    grid2.appendChild(hTeam);
+    gridrow2.appendChild(grid2);
+
+    grid2 = document.createElement('div');
+    grid2.className ='col-sm';
+    grid2.appendChild(score);
+    gridrow2.appendChild(grid2);
+
+    grid2 = document.createElement('div');
+    grid2.className ='col-sm';
+    grid2.appendChild(aTeam);
+
+    gridrow2.appendChild(grid2);
 
     cardBody.appendChild(title);
     cardBody.appendChild(container);
@@ -168,8 +202,152 @@ function createCard(game) {
     newRow.appendChild(card);
     
     return newRow;
+    
+
 
 }
+function createCardTwo(game) {
+    console.log("RUNNING");
+
+    //create new row 
+    let newRow = document.createElement('tr');
+    newRow.setAttribute('id', 'card'); //each row has an id and card 
+
+    //CARD
+    let card = document.createElement('div');
+    card.className = 'card text-dark bg-white mb-3';
+
+
+    
+    //create score display
+    let hScore = document.createElement('h1');
+    hScore.innerText =  game.HomeTeamScore;
+    hScore.className = 'text-center p-4'
+   
+  
+    //create score display
+    let aScore = document.createElement('h1');
+    aScore.innerText =  game.AwayTeamScore ;
+    aScore.className = 'text-center p-4'
+
+
+    //create home team label display
+    let hTeam = document.createElement('div')
+    hTeam.className = "p-4 font-weight-bold"
+    hTeam.innerText =  "HOME" ;
+    let hTeamHeading = document.createElement('h5')
+    hTeamHeading.innerText = convertName(game.HomeTeam);
+    hTeam.appendChild(hTeamHeading)
+   
+
+
+    //create away team label display
+    let aTeam = document.createElement('div')
+    aTeam.className = "float-right p-4 font-weight-bold"
+    aTeam.innerText =  "AWAY" ;
+    let aTeamHeading = document.createElement('h5')
+    aTeamHeading.innerText = convertName(game.AwayTeam);
+    aTeam.appendChild(aTeamHeading)
+   
+    if(game.AwayTeamScore > game.HomeTeamScore){
+        aScore.className = 'text-center p-4 text-primary'
+        aTeam.className = "float-right p-4 font-weight-bold text-primary"
+        aTeamHeading.className= "text-primary"
+    }
+    if(game.AwayTeamScore < game.HomeTeamScore){
+        hScore.className = 'text-center p-4 text-primary'
+        hTeam.className = "float-right p-4 font-weight-bold text-primary"
+        hTeamHeading.className= "text-primary"
+    }
+   
+    
+  
+    //background
+    let cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+  
+    //month # to month name
+    let monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    let month = monthNames[parseInt(game.DateTime.substring(5, 7)) - 1];
+    let day = game.DateTime.substring(8, 10);
+    let year = game.DateTime.substring(0, 4);
+   let date = `${month}. ${day}, ${year}`;
+
+    //header 
+    let title = document.createElement('h6');
+    title.innerText = date + ': ' + convertName(game.HomeTeam) + '    vs    ' + convertName(game.AwayTeam)
+    title.className = 'card-header text-center';
+
+    //container with all the content
+    let container = document.createElement('div');
+    container.className = 'container p-4';
+    
+    //CONSTRUCT GRID
+    //create row 
+    let gridrow = document.createElement('div')
+    gridrow.className = 'row';
+    container.appendChild(gridrow);
+
+    //create col 1
+    let grid = document.createElement('div');
+    grid.className ='col-sm';
+    grid.appendChild(hTeam); //add the home team to this specific cell
+    gridrow.appendChild(grid); //add this cell to the row
+
+    //create col 2
+    grid = document.createElement('div');
+    grid.className ='col-sm';
+    grid.appendChild(hScore);
+    gridrow.appendChild(grid);
+    
+    //create col 3
+    // grid = document.createElement('div');
+    // grid.className ='col-sm';
+    // grid.appendChild(aTeam);
+    // gridrow.appendChild(grid);
+
+
+     //create row 
+     let gridrow2 = document.createElement('div')
+     gridrow2.className = 'row';
+     container.appendChild(gridrow2);
+
+    //create col 3
+    grid = document.createElement('div');
+    grid.className ='col-sm';
+    grid.appendChild(aTeam);
+    gridrow2.appendChild(grid);
+
+     //create col 1
+    //  grid = document.createElement('div');
+    //  grid.className ='col-sm';
+    //  grid.appendChild(hTeam); //add the home team to this specific cell
+    //  gridrow2.appendChild(grid); //add this cell to the row
+ 
+     //create col 2
+     grid = document.createElement('div');
+     grid.className ='col-sm';
+     grid.appendChild(aScore);
+     gridrow2.appendChild(grid);
+     
+   
+
+    //add the title and grid(container) to the cardbody
+    cardBody.appendChild(title);
+    cardBody.appendChild(container);
+
+    //add the cardbody to the card
+    card.appendChild(cardBody);
+    
+    //add card to the whole row
+    newRow.appendChild(card);
+    
+    return newRow;
+    
+
+
+}
+
 
 function paginationTwo(gamesArr){
     var state = {
@@ -258,7 +436,7 @@ function paginationTwo(gamesArr){
      
         for (let i = 0; i < myList.length; i++) {
             let item = myList[i];
-            let row = createCard(item);
+            let row = createCardTwo(item);
             document.querySelector('#sections').appendChild(row)
         }
             
@@ -270,7 +448,7 @@ function paginationTwo(gamesArr){
 
 function createSchedule() {
     allGames.forEach(game => {
-        let row = createCard(game); document.querySelector('#sections').appendChild(row);
+        let row = createCardTwo(game); document.querySelector('#sections').appendChild(row);
         // console.log(game.HomeTeam)
 
     })
