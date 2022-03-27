@@ -18,30 +18,69 @@ async function getStandings() {
 
 
 
-//ternary operator: a condition followed by a question mark ( ? ), then an expression to execute if the condition is truthy followed by a colon ( : ), and finally the expression to execute if the condition is falsy.
+// // const allTeamsString = localStorage.getItem('storedTeams');
 
-//if data is not in local storage, get data from JSON or string
-// const allTeamsString = localStorage.getItem('storedTeams');
+// // let allTeams = allTeamsString != null ? JSON.parse(allTeamsString) : JSON.parse(JSON.stringify(getStandings()));
+// // // //if storedTeams is null, then parse the JSON 
 
-// let allTeams = allTeamsString != null ? JSON.parse(allTeamsString) : JSON.parse(JSON.stringify(getStandings()));
-// // //if storedTeams is null, then parse the JSON 
+// const allGamesString = localStorage.getItem('storedAllGames');
+// console.log(allGamesString);
+// let allGames = allGamesString != null ? JSON.parse(allGamesString) : gamesBigArr;
 
-const allGamesString = localStorage.getItem('storedAllGames');
-console.log(allGamesString);
-let allGames = allGamesString != null ? JSON.parse(allGamesString) : JSON.parse(getGameData());
+// // let allGamesString = localStorage.getItem('storedAllGames');
 
-// let allGamesString = localStorage.getItem('storedAllGames');
+// // let allGames = JSON.parse(allGamesString);
 
-// let allGames = JSON.parse(allGamesString);
+
+// let games = [];
+
+// let allTeamsString = localStorage.getItem('storedTeams');
+// // let allTeams = JSON.parse(allTeamsString);
+
+// let allTeams = allTeamsString != null ? JSON.parse(allTeamsString) : teamsBigArr;
+
+
+// let teams = [];
+
+
+// // let allTeamsString = JSON.stringify(teamsBigArr); 
+
+// // const teamString = localStorage.getItem('storedTeams');
+// // let allTeams = teamString != null ? JSON.parse(teamString) : JSON.parse(allTeamsString);
+
+// // let allGamesString = JSON.stringify(gamesBigArr); 
+
+// // const gamesString = localStorage.getItem('storedGames');
+// // let allGames = gamesString != null ? JSON.parse(gamesString) : JSON.parse(allGamesString);
+
+
+if (localStorage.getItem('storedAllGames') == undefined || localStorage.getItem('storedAllGames') == null){
+  localStorage.setItem('storedAllGames', JSON.stringify(gamesBigArr))
+}
+
+if (localStorage.getItem('storedTeams') === undefined || localStorage.getItem('storedTeams') === null){
+  localStorage.setItem('storedTeams', JSON.stringify(teamsBigArr))
+}
+
+
+console.log(localStorage.getItem('storedAllGames'));
+
+
+let allGamesString = localStorage.getItem('storedAllGames');
+let allGames = JSON.parse(allGamesString);
+
 
 
 let games = [];
 
 let allTeamsString = localStorage.getItem('storedTeams');
 let allTeams = JSON.parse(allTeamsString);
-
-
 let teams = [];
+
+
+    
+
+
 
 
 
@@ -150,9 +189,9 @@ function createCard(game) {
   
     //month # to month name
     let monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    let month = monthNames[parseInt(game.Day.substring(5, 7)) - 1];
-    let day = game.Day.substring(8, 10);
-    let year = game.Day.substring(0, 4);
+    let month = monthNames[parseInt(game.DateTime.substring(5, 7)) - 1];
+    let day = game.DateTime.substring(8, 10);
+    let year = game.DateTime.substring(0, 4);
    let date = `${month}. ${day}, ${year}`;
  
     //header 
@@ -308,6 +347,15 @@ function initTeams(){
 function initGames(){
     allGames = games; 
 }
+
+function storeData() {
+    localStorage.setItem('storedTeams', JSON.stringify(allTeams));
+  
+    console.log("storing");
+    localStorage.setItem('storedAllGames', JSON.stringify(allGames));
+  }
+
+  storeData();
 
 createSchedule();
 paginationTwo(allGames);

@@ -20,26 +20,48 @@ return data;
 
 }
 
-function storeData() {
-localStorage.setItem('storedTeams', JSON.stringify(allTeams));
 
-console.log("storing");
-localStorage.setItem('storedAllGames', JSON.stringify(allGames));
-}
+
+// if (localStorage.getItem('storedAllGames') === undefined || localStorage.getItem('storedAllGames') === null){
+//   localStorage.setItem('storedAllGames', gamesBigArr)
+// }
+
+// if (localStorage.getItem('storedAllGames') === undefined || localStorage.getItem('storedAllGames') === null){
+//   localStorage.setItem('storedAllGames', gamesBigArr)
+// }
+
+
 
 let dirSor = 'ASC';
-let allGames = [];
-let games = [];
 
-let teams = [];
+const teamString = localStorage.getItem('storedTeams');
+let allTeams = teamString != null ? JSON.parse(teamString) : teamsBigArr;
 
-let allTeams = [];
+const gamesString = localStorage.getItem('storedGames');
+let allGames = gamesString != null ? JSON.parse(gamesString) : gamesBigArr;
+
+
+
+let games = gamesBigArr;
+// let allGames = games;
+let allGamesString = JSON.stringify(gamesBigArr);
+
+let teams = teamsBigArr;
+// let allTeams = teams;
+
+let allTeamsString = JSON.stringify(teamsBigArr); 
 
 let filteredTeams = [];
 
 let Conference = "NBA";
 let Division = "";
 
+function storeData() {
+  localStorage.setItem('storedTeams', JSON.stringify(allTeams));
+
+  console.log("storing");
+  localStorage.setItem('storedAllGames', JSON.stringify(allGames));
+}
 
 
 
@@ -184,9 +206,7 @@ getGameData().then(data =>{ games = data; allGames = games;})
 
 getStandings().then(data => { teams = data; allTeams = teams; createStandings(); });
 
-
-
-
+createStandings();
 
 
 

@@ -8,31 +8,18 @@ async function getGameData() {
 
 }
 
-async function getStandings() {
 
-  const res = await fetch('teams.json');
-
-  const data = await res.json();
-
-  return data;
-
-
-}
+localStorage.clear()
 
 
 
 let allGames = [];
 let games = [];
 
-let teams = [];
 
-let allTeamsArr = [];
-
+getGameData().then(data =>{ games = data; allGames = data})
 
 
-getGameData().then(data =>{ games = data; allGames = data; initGames()})
-
-getStandings().then(data => { teams = data; allTeamsArr = teams; initTeams() });
 
 
 
@@ -48,13 +35,12 @@ let allGames = allGamesString != null ? JSON.parse(allGamesString) : JSON.parse(
 
 */
 function storeData() {
-  localStorage.setItem('storedTeams', allTeams);
 
+
+
+  localStorage.setItem('storedAllGames', JSON.stringify(allGames));
   console.log("storing");
-  localStorage.setItem('storedAllGames', allGames);
 
-  // console.log(allGames)
-  // console.log(allTeams);
 
 
 }
@@ -71,22 +57,29 @@ function createGame(){
   
   if(!isNaN(hScore) &&!isNaN(aScore)){
     let newGame = {
+      DateTime: date,
       HomeTeam: hTeam,
       AwayTeam: aTeam,
       AwayTeamScore: aScore,
       HomeTeamScore: hScore,
     }
+    console.log(newGame)
+
+
   
     allGames.push(newGame);
     storeData();
-    console.log(date + hTeam + aTeam + hScore + aScore)
+    console.log(JSON.parse(localStorage.getItem('storedAllGames')))
+  
 
-
-     date =  document.querySelector('#date').value = ' ';
-     aTeam = document.querySelector('#awayTeam').value = ' ';
-     hTeam = document.querySelector('#homeTeam').value= ' ';
-     hScore = document.querySelector('#homeScore').value= ' ';
-     aScore = document.querySelector('#awayScore').value= ' ';
+    setTimeout(() => {
+      date =  document.querySelector('#date').value = ' ';
+      aTeam = document.querySelector('#awayTeam').value = ' ';
+      hTeam = document.querySelector('#homeTeam').value= ' ';
+      hScore = document.querySelector('#homeScore').value= ' ';
+      aScore = document.querySelector('#awayScore').value= ' ';
+  }, 2000);
+    
 
     
   } else{
@@ -96,25 +89,7 @@ function createGame(){
 
 }
 
-function initTeams(){
-  allTeams = teams;
- 
-  // console.log(test);
 
-}
-
-function initGames(data){
-
- 
-}
-
-
-// console.log(localStorage.getItem('storedTeams'))
-// console.log(localStorage.getItem('storedAllGames'))
-
-// if (localStorage.getItem('storedTeams') == undefined || localStorage.getItem('storedTeams') == null){
-//   localStorage.setItem('storedTeams', getGameData)
-// }
 
 
 
