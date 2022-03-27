@@ -90,122 +90,6 @@ function getInput(){
         paginationTwo(newArr); 
       }
     
-
-function createCard(game) {
-    console.log("RUNNING");
-
-
-    let newRow = document.createElement('tr');
-    newRow.setAttribute('id', 'card');
-
-    let card = document.createElement('div');
-    card.className = 'card text-dark bg-white mb-3';
-
-    let score = document.createElement('h1');
-    score.innerText =  game.HomeTeamScore + "  -  " + game.AwayTeamScore ;
-    score.className = 'card-title text-center pt-lg-5 '
-
-    let hTeam = document.createElement('div')
-    hTeam.className = "float-right p-2 font-weight-bold text-center lead"
-    hTeam.innerText =  "HOME" ;
-    let tbody = document.createElement('div')
-    tbody.className = 'card-body';
-    tbody.innerText = convertName(game.HomeTeam);
-
-    hTeam.appendChild(tbody);
-
-    let aTeam = document.createElement('div')
-    aTeam.innerText =  "AWAY" ;
-    aTeam.className = "float-right p-2 font-weight-bold text-center lead"
-    
-    tbody = document.createElement('div')
-
-    tbody.className = 'card-body';
-    tbody.innerText = convertName(game.AwayTeam);
-    aTeam.appendChild(tbody);
-
-    //background
-    let cardBody = document.createElement('div');
-    cardBody.className = 'card-body';
-  
-    //month # to month name
-    let monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    let month = monthNames[parseInt(game.DateTime.substring(5, 7)) - 1];
-    let day = game.DateTime.substring(8, 10);
-    let year = game.DateTime.substring(0, 4);
-   let date = `${month}. ${day}, ${year}`;
-
-
-    let myTable = document.createElement('table'); 
-    let row1 = myTable.insertRow(0); 
-    let row1cell1 = row1.insertCell(0); 
-    row1cell1.innerText= "Home: " + convertName(game.HomeTeam)
-    let row1cell2 = row1.insertCell(1); 
-    let row1cell3 = row1.insertCell(2); 
-    row1cell3.innerText= game.HomeTeamScore;
-    
-
- 
-    //header 
-    let title = document.createElement('h6');
-    title.innerText = date + ': ' + convertName(game.HomeTeam) + '    vs    ' + convertName(game.AwayTeam)
-    title.className = 'card-header text-center';
-
-    let container = document.createElement('div');
-    container.className = 'container p-4';
-   
-    let gridrow = document.createElement('div')
-    gridrow.className = 'row';
-    container.appendChild(gridrow);
-
-    let grid = document.createElement('div');
-    grid.className ='col-sm';
-    grid.appendChild(hTeam);
-    gridrow.appendChild(grid);
-
-    grid = document.createElement('div');
-    grid.className ='col-sm';
-    grid.appendChild(score);
-    gridrow.appendChild(grid);
-
-    grid = document.createElement('div');
-    grid.className ='col-sm';
-    grid.appendChild(aTeam);
-
-    gridrow.appendChild(grid);
-
-    container.appendChild(myTable)
-
-    let gridrow2 = document.createElement('div')
-    gridrow2.className = 'row';
-    container.appendChild(gridrow2);
-
-    let grid2 = document.createElement('div');
-    grid2.className ='col-sm';
-    grid2.appendChild(hTeam);
-    gridrow2.appendChild(grid2);
-
-    grid2 = document.createElement('div');
-    grid2.className ='col-sm';
-    grid2.appendChild(score);
-    gridrow2.appendChild(grid2);
-
-    grid2 = document.createElement('div');
-    grid2.className ='col-sm';
-    grid2.appendChild(aTeam);
-
-    gridrow2.appendChild(grid2);
-
-    cardBody.appendChild(title);
-    cardBody.appendChild(container);
-    card.appendChild(cardBody);
-    newRow.appendChild(card);
-    
-    return newRow;
-    
-
-
-}
 function createCardTwo(game) {
     console.log("RUNNING");
 
@@ -243,7 +127,7 @@ function createCardTwo(game) {
 
     //create away team label display
     let aTeam = document.createElement('div')
-    aTeam.className = "float-right p-4 font-weight-bold"
+    aTeam.className = "p-4 font-weight-bold"
     aTeam.innerText =  "AWAY" ;
     let aTeamHeading = document.createElement('h5')
     aTeamHeading.innerText = convertName(game.AwayTeam);
@@ -251,12 +135,13 @@ function createCardTwo(game) {
    
     if(game.AwayTeamScore > game.HomeTeamScore){
         aScore.className = 'text-center p-4 text-primary'
-        aTeam.className = "float-right p-4 font-weight-bold text-primary"
+        aTeam.className = "p-4 font-weight-bold text-primary"
         aTeamHeading.className= "text-primary"
+        
     }
     if(game.AwayTeamScore < game.HomeTeamScore){
         hScore.className = 'text-center p-4 text-primary'
-        hTeam.className = "float-right p-4 font-weight-bold text-primary"
+        hTeam.className = "p-4 font-weight-bold text-primary"
         hTeamHeading.className= "text-primary"
     }
    
@@ -299,30 +184,17 @@ function createCardTwo(game) {
     grid.className ='col-sm';
     grid.appendChild(hScore);
     gridrow.appendChild(grid);
-    
-    //create col 3
-    // grid = document.createElement('div');
-    // grid.className ='col-sm';
-    // grid.appendChild(aTeam);
-    // gridrow.appendChild(grid);
 
-
-     //create row 
+     //create row 2 
      let gridrow2 = document.createElement('div')
      gridrow2.className = 'row';
      container.appendChild(gridrow2);
 
-    //create col 3
+    //create col 1
     grid = document.createElement('div');
     grid.className ='col-sm';
     grid.appendChild(aTeam);
     gridrow2.appendChild(grid);
-
-     //create col 1
-    //  grid = document.createElement('div');
-    //  grid.className ='col-sm';
-    //  grid.appendChild(hTeam); //add the home team to this specific cell
-    //  gridrow2.appendChild(grid); //add this cell to the row
  
      //create col 2
      grid = document.createElement('div');
@@ -331,7 +203,6 @@ function createCardTwo(game) {
      gridrow2.appendChild(grid);
      
    
-
     //add the title and grid(container) to the cardbody
     cardBody.appendChild(title);
     cardBody.appendChild(container);
@@ -343,13 +214,12 @@ function createCardTwo(game) {
     newRow.appendChild(card);
     
     return newRow;
-    
-
 
 }
 
-
+//create pagination
 function paginationTwo(gamesArr){
+    
     var state = {
         'querySet': gamesArr,
         'page': 1,
@@ -430,7 +300,6 @@ function paginationTwo(gamesArr){
             parent.firstChild.remove()
         }
     
-    
         var data = pagination(state.querySet, state.page, state.rows)
         var myList = data.querySet
      
@@ -442,7 +311,6 @@ function paginationTwo(gamesArr){
             
         pageButtons(data.pages)
     }
-    
 }
 
 
