@@ -20,7 +20,9 @@ export default {
     }, 
      components: {
          Task
-     }
+     }, 
+
+     emits: ['delete-task'], 
 
 }
 </script>
