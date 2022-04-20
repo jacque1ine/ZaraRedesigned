@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1>{{title}}</h1>
-        <Button /> <!--capital B since it is a componenta-->
+        <Button text="Add Task" color="green" /> <!--capital B since it is a componenta-->
     </header>
 </template>
 
@@ -11,7 +11,14 @@ import Button from './Button'
 
 export default {
     name: 'Header', //you can pass props into components
-    props: ['title']
+    props: {
+        title: String,
+    }, 
+
+    components: {
+        Button,
+
+    }
 
     
 }

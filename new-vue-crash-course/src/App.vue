@@ -3,6 +3,7 @@
 <template>
 <div class="container">
   <Header title="Task Tracker" /> 
+  <Tasks @delete-task="deleteTask" :tasks="tasks"/> <!--v bind so that its dynamic-->
 </div>
 
   
@@ -12,12 +13,51 @@
 <script>
 
 import Header from './components/Header'
+import Tasks from './components/Tasks'
+
 
 export default {
   name: 'App',
   components: {
     Header,
+    Tasks
    
+  },
+  data() {
+    return{
+      tasks: []
+
+    }
+  }, 
+  methods: {
+    deleteTask(id){
+      if (confirm('Are you sure?'))
+         this.tasks= this.tasks.filter((task)=> task.id !==id) //we want everything back except the task with that id bc we are deleting that task
+    }
+
+  }, 
+  created() {
+    this.tasks = [
+      {
+        id: 1, 
+        text: 'doc appt', 
+        day: 'march 1st at 2:30pm', 
+        reminder: true,
+      }, 
+      {
+        id: 2, 
+        text: 'meeting at school', 
+        day: 'march 3rd at 2:30pm', 
+        reminder: true,
+      },
+      {
+        id: 3, 
+        text: 'food appt', 
+        day: 'march 4th at 2:30pm', 
+        reminder: false,
+      }, 
+
+    ]
   }
 }
 </script>
