@@ -1,7 +1,9 @@
 <template>
     <header>
         <h1>{{title}}</h1>
-        <Button @toggle-add-task="$emit('toggle-add-task')" text="Add Task" color="green" /> <!--capital B since it is a componenta-->
+        <Button @toggle-add-task="$emit('toggle-add-task')" 
+        :text="showAddTask ? 'Close' : 'Add Task'" 
+        :color="showAddTask ? 'red' : 'green' " /> <!--capital B since it is a componenta-->
     </header>
 </template>
 
@@ -13,6 +15,7 @@ export default {
     name: 'Header', //you can pass props into components
     props: {
         title: String,
+        showAddTask: Boolean
     }, 
 
     components: {
