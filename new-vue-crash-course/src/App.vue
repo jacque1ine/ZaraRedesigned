@@ -52,31 +52,16 @@ export default {
      this.tasks = this.tasks.map((task)=> task.id === id ? {...task, reminder: !task.reminder} : task
      )
     },
+    async fetchTasks(){
+      const res = await fetch('http://localhost:5000/tasks')
+      const data = await res.json()
+      return data
+    }
 
 
   }, 
-  created() {
-    this.tasks = [
-      {
-        id: 1, 
-        text: 'doc appt', 
-        day: 'march 1st at 2:30pm', 
-        reminder: true,
-      }, 
-      {
-        id: 2, 
-        text: 'meeting at school', 
-        day: 'march 3rd at 2:30pm', 
-        reminder: true,
-      },
-      {
-        id: 3, 
-        text: 'food appt', 
-        day: 'march 4th at 2:30pm', 
-        reminder: false,
-      }, 
-
-    ]
+  async created() {
+    this.tasks = await this.fetchTasks()
   }
 }
 </script>
