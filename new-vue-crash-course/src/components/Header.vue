@@ -1,0 +1,28 @@
+<template>
+    <header>
+        <h1>{{title}}</h1>
+        <Button /> <!--capital B since it is a componenta-->
+    </header>
+</template>
+
+<script>
+
+import Button from './Button'
+
+export default {
+    name: 'Header', //you can pass props into components
+    props: ['title']
+
+    
+}
+</script>
+
+<style scoped>
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    }
+
+</style>
