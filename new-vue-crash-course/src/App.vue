@@ -3,7 +3,7 @@
 <template>
 <div class="container">
   <Header title="Task Tracker" /> 
-  <Tasks @delete-task="deleteTask" :tasks="tasks"/> <!--v bind so that its dynamic-->
+  <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"/> <!--v bind so that its dynamic-->
 </div>
 
   
@@ -33,7 +33,12 @@ export default {
     deleteTask(id){
       if (confirm('Are you sure?'))
          this.tasks= this.tasks.filter((task)=> task.id !==id) //we want everything back except the task with that id bc we are deleting that task
-    }
+    },
+    toggleReminder(id){
+      //updating task to either true to false, or false to true
+     this.tasks = this.tasks.map((task)=> task.id === id ? {...task, reminder: !task.reminder} : task
+     )
+    },
 
   }, 
   created() {
