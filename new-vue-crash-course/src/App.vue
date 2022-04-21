@@ -40,15 +40,31 @@ export default {
     toggleAddTask(){
       this.showAddTask = !this.showAddTask
     },
-    addTask(task){
+    async addTask(task){
+      const res = await fetch ('http://localhost:5000/tasks', {
+        method:  'POST', 
+        headers: {
+          'Content-type': 'application/json', 
+
+        }, 
+         body: JSON.stringify(task)
+      })
+
+      const data = await res.json()
+
       this.tasks=[...this.tasks, task]
     },
-    deleteTask(id){
-      if (confirm('Are you sure?'))
-         this.tasks= this.tasks.filter((task)=> task.id !==id) //we want everything back except the task with that id bc we are deleting that task
+    async deleteTask(id){
+      if (confirm('Are you sure?')) {
+       const res = await fetch (`http://localhost:5000/tasks/${id}`, {
+        method: 'DELETE'
+
+      })
+      res.status === 200 ? filter (this.tasks= this.tasks.filter((task)=> task.id !==id)) : alert('Error deleting task') 
+       //we want everything back except the task with that id bc we are deleting that task
+      }
     },
     toggleReminder(id){
-      //updating task to either true to false, or false to true
      this.tasks = this.tasks.map((task)=> task.id === id ? {...task, reminder: !task.reminder} : task
      )
     },
