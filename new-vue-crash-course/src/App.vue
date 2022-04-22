@@ -7,6 +7,8 @@
     <AddTask @add-task="addTask"/>
   </div>
   <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"/> <!--v bind so that its dynamic-->
+  <Footer />
+
 </div>
 
   
@@ -18,6 +20,7 @@
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
+import Footer from './components/Footer'
 
 
 export default {
@@ -25,7 +28,8 @@ export default {
   components: {
     Header,
     Tasks, 
-    AddTask
+    AddTask, 
+    Footer
    
   },
   data() {
@@ -60,14 +64,33 @@ export default {
         method: 'DELETE'
 
       })
-      res.status === 200 ? filter (this.tasks= this.tasks.filter((task)=> task.id !==id)) : alert('Error deleting task') 
+      res.status === 200 ? filter (this.tasks= 
+        this.tasks.filter((task)=> task.id 
+        !==id)) : alert('Error deleting task') 
        //we want everything back except the task with that id bc we are deleting that task
       }
     },
-    toggleReminder(id){
-     this.tasks = this.tasks.map((task)=> task.id === id ? {...task, reminder: !task.reminder} : task
+
+    async toggleReminder(id){
+      const taskToToggle = await this.fetchTasks(id)
+      const updTask = {...taskToToggle, reminder: !taskToToggle.reminder}
+      
+      const res = await fetch(`http://localhost:5000/tasks/${id}`, { 
+        method: 'PUT', //put is a for updates
+        headers: {
+          'Content-type': 'application/json',
+        }, 
+        body: JSON.stringify(updTask),
+      })
+
+      const data = await res.json()
+
+     this.tasks = this.tasks.map
+     ((task)=> task.id === id ? {...task, reminder: data.reminder} 
+     : task
      )
     },
+
     async fetchTasks(){
         const res = await fetch('http://localhost:5000/tasks')
         const data = await res.json()
