@@ -38,6 +38,12 @@ const routes = [
     path: '/jamaica',
     name: 'jamaica',
     component: () => import ('@/views/JamaicaView.vue')
+  }, 
+  
+  {
+    path: '/destination/:id',
+    name: 'destination.show',
+    component: () => import ('@/views/DestinationView.vue')
   }
   // {
   //   path: '/about',
