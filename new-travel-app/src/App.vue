@@ -1,18 +1,17 @@
-ad<template>
-  <div id="nav">
-    <!--router view is a component that changes when the page re-renders-->
-    <router-link to="/">Home</router-link> 
-    <router-link to="/brazil">Brazil</router-link>
-    <router-link to="/panama">Panama</router-link>
-    <router-link to="/hawaii">Hawaii</router-link>
-    <router-link to="/jamaica">Jamaica</router-link>
-    
-  
-  </div>
-
-  
+<template>
   <div class="container">
+    <the-navigation-bar />
     <router-view/>
   </div>
 </template>
+
+<script>
+
+import TheNavigationBar from '@/components/TheNavigationBar.vue'
+
+export default {
+  components: { TheNavigationBar},
+  
+};
+</script>
 

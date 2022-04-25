@@ -1,10 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import AboutView from '@/views/AboutView.vue'
-import BrazilView from '@/views/BrazilView.vue'
-import PanamaView from '@/views/PanamaView.vue'
-import HawaiiView from '@/views/HawaiiView.vue'
-import JamaicaView from '@/views/JamaicaView.vue'
+
 
 //if we want to get to source folder, we use @ symbol. 
 //the @ symbol takes us to the src folder 
@@ -20,28 +16,28 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: AboutView
+    component: () => import ('@/views/AboutView.vue')
   },
   {
     path: '/brazil',
     name: 'brazil',
-    component: BrazilView
+    component: () => import ('@/views/BrazilView.vue')
   },
   {
     path: '/panama',
     name: 'panama',
-    component: PanamaView
+    component: () => import ('@/views/PanamaView.vue')
   },
   {
     path: '/hawaii',
     name: 'hawaii',
-    component: HawaiiView
+    component: () => import ('@/views/HawaiiView.vue')
   },
 
   {
     path: '/jamaica',
     name: 'jamaica',
-    component: JamaicaView
+    component: () => import ('@/views/JamaicaView.vue')
   }
   // {
   //   path: '/about',
