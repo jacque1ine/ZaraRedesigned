@@ -20,6 +20,11 @@ const routes = [
     name: 'adduser',
     component: () => import(/* webpackChunkName: "addcontactview" */ '@/views/AddUserView.vue')
   }, 
+  {
+    path: '/posts',
+    name: 'posts',
+    component: () => import(/* webpackChunkName: "addcontactview" */ '@/views/PostView.vue')
+  }, 
 
 ]
 
