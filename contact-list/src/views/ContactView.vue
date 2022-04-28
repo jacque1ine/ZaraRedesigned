@@ -21,7 +21,6 @@ export default {
       const contactId = parseInt(this.$route.params.id);
       const res = await fetch(`../api/contacts/${contactId}`);
 
-
       const data = await res.json();
 
       return data;
