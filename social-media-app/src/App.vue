@@ -1,9 +1,16 @@
 <template>
-  <v-app>
-    <v-main>
+  <!-- <v-app>
+    <v-main> -->
+
+      <nav> 
+         <router-link to="/">Home</router-link> |
+    <router-link to="/adduser">Add User</router-link> 
+      
+      </nav>
+
       <router-view/>
-    </v-main>
-  </v-app>
+    <!-- </v-main>
+  </v-app> -->
 </template>
 
 <script>
