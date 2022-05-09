@@ -1,4 +1,4 @@
-<template>
+                <template>
 <section>
     <h1>{{ destination.name }}</h1>
     <div class="desintation-details">

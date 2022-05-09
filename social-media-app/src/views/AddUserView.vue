@@ -57,7 +57,7 @@ export default {
         phone: this.phone,
       };
  
-      const res = await fetch("api/contacts", {
+      const res = await fetch("/api/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

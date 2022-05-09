@@ -25,6 +25,11 @@ const routes = [
     name: 'posts',
     component: () => import(/* webpackChunkName: "addcontactview" */ '@/views/PostView.vue')
   }, 
+  {
+    path: '/user/:id',
+    name: 'user.show',
+    component: () => import ('@/views/AccountView.vue')
+  }
 
 ]
 
