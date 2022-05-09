@@ -19,7 +19,7 @@ export default {
   methods: {
     async fetchContact() {
       const contactId = parseInt(this.$route.params.id);
-      const res = await fetch(`../api/contacts/${contactId}`);
+      const res = await fetch(`http://localhost:5000/${contactId}`);
 
       const data = await res.json();
 
