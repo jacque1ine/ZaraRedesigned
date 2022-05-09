@@ -91,7 +91,7 @@ export default {
 }
  
 .form-control input {
-  width: 100%;
+  width: 80%;
   height: 40px;
   margin: 5px;
   padding: 3px 7px;
