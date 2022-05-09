@@ -6,16 +6,6 @@
     lazy-validation
       @submit="onSubmit" class="add-form">
 
-    <!-- <div class="form-control">
-      <label>Contact</label>
-      <input
-        type="text"
-        v-model="firstName"
-        name="firstName"
-        placeholder="First Name"
-      />
-    </div> -->
-
     <v-text-field
       v-model="firstName"
       name="firstName"
@@ -23,13 +13,19 @@
       required
     ></v-text-field>
 
-<v-text-field
+    <v-text-field
       v-model="lastName"
       name="lastName"
       label="Last Name"
       required
     ></v-text-field>
 
+    <v-text-field
+      v-model="username"
+      name="username"
+      label="Username"
+      required
+    ></v-text-field>
 
     <v-text-field
       v-model="phone"
@@ -38,29 +34,6 @@
       required
     ></v-text-field>
 
-     
-    <!-- <div class="form-control">
-      <label>Last Name</label>
-      <input
-        type="text"
-        v-model="lastName"
-        name="lastName"
-        placeholder="Last Name"
-      />
-    </div>
-
-    
-
-    
-    <div class="form-control">
-      <label>Phone Number</label>
-      <input
-        type="phone"
-        v-model="phone"
-        name="phone"
-        placeholder="(XXX)-XXX-XXXX"
-      />
-    </div> -->
  
     <v-btn
       input type="submit" 
@@ -82,6 +55,7 @@ export default {
       firstName: "",
       lastName: "",
       phone: "",
+      username: "",
       address: "",
     }
   },
@@ -91,7 +65,7 @@ export default {
     async onSubmit(e) {
       e.preventDefault();
  
-      if (!this.firstName || !this.lastName || !this.phone) {
+      if (!this.firstName || !this.lastName || !this.username || !this.phone ) {
         alert("All fields are mandatory");
         return;
       }
@@ -99,7 +73,9 @@ export default {
       const newContact = {
         firstName: this.firstName,
         lastName: this.lastName,
-        phone: this.phone,
+        username: this.username,
+        phone: this.phone
+        
       };
  
       const res = await fetch("/api/contacts", {
@@ -114,23 +90,12 @@ export default {
  
       this.firstName = "";
       this.lastName = "";
+      this.username="";
       this.phone = "";
+  
  
       document.querySelector("v-form").reset();
-    },
-
-     validate () {
-        this.$refs.form.validate()
-      },
-      reset () {
-        this.$refs.form.reset()
-      },
-      resetValidation () {
-        this.$refs.form.resetValidation()
-      },
-
-
-
+    }
   },
 };
 </script>
