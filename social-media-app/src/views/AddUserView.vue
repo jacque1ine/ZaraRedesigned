@@ -1,6 +1,11 @@
 <template>
-  <form @submit="onSubmit" class="add-form">
-    <div class="form-control">
+
+  <v-form ref="form"
+    v-model="valid"
+    lazy-validation
+      @submit="onSubmit" class="add-form">
+
+    <!-- <div class="form-control">
       <label>Contact</label>
       <input
         type="text"
@@ -8,8 +13,32 @@
         name="firstName"
         placeholder="First Name"
       />
-    </div>
-    <div class="form-control">
+    </div> -->
+
+    <v-text-field
+      v-model="firstName"
+      name="firstName"
+      label="First Name"
+      required
+    ></v-text-field>
+
+<v-text-field
+      v-model="lastName"
+      name="lastName"
+      label="Last Name"
+      required
+    ></v-text-field>
+
+
+    <v-text-field
+      v-model="phone"
+      name="phone"
+      label="Phone Number"
+      required
+    ></v-text-field>
+
+     
+    <!-- <div class="form-control">
       <label>Last Name</label>
       <input
         type="text"
@@ -18,6 +47,10 @@
         placeholder="Last Name"
       />
     </div>
+
+    
+
+    
     <div class="form-control">
       <label>Phone Number</label>
       <input
@@ -26,22 +59,31 @@
         name="phone"
         placeholder="(XXX)-XXX-XXXX"
       />
-    </div>
+    </div> -->
  
-    <input type="submit" value="Save" class="btn btn-block" />
-  </form>
+    <v-btn
+      input type="submit" 
+      value="Save"
+      color="success"
+      >
+      Save</v-btn>
+  </v-form>
+
+
 </template>
  
 <script>
 export default {
-  data() {
-    return {
+  data(){
+    return  {
       firstName: "",
       lastName: "",
       phone: "",
       address: "",
-    };
+    }
   },
+
+
   methods: {
     async onSubmit(e) {
       e.preventDefault();
@@ -71,14 +113,31 @@ export default {
       this.lastName = "";
       this.phone = "";
  
-      document.querySelector("form").reset();
+      document.querySelector("v-form").reset();
     },
+
+     validate () {
+        this.$refs.form.validate()
+      },
+      reset () {
+        this.$refs.form.reset()
+      },
+      resetValidation () {
+        this.$refs.form.resetValidation()
+      },
+
+
+
   },
 };
 </script>
  
 <style scoped>
-.add-form {
+.container{
+  padding: 10px;
+}
+
+/* .add-form {
   margin-bottom: 40px;
 }
  
@@ -111,5 +170,5 @@ export default {
 .form-control-check input {
   flex: 2;
   height: 20px;
-}
+} */
 </style>
