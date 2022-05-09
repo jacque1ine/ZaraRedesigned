@@ -1,5 +1,6 @@
 <template>
 
+<div class = "content">
   <v-form ref="form"
     v-model="valid"
     lazy-validation
@@ -67,8 +68,10 @@
       color="success"
       >
       Save</v-btn>
-  </v-form>
 
+   
+  </v-form>
+ </div>
 
 </template>
  
@@ -133,8 +136,8 @@ export default {
 </script>
  
 <style scoped>
-.container{
-  padding: 10px;
+.content{
+  padding: 20px;
 }
 
 /* .add-form {
