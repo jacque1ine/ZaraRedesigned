@@ -1,55 +1,60 @@
 {
-    "users": [
-      {
-        "firstName": "Jacqueline",
-        "lastName": "Fung",
-        "id": 1
-      },
-      {
-        "firstName": "Will",
-        "lastName": "Maci",
-        "id": 2
-      },
-      {
-        "firstName": "Steve",
-        "lastName": "Harvey",
-        "id": 3
-      },
-      {
-        "firstName": "Joe",
-        "lastName": "Rogan",
-        "id": 4
-      },
-      {
-        "firstName": "Jacob",
-        "lastName": "McMull",
-        "id": 5
-      },
-      {
-        "firstName": "Kevin",
-        "lastName": "Dlo",
-        "id": 6
-      },
-      {
-        "firstName": "Test",
-        "lastName": "Excited",
-        "id": 7
-      }
-    ],
-  
-    "posts":[
-      
-      {
-        "id": 1, 
-        "userID": 1, 
-        "text": "This is a sample post", 
-        "date": "5/5/22"
-      }, 
-      {
-        "id": 1, 
-        "userID": 2, 
-        "text": "This is ANOTHER sample post", 
-        "date": "1/5/22"
-      }
-    ]
-  }
+  "contacts": [
+    {
+      "firstName": "Jacqueline",
+      "lastName": "Fung",
+      "phone": "6474785567",
+      "id": 1
+    },
+    {
+      "firstName": "Will",
+      "lastName": "Maci",
+      "phone": "4162727202",
+      "id": 2
+    },
+    {
+      "firstName": "Steve",
+      "lastName": "Harvey",
+      "phone": "9876575566",
+      "id": 3
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Rogan",
+      "phone": "1234567890",
+      "id": 4
+    },
+    {
+      "firstName": "Jacob",
+      "lastName": "McMull",
+      "phone": "8766451234",
+      "id": 5
+    },
+    {
+      "firstName": "Kevin",
+      "lastName": "Dlo",
+      "phone": "87656783728",
+      "id": 6
+    },
+    {
+      "firstName": "Adriana",
+      "lastName": "Dybala",
+      "phone": "45487856",
+      "id": 7
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userID": 1,
+      "text": "This is a sample post",
+      "date": "5/5/22"
+    },
+    {
+      "id": 1,
+      "userID": 2,
+      "text": "This is ANOTHER sample post",
+      "date": "1/5/22"
+    }
+  ]
+}
