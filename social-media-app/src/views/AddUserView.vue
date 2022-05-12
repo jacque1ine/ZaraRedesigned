@@ -101,9 +101,9 @@ export default {
 </script>
  
 <style scoped>
-.content{
+/* .content{
   padding: 20px;
-}
+} */
 
 /* .add-form {
   margin-bottom: 40px;

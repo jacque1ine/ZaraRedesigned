@@ -20,10 +20,7 @@ export default {
     async fetchuser() {
       const userId = parseInt(this.$route.params.id);
       const res = await fetch(`../api/contacts/${userId}`);
-
-
       const data = await res.json();
-
       return data;
     },
   },
